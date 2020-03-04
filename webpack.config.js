@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',
@@ -16,7 +16,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s?css$/i, // думал, стоит ли оставлять правило для css - решил сделать так
+        test: /\.pug$/,
+        use: [
+          'pug-loader',
+        ],
+      },
+      {
+        test: /\.scss$/,
         use: [
           'style-loader',
           'css-loader',
@@ -40,7 +46,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      template: './src/index.pug',
+      filename: './index.html'
     }),
   ],
 };
