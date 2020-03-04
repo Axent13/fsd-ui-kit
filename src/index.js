@@ -11,6 +11,6 @@ function component(className) {
     return element;
   }
   
-  document.body.appendChild(component('quicksand'));
-  document.body.appendChild(component('montserrat-regular'));
-  document.body.appendChild(component('montserrat-bold'));
+document.body.appendChild(component('quicksand'));
+document.body.appendChild(component('montserrat-regular'));
+document.body.appendChild(component('montserrat-bold'));
