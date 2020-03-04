@@ -1,14 +1,16 @@
 import _ from 'lodash';
-import './style.css';
-import './fonts.css';
+import './style.scss';
+import './fonts.scss';
 
-function component() {
+function component(className) {
     const element = document.createElement('div');
   
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
+    element.innerHTML = _.join(['Hello', className], ' ');
+    element.classList.add(className);
   
     return element;
   }
   
-  document.body.appendChild(component());
+  document.body.appendChild(component('quicksand'));
+  document.body.appendChild(component('montserrat-regular'));
+  document.body.appendChild(component('montserrat-bold'));
