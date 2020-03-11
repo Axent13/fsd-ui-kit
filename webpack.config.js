@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -47,7 +48,23 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.pug',
-      filename: './index.html'
+      filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/colors-and-types.pug',
+      filename: 'colors-and-types.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/form-elements.pug',
+      filename: 'form-elements.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/cards.pug',
+      filename: './cards.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/headers-and-footers.pug',
+      filename: 'headers-and-footers.html'
+    })
   ],
 };
