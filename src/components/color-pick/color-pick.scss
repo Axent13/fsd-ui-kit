@@ -1,0 +1,16 @@
+.color-pick {
+  &__example {
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    &_color {
+      &_dark-shade-100 {
+        background-color: #1f2041;
+      }
+    }
+  }
+  &__description-container {
+    margin-left: 3rem;
+  }
+}
