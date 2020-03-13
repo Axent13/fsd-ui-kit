@@ -1,5 +1,5 @@
-mixin color-pick(color-classname)
-  div(class="color-pick__example color-pick__example_color_")
+mixin color-pick(className, colorName, colorHex)
+  div(class="color-pick__example color-pick__example_color_" + className)
   .color-pick__description-container
-    p.color-pick__color-name= $color-name
-    p.color-pick__color-hex= $color-hex
+    p.color-pick__color-name= colorName
+    p.color-pick__color-hex= colorHex
