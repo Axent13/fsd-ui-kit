@@ -1,4 +1,22 @@
 .logo-container {
   margin-top: 1.9rem;
-  margin-left: 1.4rem;
+  margin-left: 2rem;
+}
+
+.main-container {
+  display: flex;
+  margin-top: 4.15rem;
+  margin-left: 9.4rem;
+  height: 38.2rem;
+  &__colors-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__texts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+  }
 }
