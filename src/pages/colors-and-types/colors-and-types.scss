@@ -1,22 +1,32 @@
+.wrapper {
+  width: 136rem;
+}
+
 .logo-container {
-  margin-top: 1.9rem;
-  margin-left: 2rem;
+  margin-top: 2.9rem;
+  margin-left: 2.9rem;
 }
 
 .main-container {
   display: flex;
-  margin-top: 4.15rem;
-  margin-left: 9.4rem;
-  height: 38.2rem;
+  width: 79.2%;
+  margin: 6.15rem auto 0;
   &__colors-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 57.7rem;
   }
   &__texts-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: auto;
+    margin-right: 2rem;
+    height: 30rem;
+    &:first-child {
+      margin-top: 1rem;
+      background-color: #fff;
+    }
   }
 }

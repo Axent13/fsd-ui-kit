@@ -1,0 +1,4 @@
+mixin text-example($className, $type, $definition)
+  .text-example__container
+    p(class="text-example__type text-example__type_" + $className)= $type
+    p(class="text-example__definition text-example__definition_" + $className)= $definition

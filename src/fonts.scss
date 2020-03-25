@@ -1,7 +1,18 @@
 @font-face {
+	font-family: 'Quicksand';
+  src:
+    url('fonts/Quicksand-Regular.eot?') format('eot'),
+    url('fonts/Quicksand-Regular.woff') format('woff'),
+    url('fonts/Quicksand-Regular.ttf') format('truetype'),
+    url('fonts/Quicksand-Regular.svg') format('svg')
+  ;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
   font-family: 'Quicksand';
   src: 
-    url('fonts/Quicksand-Bold.eot') format('eot'),
+    url('fonts/Quicksand-Bold.eot?') format('eot'),
     url('fonts/Quicksand-Bold.woff') format('woff'),
     url('fonts/Quicksand-Bold.ttf') format('truetype'),
     url('fonts/Quicksand-Bold.svg') format('svg')
