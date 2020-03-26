@@ -2,6 +2,10 @@
   &__container {
     display: flex;
     align-items: center;
+    width: 320px;
+    @media only screen and (min-width: 768px) {
+      width: initial;
+    }
   }
   &__example {
     width: 6.6rem;
