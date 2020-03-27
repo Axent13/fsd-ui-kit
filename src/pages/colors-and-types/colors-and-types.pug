@@ -3,26 +3,26 @@ include ../../components/color-pick/color-pick.pug
 include ../../components/text-example/text-example.pug
 
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Colors and Types
   body
-    .wrapper
-      .logo-container
+    section.wrapper
+      section.logo-container
         +logo()
-      .main-container
-        .main-container__colors-container
-          +color-pick('dark-shade-100', 'dark shade 100%', '#1f2041')
-          +color-pick('dark-shade-75', 'dark shade 75%', '#1f2041')
-          +color-pick('dark-shade-50', 'dark shade 50%', '#1f2041')
-          +color-pick('dark-shade-25', 'dark shade 25%', '#1f2041')
-          +color-pick('dark-shade-5', 'dark shade 5%', '#1f2041')
-          +color-pick('purple', 'purple', '#bc9cff')
-          +color-pick('green', 'green', '#6fcf97')
-        .main-container__texts-container
-          +text-example("h1", "H1", "This one is the sub-section or widget title")
-          +text-example("h2", "H2", "Next one is the item title inside widgets")
-          +text-example("h3", "H3", "This label or cta text")
-          +text-example("body", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+      section.main-container
+        section.main-container__colors-container
+          +color-pick({ className: 'dark-shade-100', colorName: 'dark shade 100%', colorHex: '#1f2041' })
+          +color-pick({ className: 'dark-shade-75', colorName: 'dark shade 75%', colorHex: '#1f2041' })
+          +color-pick({ className: 'dark-shade-50', colorName: 'dark shade 50%', colorHex: '#1f2041' })
+          +color-pick({ className: 'dark-shade-25', colorName: 'dark shade 25%', colorHex: '#1f2041' })
+          +color-pick({ className: 'dark-shade-5', colorName: 'dark shade 5%', colorHex: '#1f2041' })
+          +color-pick({ className: 'purple', colorName: 'purple', colorHex: '#bc9cff' })
+          +color-pick({ className: 'green', colorName: 'green', colorHex: '#6fcf97' })
+        section.main-container__texts-container
+          +text-example({ className: 'h1', tagName: 'H1', definition: 'This one is the sub-section or widget title' })
+          +text-example({ className: 'h2', tagName: 'H2', definition: 'Next one is the item title inside widgets' })
+          +text-example({ className: 'h3', tagName: 'H3', definition: 'This label or cta text' })
+          +text-example({ className: 'body', tagName: 'Body', definition: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.' })

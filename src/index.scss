@@ -5,6 +5,9 @@
 }
 
 html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: normal;
+  color: #1f2041;
   font-size: 14px;
   @media only screen and (min-width: 768px) {
     font-size: 8px;
@@ -15,7 +18,7 @@ html {
   @media only screen and (min-width: 1200px) {
     font-size: 14px;
   }
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 1921px) {
     font-size: 21.2px;
   }
 }

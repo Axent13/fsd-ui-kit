@@ -34,17 +34,16 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 5rem;
-    @media only screen and (min-width: 768px) {
-      margin: 0 2rem 0 auto;
-      align-items: initial;
-    }
     height: 30rem;
     &:first-child {
       margin-top: 1rem;
       background-color: #fff;
     }
+    @media only screen and (min-width: 768px) {
+      margin: 0 2rem 0 auto;
+      align-items: initial;
+    }
   }
-
   @media only screen and (min-width: 768px) {
     display: flex;
     width: 79.2%;
