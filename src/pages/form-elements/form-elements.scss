@@ -1,0 +1,32 @@
+.form-elements {
+  &-wrapper {
+    margin: 1rem auto 0;
+    @media only screen and (min-width: 768px) {
+      max-width: 136rem;
+      margin: 0;
+    }
+  }
+  &-logo-container {
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+    @media only screen and (min-width: 768px) {
+      margin: 2.9rem 0 0 2.9rem;
+      height: 4.5rem;
+    }
+  }
+  &-main-container {
+    margin: 2rem auto 0;
+    @media only screen and (min-width: 768px) {
+      width: 80.5%;
+      margin: 6.15rem auto 0;
+    }
+  }
+  &-text-field-container {
+    width: 30.2rem;
+  }
+  &-text-field-hover-container {
+    margin-top: 2rem;
+    width: 30.2rem;
+  }
+}

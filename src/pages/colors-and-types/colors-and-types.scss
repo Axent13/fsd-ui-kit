@@ -1,52 +1,52 @@
-.wrapper {
-  margin: 1rem auto 0;
-  @media only screen and (min-width: 768px) {
-    max-width: 136rem;
-    margin: 0;
-  }
-}
-
-.logo-container {
-  margin: 0 auto;
-  height: 12rem;
-  width: 12rem;
-  @media only screen and (min-width: 768px) {
-    margin: 2.9rem 0 0 2.9rem;
-    height: 4.5rem;
-  }
-}
-
-.main-container {
-  margin: 2rem auto 0;
-  &__colors-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 57.7rem;
-    align-items: center;
+.colors-and-types {
+  &-wrapper {
+    margin: 1rem auto 0;
     @media only screen and (min-width: 768px) {
-      align-items: initial;
+      max-width: 136rem;
+      margin: 0;
     }
   }
-  &__texts-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5rem;
-    height: 30rem;
-    &:first-child {
-      margin-top: 1rem;
-      background-color: #fff;
+  &-logo-container {
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+    @media only screen and (min-width: 768px) {
+      margin: 2.9rem 0 0 2.9rem;
+      height: 4.5rem;
+    }
+  }
+  &-main-container {
+    margin: 2rem auto 0;
+    &__colors-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 57.7rem;
+      align-items: center;
+      @media only screen and (min-width: 768px) {
+        align-items: initial;
+      }
+    }
+    &__texts-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5rem;
+      height: 30rem;
+      &:first-child {
+        margin-top: 1rem;
+        background-color: #fff;
+      }
+      @media only screen and (min-width: 768px) {
+        margin: 0 2rem 0 auto;
+        align-items: initial;
+      }
     }
     @media only screen and (min-width: 768px) {
-      margin: 0 2rem 0 auto;
-      align-items: initial;
+      display: flex;
+      width: 79.2%;
+      margin: 6.15rem auto 0;
     }
-  }
-  @media only screen and (min-width: 768px) {
-    display: flex;
-    width: 79.2%;
-    margin: 6.15rem auto 0;
   }
 }

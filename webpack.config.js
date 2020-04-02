@@ -69,7 +69,7 @@ module.exports = {
       filename: 'colors-and-types.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/form-elements.pug',
+      template: './src/pages/form-elements/form-elements.pug',
       filename: 'form-elements.html'
     }),
     new HtmlWebpackPlugin({
