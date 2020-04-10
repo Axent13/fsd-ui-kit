@@ -1,0 +1,1 @@
+$('.js-item-quantity-dropdown__select').html('Jquery works!');

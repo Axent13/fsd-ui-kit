@@ -1,5 +1,6 @@
 include ../../components/logo/logo.pug
 include ../../components/text-field/text-field.pug
+include ../../components/item-quantity-dropdown/item-quantity-dropdown.pug
 
 doctype html
 html(lang="en")
@@ -25,3 +26,5 @@ html(lang="en")
           +text-field({inputName: 'Text field', inputState: 'Default', type: 'text', placeholder: 'Email'})
         section.form-elements-text-field-hover-container
           +text-field({inputName: 'Text field', inputState: 'Hover / Focus', type: 'text'})
+        section.form-elements-item-quantity-dropdown-container
+          +item-quantity-dropdown()

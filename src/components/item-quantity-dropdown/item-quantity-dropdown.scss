@@ -1,0 +1,11 @@
+.item-quantity-dropdown {
+  &__select {
+    cursor: pointer;
+  }
+  &__options-container {
+    display: none;
+    &_expanded {
+      display: block;
+    }
+  }
+}
