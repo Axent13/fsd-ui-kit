@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .color-pick {
   &__container {
     display: flex;
@@ -13,25 +15,25 @@
     border-radius: 0.7rem;
     &_color {
       &_dark-shade-100 {
-        background-color: #1f2041;
+        background-color: map-get($colors, "dark-shade-100");
       }
       &_dark-shade-75 {
-        background-color: rgba(31, 32, 65, 0.75);
+        background-color: map-get($colors, "dark-shade-75");
       }
       &_dark-shade-50 {
-        background-color: rgba(31, 32, 65, 0.5);
+        background-color: map-get($colors, "dark-shade-50");
       }
       &_dark-shade-25 {
-        background-color: rgba(31, 32, 65, 0.25);
+        background-color: map-get($colors, "dark-shade-25");
       }
       &_dark-shade-5 {
-        background-color: rgba(31, 32, 65, 0.05);
+        background-color: map-get($colors, "dark-shade-5");
       }
       &_purple {
-        background-color: #bc9cff;
+        background-color: map-get($colors, "purple");
       }
       &_green {
-        background-color: #6fcf97;
+        background-color: map-get($colors, "green");
       }
     }
   }
@@ -40,14 +42,14 @@
   }
   &__color-name {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: map-get($font-sizes, "h2");
     font-family: 'Quicksand', 'Open Sans', sans-serif;
     font-weight: bold;
   }
   &__color-hex {
     margin-top: 0.6rem;
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: map-get($font-sizes, "h2");
     font-family: 'Quicksand', 'Open Sans', sans-serif;
     font-weight: normal;
   }

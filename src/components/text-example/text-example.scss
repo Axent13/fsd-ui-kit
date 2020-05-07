@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .text-example {
   &__container {
     display: flex;
@@ -12,26 +14,26 @@
     &_h1 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 2.4rem;
-      color: rgba(31, 32, 65, 0.25);
+      font-size: map-get($font-sizes, "h1");
+      color: map-get($colors, "dark-shade-25");
     }
     &_h2 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 1.8rem;
-      color: rgba(31, 32, 65, 0.25);
+      font-size: map-get($font-sizes, "h2");
+      color: map-get($colors, "dark-shade-25");
     }
     &_h3 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 1.2rem;
-      color: rgba(31, 32, 65, 0.25);
+      font-size: map-get($font-sizes, "h3");
+      color: map-get($colors, "dark-shade-25");
     }
     &_body {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 1.25rem;
-      color: rgba(31, 32, 65, 0.25);
+      font-size: map-get($font-sizes, "body");
+      color: map-get($colors, "dark-shade-25");
     }
   }
   &__definition {
@@ -39,28 +41,28 @@
     &_h1 {
       font-family: 'Quicksand', 'Open Sans', sans-serif;
       font-weight: bold;
-      font-size: 2.4rem;
-      color: #1f2041;
+      font-size: map-get($font-sizes, "h1");
+      color: map-get($colors, "dark-shade-100");
     }
     &_h2 {
       font-family: 'Quicksand', 'Open Sans', sans-serif;
       font-weight: bold;
-      font-size: 1.8rem;
-      color: #1f2041;
+      font-size: map-get($font-sizes, "h2");
+      color: map-get($colors, "dark-shade-100");
     }
     &_h3 {
       font-family: 'Monserrat', 'Open Sans', sans-serif;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: map-get($font-sizes, "h3");
       text-transform: uppercase;
-      color: #1f2041;
+      color: map-get($colors, "dark-shade-100");
     }
     &_body {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: 1.25rem;
+      font-size: map-get($font-sizes, "body");
       line-height: 2rem;
-      color: rgba(31, 32, 65, 0.25);
+      color: map-get($colors, "dark-shade-25");
     }
   }
 }

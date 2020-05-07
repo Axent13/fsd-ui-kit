@@ -1,18 +1,20 @@
+@import '../../variables.scss';
+
 .component-description {
   display: flex; 
   &__name {
     font-family: 'Monserrat', 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: map-get($font-sizes, "h3");
     text-transform: uppercase;
-    color: #1f2041;
+    color: map-get($colors, "dark-shade-100");
   }
   &__state {
     margin-left: auto;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: map-get($font-sizes, "h3");
     text-transform: uppercase;
-    color: rgba(31, 32, 65, 0.25);
+    color: map-get($colors, "dark-shade-25");
   }
 }

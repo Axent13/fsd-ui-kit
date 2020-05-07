@@ -1,0 +1,23 @@
+$breakpoints: (
+  "mobile": 768px,
+  "small": 1024px,
+  "normal": 1200px,
+  "large": 1921px
+);
+
+$colors: (
+  "dark-shade-100": #1f2041,
+  "dark-shade-75": rgba(31, 32, 65, 0.75),
+  "dark-shade-50": rgba(31, 32, 65, 0.5),
+  "dark-shade-25": rgba(31, 32, 65, 0.25),
+  "dark-shade-5": rgba(31, 32, 65, 0.05),
+  "purple": #bc9cff,
+  "green": #6fcf97
+);
+
+$font-sizes: (
+  "h1": 2.4rem,
+  "h2": 1.8rem,
+  "h3": 1.2rem,
+  "body": 1.25rem
+)

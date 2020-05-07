@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,16 +11,16 @@ html {
   font-weight: normal;
   color: #1f2041;
   font-size: 14px;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: map-get($breakpoints, "mobile")) {
     font-size: 8px;
   }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: map-get($breakpoints, "small")) {
     font-size: 12px;
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: map-get($breakpoints, "normal")) {
     font-size: 14px;
   }
-  @media only screen and (min-width: 1921px) {
+  @media only screen and (min-width: map-get($breakpoints, "large")) {
     font-size: 21.2px;
   }
 }
