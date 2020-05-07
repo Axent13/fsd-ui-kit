@@ -1,4 +1,5 @@
 mixin color-pick($arguments)
+  - $arguments = $arguments || {}
   .color-pick__container
     div(class="color-pick__example color-pick__example_color_" + $arguments.className)
     .color-pick__description-container

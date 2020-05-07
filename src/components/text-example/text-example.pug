@@ -1,4 +1,5 @@
 mixin text-example($arguments)
+  - $arguments = $arguments || {}
   .text-example__container
     p(class="text-example__type text-example__type_" + $arguments.className)= $arguments.tagName
     p(class="text-example__definition text-example__definition_" + $arguments.className)= $arguments.definition

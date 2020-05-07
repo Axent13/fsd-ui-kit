@@ -1,9 +1,4 @@
 mixin text-field($arguments)
+  - $arguments = $arguments || {}
   .text-field
-    .text-field__head-container
-      if $arguments.inputName
-        p.text-field__input-name= $arguments.inputName
-      if $arguments.inputState
-        p.text-field__input-state= $arguments.inputState
-    .text-field__input-container
-        input.text-field__input(type=$arguments.type placeholder=$arguments.placeholder)
+    input.text-field__input(type=$arguments.type placeholder=$arguments.placeholder)

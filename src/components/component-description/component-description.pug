@@ -1,0 +1,7 @@
+mixin component-description($arguments)
+  - $arguments = $arguments || {}
+  .component-description
+    if $arguments.name
+      p.component-description__name= $arguments.name
+    if $arguments.state
+      p.component-description__state= $arguments.state
