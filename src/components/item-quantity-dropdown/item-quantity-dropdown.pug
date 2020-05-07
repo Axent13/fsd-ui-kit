@@ -1,7 +1,21 @@
 mixin item-quantity-dropdown($arguments)
+  - $arguments = $arguments || {}
+  - $arguments.options = $arguments.options || []
   .item-quantity-dropdown
-    .item-quantity-dropdown__select.js-item-quantity-dropdown__select Количество комнат
-    .item-quantity-dropdown__options-container
+    .item-quantity-dropdown__head-container
+      if $arguments.selectName
+        p.item-quantity-dropdown__select-name= $arguments.selectName
+      if $arguments.selectState
+        p.item-quantity-dropdown__select-state= $arguments.selectState
+    .item-quantity-dropdown__select.js-item-quantity-dropdown__select= $arguments.placeholder
+    .item-quantity-dropdown__options-container.js-item-quantity-dropdown__options-container
       .item-quantity-dropdown__option
+        .item-quantity-dropdown__option-name= $arguments.options[0]
+        .item-quantity-dropdown__counter-container
+          .item-quantity-dropdown__decrement -
+          .item-quantity-dropdown__counter 0
+          .item-quantity-dropdown__increment +
       .item-quantity-dropdown__option
+        .item-quantity-dropdown__option-name= $arguments.options[1]
       .item-quantity-dropdown__option
+        .item-quantity-dropdown__option-name= $arguments.options[2]
