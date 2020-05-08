@@ -1,16 +1,14 @@
-mixin item-quantity-dropdown($arguments)
-  - $arguments = $arguments || {}
-  - $arguments.options = $arguments.options || []
+mixin item-quantity-dropdown()
   .item-quantity-dropdown
-    .item-quantity-dropdown__select.js-item-quantity-dropdown__select= $arguments.placeholder
-    .item-quantity-dropdown__options-container.js-item-quantity-dropdown__options-container
+    .item-quantity-dropdown__select.js-item-quantity-dropdown__select Placeholder
+    .item-quantity-dropdown__options-container.js-item-quantity-dropdown__options-container OptionsContainer
       .item-quantity-dropdown__option
-        .item-quantity-dropdown__option-name= $arguments.options[0]
+        .item-quantity-dropdown__option-name Option1Name
         .item-quantity-dropdown__counter-container
           .item-quantity-dropdown__decrement -
           .item-quantity-dropdown__counter 0
           .item-quantity-dropdown__increment +
       .item-quantity-dropdown__option
-        .item-quantity-dropdown__option-name= $arguments.options[1]
+        .item-quantity-dropdown__option-name
       .item-quantity-dropdown__option
-        .item-quantity-dropdown__option-name= $arguments.options[2]
+        .item-quantity-dropdown__option-name
