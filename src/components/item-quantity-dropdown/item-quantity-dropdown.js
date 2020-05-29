@@ -1,5 +1,6 @@
-const options = {
-  placeholder: 'Сколько гостей',
+const optionsDataFromSomewhere = {
+  placeholder: 'Удобства номера',
+  hasClearAndApplyButtons: true,
   options: [
     {
       name: 'спальни',
@@ -22,27 +23,58 @@ const options = {
   ],
 };
 
-function pluralForm(qauntity, form1, form2, form5) {
-  const reminderOfTheHundred = Math.abs(qauntity) % 100;
-  const reminderOfTheTen = reminderOfTheHundred % 10;
-  if (reminderOfTheHundred > 10 && reminderOfTheHundred < 20) return form5;
-  if (reminderOfTheTen > 1 && reminderOfTheTen < 5) return form2;
-  if (reminderOfTheTen === 1) return form1;
-  return form5;
-}
+// function pluralForm(qauntity, form1, form2, form5) {
+//   const reminderOfTheHundred = Math.abs(qauntity) % 100;
+//   const reminderOfTheTen = reminderOfTheHundred % 10;
+//   if (reminderOfTheHundred > 10 && reminderOfTheHundred < 20) return form5;
+//   if (reminderOfTheTen > 1 && reminderOfTheTen < 5) return form2;
+//   if (reminderOfTheTen === 1) return form1;
+//   return form5;
+// }
 
 const $select = $('.js-item-quantity-dropdown__select');
-const $optionsContainer = $('.js-item-quantity-dropdown__options-container');
+const $arrow = $('.js-item-quantity-dropdown__arrow');
+const $options = $('.js-item-quantity-dropdown__options');
 
 function handleSelectClick() {
-  $optionsContainer.toggleClass('item-quantity-dropdown__options-container_opened');
+  $select.toggleClass('item-quantity-dropdown__select_expanded');
+  $arrow.toggleClass('item-quantity-dropdown__arrow_expanded');
+  $options.toggleClass('item-quantity-dropdown__options_expanded');
 }
 
 function initEventListeners() {
   $select.on('click', handleSelectClick);
 }
 
-initEventListeners();
 
-const test = options.options[0];
-console.log(pluralForm(111122, test.form1, test.form2, test.form5));
+function createOptions(optionsData) {
+  optionsData.options.forEach((item) => {
+    const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
+    const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
+    const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
+    const $newDecrement = $('<div class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled">-</div>');
+    const $newCounter = $('<div class="item-quantity-dropdown__counter">0</div>');
+    const $newIncrement = $('<div class="item-quantity-dropdown__increment">+</div>');
+
+    $newCounterContainer.append($newDecrement);
+    $newCounterContainer.append($newCounter);
+    $newCounterContainer.append($newIncrement);
+    $newOption.append($newOptionName);
+    $newOption.append($newCounterContainer);
+    $options.append($newOption);
+  });
+}
+
+function createClearAndApplyButtons() {
+  const $clearAndApplyButtonsContainer = $('<div class="item-quantity-dropdown__clear-and-apply-buttons-container"></div>');
+  const $clearButton = $('<div class="item-quantity-dropdown__clear item-quantity-dropdown__clear_disabled">Очистить</div>');
+  const $applyButton = $('<div class="item-quantity-dropdown__apply">Применить</div>');
+
+  $clearAndApplyButtonsContainer.append($clearButton);
+  $clearAndApplyButtonsContainer.append($applyButton);
+  $options.append($clearAndApplyButtonsContainer);
+}
+
+initEventListeners();
+createOptions(optionsDataFromSomewhere);
+if (optionsDataFromSomewhere.hasClearAndApplyButtons === true) createClearAndApplyButtons();

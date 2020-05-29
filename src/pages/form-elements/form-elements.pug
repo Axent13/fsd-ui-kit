@@ -29,6 +29,7 @@ html(lang="en")
         section.form-elements-text-field-hover-container
           +component-description({name: 'Text field', state: 'Hover / Focus'})
           +text-field({type: 'text'})
-        section.form-elements-item-quantity-dropdown-container
+        section.form-elements-item-quantity-dropdown-description-container
           +component-description({name: 'Dropdown', state: 'Default'})
-          +item-quantity-dropdown()
+          .form-elements-item-quantity-dropdown-container
+            +item-quantity-dropdown({placeholder: 'Удобства номера'})
