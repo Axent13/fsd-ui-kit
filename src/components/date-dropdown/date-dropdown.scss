@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.date-dropdown {
+    position: relative;
+    height: 4.1rem;
+    padding: 1rem 0.5rem 0 1.4rem;
+    border: 1px solid map-get($colors, "dark-shade-25");
+    border-radius: 4px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: map-get($colors, "dark-shade-75");
+    cursor: pointer;
+  &__arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('img/keyboard_arrow_down-24px.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.5s ease;
+    opacity: 0.75;
+    &_expanded {
+      transform: rotate(180deg);
+    }
+  }
+}

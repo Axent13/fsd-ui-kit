@@ -3,6 +3,7 @@ include ../../components/text-field/text-field.pug
 include ../../components/item-quantity-dropdown/item-quantity-dropdown.pug
 include ../../components/component-description/component-description.pug
 include ../../components/masked-text-field/masked-text-field.pug
+include ../../components/date-dropdown/date-dropdown.pug
 
 doctype html
 html(lang="en")
@@ -37,3 +38,6 @@ html(lang="en")
         section.form-elements-masked-text-field-container
           +component-description({name: 'Masked text field', state: 'Default'})
           +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
+        section
+          +component-description({name: 'Date dropdown'})
+          +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
