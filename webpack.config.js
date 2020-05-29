@@ -62,28 +62,28 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.pug',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/colors-and-types/colors-and-types.pug',
-      filename: 'colors-and-types.html'
+      filename: 'colors-and-types.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/form-elements/form-elements.pug',
-      filename: 'form-elements.html'
+      filename: 'form-elements.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/cards.pug',
-      filename: './cards.html'
+      filename: './cards.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/headers-and-footers.pug',
-      filename: 'headers-and-footers.html'
+      filename: 'headers-and-footers.html',
     })
   ],
 };

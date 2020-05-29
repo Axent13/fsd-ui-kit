@@ -2,6 +2,7 @@ include ../../components/logo/logo.pug
 include ../../components/text-field/text-field.pug
 include ../../components/item-quantity-dropdown/item-quantity-dropdown.pug
 include ../../components/component-description/component-description.pug
+include ../../components/masked-text-field/masked-text-field.pug
 
 doctype html
 html(lang="en")
@@ -33,3 +34,6 @@ html(lang="en")
           +component-description({name: 'Dropdown', state: 'Default'})
           .form-elements-item-quantity-dropdown-container
             +item-quantity-dropdown({placeholder: 'Удобства номера'})
+        section.form-elements-masked-text-field-container
+          +component-description({name: 'Masked text field', state: 'Default'})
+          +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
