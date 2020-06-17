@@ -1,5 +1,6 @@
 mixin date-dropdown($arguments)
   - $arguments = $arguments || {}
-  input.js-air-datepicker(type="text")
-  .date-dropdown.js-date-dropdown= $arguments.placeholder
+  .date-dropdown
+    input.date-dropdown__air-datepicker.js-date-dropdown__air-datepicker(type="text" placeholder=$arguments.placeholder)
     .date-dropdown__arrow.js-date-dropdown__arrow
+    

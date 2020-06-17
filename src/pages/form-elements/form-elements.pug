@@ -38,6 +38,12 @@ html(lang="en")
         section.form-elements-masked-text-field-container
           +component-description({name: 'Masked text field', state: 'Default'})
           +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
-        section
-          +component-description({name: 'Date dropdown'})
-          +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+        section.form-elements-date-dropdown-container
+            .form-elements-date-dropdown-container-short
+              +component-description({name: 'Date dropdown'})
+              .form-elements-date-dropdown-input-container
+              +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})  
+            .form-elements-date-dropdown-container-short
+              +component-description({name: 'Date dropdown'})
+              .form-elements-date-dropdown-input-container
+              +date-dropdown({placeholder: '19.08.2019'})

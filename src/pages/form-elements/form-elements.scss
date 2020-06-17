@@ -42,7 +42,15 @@
     width: 30.2rem;
   }
   &-date-dropdown-container {
-    margin-top: 2.2rem;
+    margin-top: 3.9rem;
     width: 30.2rem;
+    display: flex;
+    justify-content: space-between;
   }
+  &-date-dropdown-input-container {
+    margin-top: 0.5rem;
+  }
+  &-date-dropdown-container-short {
+    width: 14.2rem;
+  } 
 }
