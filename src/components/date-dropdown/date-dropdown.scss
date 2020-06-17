@@ -18,14 +18,10 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    background-image: url('img/keyboard_arrow_down-24px.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    font-family: 'Material Icons';
+    font-size: 2rem;
     transition: all 0.5s ease;
     opacity: 0.75;
-    cursor: pointer;
     &_expanded {
       transform: rotate(180deg);
     }
