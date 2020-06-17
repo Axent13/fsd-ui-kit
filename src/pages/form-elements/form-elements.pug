@@ -5,6 +5,7 @@ include ../../components/component-description/component-description.pug
 include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/subscription-text-field/subscription-text-field.pug
 
 doctype html
 html(lang="en")
@@ -52,3 +53,7 @@ html(lang="en")
           +component-description({name: 'Filter date dropdown'})
           .form-elements-filter-date-dropdown
             +filter-date-dropdown({placeholder: '19 авг - 23 авг'})
+        section.form-elements-subscription-text-field-container
+          +component-description({name: 'Subscription text field'})
+          .form-elements-subcription-text-field
+            +subscription-text-field({placeholder: ''})

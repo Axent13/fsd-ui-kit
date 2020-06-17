@@ -1,0 +1,5 @@
+mixin subscription-text-field($arguments)
+  - $arguments = $arguments || {}
+  form.subscription-text-field(action="/mock-address/change-me" method="get")
+    input.subscription-text-field__input(type="email" name="email" placeholder=$arguments.placeholder)
+    input.subscription-text-field__submit-button(type="submit" value="->")
