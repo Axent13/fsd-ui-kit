@@ -1,12 +1,12 @@
 .form-elements {
-  &-wrapper {
+  &__wrapper {
     margin: 1rem auto 0;
     @media only screen and (min-width: 768px) {
       max-width: 136rem;
       margin: 0;
     }
   }
-  &-logo-container {
+  &__logo-section {
     margin: 0 auto;
     height: 12rem;
     width: 12rem;
@@ -15,52 +15,52 @@
       height: 4.5rem;
     }
   }
-  &-main-container {
+  &__main-section {
     margin: 2rem auto 0;
     @media only screen and (min-width: 768px) {
       width: 80.5%;
       margin: 6.15rem auto 0;
     }
   }
-  &-text-field-container {
+  &__text-field-section {
     width: 30.2rem;
   }
-  &-text-field-hover-container {
+  &__text-field-hovered-section {
     margin-top: 2rem;
     width: 30.2rem;
   }
-  &-item-quantity-dropdown-description-container {
+  &__item-quantity-dropdown-section {
     margin-top: 2rem;
     width: 30.2rem;
   }
-  &-item-quantity-dropdown-container {
+  &__item-quantity-dropdown {
     margin-top: 0.45rem;
     width: 30.2rem;
   }
-  &-masked-text-field-container {
+  &__masked-text-field-section {
     margin-top: 2.2rem;
     width: 30.2rem;
   }
-  &-date-dropdown-container {
+  &__date-dropdown-section {
     margin-top: 3.9rem;
     width: 30.2rem;
     display: flex;
     justify-content: space-between;
   }
-  &-date-dropdown-input-container {
-    margin-top: 0.5rem;
-  }
-  &-date-dropdown-container-short {
+  &__date-dropdown-short-container {
     width: 14.2rem;
   }
-  &-filter-date-dropdown-container {
+  &__date-dropdown {
+    margin-top: 0.5rem;
+  }
+  &__filter-date-dropdown-section {
     margin-top: 4rem;
     width: 25rem;
   }
-  &-filter-date-dropdown {
+  &__filter-date-dropdown {
     margin-top: 0.3rem;
   }
-  &-subscription-text-field-container {
+  &__subscription-text-field-section {
     margin-top: 4rem;
     width: 25rem;
   }
