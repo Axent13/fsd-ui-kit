@@ -22,6 +22,12 @@
       margin: 6.15rem auto 0;
     }
   }
+  &__upper-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60rem;
+  }
   &__text-field-section {
     width: 30.2rem;
   }

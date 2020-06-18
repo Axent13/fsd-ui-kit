@@ -27,33 +27,34 @@ html(lang="en")
       section.form-elements__logo-section
         +logo()
       section.form-elements__main-section
-        section.form-elements__text-field-section
-          +component-description({name: 'Text field', state: 'Default'})
-          +text-field({type: 'text', placeholder: 'Email'})
-        section.form-elements__text-field-hovered-section
-          +component-description({name: 'Text field', state: 'Hover / Focus'})
-          +text-field({type: 'text'})
-        section.form-elements__item-quantity-dropdown-section
-          +component-description({name: 'Dropdown', state: 'Default'})
-          .form-elements__item-quantity-dropdown
-            +item-quantity-dropdown({placeholder: 'Удобства номера'})
-        section.form-elements__masked-text-field-section
-          +component-description({name: 'Masked text field', state: 'Default'})
-          +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
-        section.form-elements__date-dropdown-section
-            .form-elements__date-dropdown-short-container
-              +component-description({name: 'Date dropdown'})
-              .form-elements__date-dropdown
-              +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})  
-            .form-elements__date-dropdown-short-container
-              +component-description({name: 'Date dropdown'})
-              .form-elements__date-dropdown
-              +date-dropdown({placeholder: '19.08.2019'})
-        section.form-elements__filter-date-dropdown-section
-          +component-description({name: 'Filter date dropdown'})
-          .form-elements__filter-date-dropdown
-            +filter-date-dropdown({placeholder: '19 авг - 23 авг'})
-        section.form-elements__subscription-text-field-section
-          +component-description({name: 'Subscription text field'})
-          .form-elements__subcription-text-field
-            +subscription-text-field({placeholder: ''})
+        section.form-elements__upper-section
+          section.form-elements__text-field-section
+            +component-description({name: 'Text field', state: 'Default'})
+            +text-field({type: 'text', placeholder: 'Email'})
+          section.form-elements__text-field-hovered-section
+            +component-description({name: 'Text field', state: 'Hover / Focus'})
+            +text-field({type: 'text'})
+          section.form-elements__item-quantity-dropdown-section
+            +component-description({name: 'Dropdown', state: 'Default'})
+            .form-elements__item-quantity-dropdown
+              +item-quantity-dropdown({placeholder: 'Удобства номера'})
+          section.form-elements__masked-text-field-section
+            +component-description({name: 'Masked text field', state: 'Default'})
+            +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
+          section.form-elements__date-dropdown-section
+              .form-elements__date-dropdown-short-container
+                +component-description({name: 'Date dropdown'})
+                .form-elements__date-dropdown
+                +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})  
+              .form-elements__date-dropdown-short-container
+                +component-description({name: 'Date dropdown'})
+                .form-elements__date-dropdown
+                +date-dropdown({placeholder: '19.08.2019'})
+          section.form-elements__filter-date-dropdown-section
+            +component-description({name: 'Filter date dropdown'})
+            .form-elements__filter-date-dropdown
+              +filter-date-dropdown({placeholder: '19 авг - 23 авг'})
+          section.form-elements__subscription-text-field-section
+            +component-description({name: 'Subscription text field'})
+            .form-elements__subcription-text-field
+              +subscription-text-field({placeholder: ''})
