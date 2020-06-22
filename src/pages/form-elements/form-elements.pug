@@ -6,6 +6,7 @@ include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
+include ../../components/checkbox-button/checkbox-button.pug
 
 doctype html
 html(lang="en")
@@ -58,3 +59,13 @@ html(lang="en")
             +component-description({name: 'Subscription text field'})
             .form-elements__subcription-text-field
               +subscription-text-field({placeholder: ''})
+          section.form-elements__checkbox-buttons-section
+            +component-description({name: 'Checkbox buttons'})
+            .form-elements__checkbox-buttons
+              .form-elements__checkbox-button
+                +checkbox-button({name: 'maySmoke', value: 'true', text: 'Можно курить'})
+              .form-elements__checkbox-button
+                +checkbox-button({name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
+              .form-elements__checkbox-button
+                +checkbox-button({name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+          
