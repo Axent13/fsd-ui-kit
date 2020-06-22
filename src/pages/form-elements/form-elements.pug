@@ -8,6 +8,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-button/checkbox-button.pug
 include ../../components/radio-button/radio-button.pug
+include ../../components/toggle-button/toggle-button.pug
 
 
 doctype html
@@ -75,4 +76,10 @@ html(lang="en")
             .form-elements__radio-buttons
               +radio-button({id: 'male', name: 'gender', value: 'male', text: 'Мужчина', checked: 'checked'})
               +radio-button({id: 'female', name: 'gender', value: 'female', text: 'Женщина'})
-          
+          section.form-elements__toggle-buttons-section
+            +component-description({name: 'Toggle'})
+            .form-elements__toggle-buttons
+              .form-elements__toggle-button
+                +toggle-button({id: 'getSpecial', name: 'special', value: 'true', text: 'Получать спецпредложения', checked: 'checked'})
+              .form-elements__toggle-button
+                +toggle-button({id: 'getSpecialChecked', name: 'special', value: 'true', text: 'Получать спецпредложения'})

@@ -1,0 +1,5 @@
+mixin toggle-button($arguments)
+  - $arguments = $arguments || {}
+  .toggle-button
+    input.toggle-button__checkbox(type="checkbox" id=$arguments.id name=$arguments.name value=$arguments.value checked=$arguments.checked)
+    label.toggle-button__label(for=$arguments.id)= $arguments.text
