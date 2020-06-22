@@ -1,5 +1,5 @@
 mixin checkbox-button($arguments)
   - $arguments = $arguments || {}
   .checkbox-button
-    input.checkbox-button__checkbox(type="checkbox" id=$arguments.name name=$arguments.name value=$arguments.value checked=$arguments.checked)
-    label.checkbox-button__label(for=$arguments.name)= $arguments.text
+    input.checkbox-button__checkbox(type="checkbox" id=$arguments.id name=$arguments.name value=$arguments.value checked=$arguments.checked)
+    label.checkbox-button__label(for=$arguments.id)= $arguments.text

@@ -1,0 +1,5 @@
+mixin radio-button($arguments)
+  - $arguments = $arguments || {}
+  .radio-button
+    input.radio-button__radio(type="radio" id=$arguments.id name=$arguments.name value=$arguments.value checked=$arguments.checked)
+    label.radio-button__label(for=$arguments.id)= $arguments.text

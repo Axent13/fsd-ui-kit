@@ -7,6 +7,8 @@ include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-button/checkbox-button.pug
+include ../../components/radio-button/radio-button.pug
+
 
 doctype html
 html(lang="en")
@@ -63,9 +65,14 @@ html(lang="en")
             +component-description({name: 'Checkbox buttons'})
             .form-elements__checkbox-buttons
               .form-elements__checkbox-button
-                +checkbox-button({name: 'maySmoke', value: 'true', text: 'Можно курить'})
+                +checkbox-button({id: 'maySmoke', name: 'maySmoke', value: 'true', text: 'Можно курить'})
               .form-elements__checkbox-button
-                +checkbox-button({name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
+                +checkbox-button({id: 'mayPets',name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
               .form-elements__checkbox-button
-                +checkbox-button({name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+                +checkbox-button({id: 'mayGuests',name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+          section.form-elements__radio-buttons-section
+            +component-description({name: 'Radio buttons'})
+            .form-elements__radio-buttons
+              +radio-button({id: 'male', name: 'gender', value: 'male', text: 'Мужчина', checked: 'checked'})
+              +radio-button({id: 'female', name: 'gender', value: 'female', text: 'Женщина'})
           

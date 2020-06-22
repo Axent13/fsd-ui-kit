@@ -79,4 +79,13 @@
   &__checkbox-button {
     margin-top: 1rem;
   }
+  &__radio-buttons-section {
+    margin-top: 4.3rem;
+  }
+  &__radio-buttons {
+    display: flex;
+    width: 20.5rem;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
 }
