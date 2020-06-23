@@ -9,6 +9,7 @@ include ../../components/subscription-text-field/subscription-text-field.pug
 include ../../components/checkbox-button/checkbox-button.pug
 include ../../components/radio-button/radio-button.pug
 include ../../components/toggle-button/toggle-button.pug
+include ../../components/like-button/like-button.pug
 
 
 doctype html
@@ -83,3 +84,8 @@ html(lang="en")
                 +toggle-button({id: 'getSpecialChecked', name: 'special', value: 'true', text: 'Получать спецпредложения', checked: 'checked'})
               .form-elements__toggle-button
                 +toggle-button({id: 'getSpecial', name: 'special', value: 'true', text: 'Получать спецпредложения'})
+          section.form-elements__like-buttons-section
+            +component-description({name: 'Like button'})
+            .form-elements__like-buttons
+              +like-button({likesCount: '2', isLiked: 'false'})
+              +like-button({likesCount: '12', isLiked: 'true'})

@@ -9,7 +9,5 @@ $airDatepicker.datepicker({
   multipleDatesSeparator: ' - ',
   dateFormat: 'd M',
 });
-console.log($airDatepicker.data('datepicker'));
 
 $dateDropdown.innerHTML = $airDatepicker.data('datepicker').currentDate;
-console.log($airDatepicker.data('datepicker').currentDate);

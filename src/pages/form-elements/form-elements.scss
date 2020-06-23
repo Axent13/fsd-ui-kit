@@ -97,4 +97,13 @@
   &__toggle-button {
     margin-top: 1.3rem;
   }
+  &__like-buttons-section {
+    margin-top: 4.2rem;
+  }
+  &__like-buttons {
+    display: flex;
+    width: 8.3rem;
+    justify-content: space-between;
+    padding-top: 1.3rem;
+  }
 }

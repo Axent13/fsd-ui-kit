@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+
+.like-button {
+  display: flex;
+  align-items: center;
+  width: 3.5rem;
+  height: 1.9rem;
+  padding-left: 0.3rem;
+  border: 1px solid map-get($colors, "dark-shade-25");
+  border-radius: 1rem;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    border-color: map-get($colors, "purple");
+  }
+  &_liked {
+    border-color: map-get($colors, "purple");
+    color: map-get($colors, "purple");
+  }
+  &__button {
+    font-family: 'Material Icons';
+    color: map-get($colors, "dark-shade-25");
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &_liked {
+      border-color: map-get($colors, "purple");
+      color: map-get($colors, "purple");
+    }
+  }
+  &__counter {
+    color: map-get($colors, "dark-shade-25");
+    margin-left: 0.6rem;
+    &_liked {
+      border-color: map-get($colors, "purple");
+      color: map-get($colors, "purple");
+    }
+  }
+}
