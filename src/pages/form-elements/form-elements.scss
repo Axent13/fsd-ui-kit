@@ -11,14 +11,14 @@
     height: 12rem;
     width: 12rem;
     @media only screen and (min-width: 768px) {
-      margin: 2.9rem 0 0 2.9rem;
+      margin: 2.9rem 0 0 5.5rem;
       height: 4.5rem;
     }
   }
   &__main-section {
     margin: 2rem auto 0;
     @media only screen and (min-width: 768px) {
-      width: 80.5%;
+      width: 76.5%;
       margin: 6.15rem auto 0;
     }
   }
@@ -108,11 +108,15 @@
   }
   &__rate-buttons-section {
     margin-top: 4rem;
+    margin-bottom: 9rem;
   }
   &__rate-buttons {
     padding-top: 1.5rem;
     display: flex;
     width: 24.7rem;
     justify-content: space-between;
+  }
+  &__range-slider-section {
+    min-height: 6rem;
   }
 }
