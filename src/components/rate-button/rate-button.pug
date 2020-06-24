@@ -1,0 +1,11 @@
+mixin rate-button($arguments)
+  - $arguments = $arguments || {}
+  - $arguments.id = $arguments.id || []
+  .rate-button
+    each $val, $index in $arguments.id
+      - const $reverseIndex = $arguments.id.length - $index
+      if $reverseIndex === $arguments.initRating
+        input.rate-button__input(type="radio" id=$arguments.id[$reverseIndex - 1] name=$arguments.name value=$reverseIndex checked)
+      else
+        input.rate-button__input(type="radio" id=$arguments.id[$reverseIndex - 1] name=$arguments.name value=$reverseIndex)
+      label.rate-button__star(for=$arguments.id[$reverseIndex - 1])

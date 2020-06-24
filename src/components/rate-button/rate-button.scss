@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.rate-button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  user-select: none; 
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked ~ .rate-button__star::before {
+      content: 'star';
+    }
+  }
+  &__star {
+    font-family: 'Material Icons';
+    font-size: 2rem;
+    color: map-get($colors, 'purple');
+    margin-right: 0.3rem;
+    cursor: pointer;
+    &::before {
+      content: 'star_border';
+    }
+    &:hover::before,
+    &:hover ~ .rate-button__star::before {
+      content: 'star'; 
+    }
+  }
+}

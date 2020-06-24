@@ -10,6 +10,7 @@ include ../../components/checkbox-button/checkbox-button.pug
 include ../../components/radio-button/radio-button.pug
 include ../../components/toggle-button/toggle-button.pug
 include ../../components/like-button/like-button.pug
+include ../../components/rate-button/rate-button.pug
 
 
 doctype html
@@ -89,3 +90,8 @@ html(lang="en")
             .form-elements__like-buttons
               +like-button({likesCount: '2', isLiked: 'false'})
               +like-button({likesCount: '12', isLiked: 'true'})
+          section.form-elements__rate-buttons-section
+            +component-description({name: 'Rate button'})
+            .form-elements__rate-buttons
+              +rate-button({id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'], name: 'ratingFirst', initRating: 4})
+              +rate-button({id: ['1stStarSecond', '2ndStarSecond', '3rdStarSecond', '4thStarSecond', '5thStarSecond'], name: 'ratingSecond', initRating: 5})
