@@ -1,0 +1,9 @@
+mixin button($arguments)
+  - $arguments = $arguments || {}
+  button(type="button" class="button" + 
+    ($arguments.isFilled ? ' button_filled' : '') + 
+    ($arguments.isBordered ? ' button_bordered' : '') + 
+    ($arguments.hasArrow ? ' button_with-arrow' : '') + 
+    ($arguments.isTextColored ? ' button_colored-text' : '')
+  )= $arguments.text
+  

@@ -11,6 +11,7 @@ include ../../components/radio-button/radio-button.pug
 include ../../components/toggle-button/toggle-button.pug
 include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug
+include ../../components/button/button.pug
 
 
 doctype html
@@ -97,3 +98,22 @@ html(lang="en")
               +rate-button({id: ['1stStarSecond', '2ndStarSecond', '3rdStarSecond', '4thStarSecond', '5thStarSecond'], name: 'ratingSecond', initRating: 5})
           section.form-elements__range-slider-section
             .form-elements__range-slider Здесь будет Range Slider...
+          section.form-elements__buttons-section
+            +component-description({name: 'Buttons'})
+            .form-elements__filled-buttons
+              .form-elements__button
+                +button({text: 'Click me', isFilled: true})
+              .form-elements__button
+                +button({text: 'Click me', isFilled: true})
+            .form-elements__bordered-buttons
+              .form-elements__button
+                +button({text: 'Click me', isBordered: true})
+              .form-elements__button
+                +button({text: 'Click me', isBordered: true})
+            .form-elements__colored-text-buttons
+              .form-elements__colored-text-button
+                +button({text: 'Click me', isTextColored: true})
+              .form-elements__colored-text-button
+                +button({text: 'Click me', isTextColored: true})
+            .form-elements__button-with-arrow
+              +button({text: 'Перейти к оплате', hasArrow: true})

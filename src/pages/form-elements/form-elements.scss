@@ -18,7 +18,7 @@
   &__main-section {
     margin: 2rem auto 0;
     @media only screen and (min-width: 768px) {
-      width: 76.5%;
+      width: 89.1%;
       margin: 6.15rem auto 0;
     }
   }
@@ -118,5 +118,46 @@
   }
   &__range-slider-section {
     min-height: 6rem;
+  }
+  &__buttons-section {
+    margin-top: 2.3rem;
+  }
+  &__filled-buttons {
+    margin-top: 1.45rem;
+    display: flex;
+    justify-content: space-between;
+    width: 20.5rem;
+  }
+  &__bordered-buttons {
+    margin-top: 2.9rem;
+    display: flex;
+    justify-content: space-between;
+    width: 20.5rem;
+  }
+  &__colored-text-buttons {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 13.5rem;
+  }
+  &__button {
+    width: 9.3rem;
+  }
+  &__colored-text-button {
+    width: 6rem;
+  }
+  &__button-with-arrow {
+    position: relative;
+    margin-top: 2.7rem;
+    width: 30rem;
+    &::after {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-family: 'Material Icons';
+      font-size: 2rem;
+      content: 'arrow_forward';
+      color: white;
+    }
   }
 }
