@@ -1,0 +1,11 @@
+mixin pagination($arguments)
+  - $arguments = $arguments || {}
+  .pagination
+    .pagination__buttons
+      button.pagination__page-button.pagination__page-button_active(type="button") 1
+      button.pagination__page-button(type="button") 2
+      button.pagination__page-button(type="button") 3
+      button.pagination__page-button(type="button") ...
+      button.pagination__page-button(type="button") 15
+      button.pagination__next-button(type="button") arrow_forward
+    .pagination__text 1 – 12 из 100+ вариантов аренды

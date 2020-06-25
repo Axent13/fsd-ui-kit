@@ -144,7 +144,7 @@
     width: 9.3rem;
   }
   &__colored-text-button {
-    width: 6rem;
+    width: 6.1rem;
   }
   &__button-with-arrow {
     position: relative;
@@ -159,5 +159,12 @@
       content: 'arrow_forward';
       color: white;
     }
+  }
+  &__pagination-section {
+    margin-top: 4rem;
+    width: 22.7rem;
+  }
+  &__pagination {
+    margin-top: 1.3rem;
   }
 }

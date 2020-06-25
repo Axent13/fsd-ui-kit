@@ -12,6 +12,7 @@ include ../../components/toggle-button/toggle-button.pug
 include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug
 include ../../components/button/button.pug
+include ../../components/pagination/pagination.pug
 
 
 doctype html
@@ -117,3 +118,7 @@ html(lang="en")
                 +button({text: 'Click me', isTextColored: true})
             .form-elements__button-with-arrow
               +button({text: 'Перейти к оплате', hasArrow: true})
+          section.form-elements__pagination-section
+            +component-description({name: 'Pagination'})
+            .form-elements__pagination
+              +pagination()

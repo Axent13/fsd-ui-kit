@@ -3,7 +3,7 @@
 .component-description {
   display: flex; 
   &__name {
-    font-family: 'Monserrat', 'Open Sans', sans-serif;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: map-get($font-sizes, "h3");
     text-transform: uppercase;
