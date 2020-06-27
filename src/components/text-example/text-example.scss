@@ -14,26 +14,26 @@
     &_h1 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: map-get($font-sizes, "h1");
-      color: map-get($colors, "dark-shade-25");
+      font-size: map-get($font-sizes, 'h1');
+      color: map-get($colors, 'dark-shade-25');
     }
     &_h2 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: map-get($font-sizes, "h2");
-      color: map-get($colors, "dark-shade-25");
+      font-size: map-get($font-sizes, 'h2');
+      color: map-get($colors, 'dark-shade-25');
     }
     &_h3 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: map-get($font-sizes, "h3");
-      color: map-get($colors, "dark-shade-25");
+      font-size: map-get($font-sizes, 'h3');
+      color: map-get($colors, 'dark-shade-25');
     }
     &_body {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: map-get($font-sizes, "body");
-      color: map-get($colors, "dark-shade-25");
+      font-size: map-get($font-sizes, 'body');
+      color: map-get($colors, 'dark-shade-25');
     }
   }
   &__definition {
@@ -41,28 +41,28 @@
     &_h1 {
       font-family: 'Quicksand', 'Open Sans', sans-serif;
       font-weight: bold;
-      font-size: map-get($font-sizes, "h1");
-      color: map-get($colors, "dark-shade-100");
+      font-size: map-get($font-sizes, 'h1');
+      color: map-get($colors, 'dark-shade-100');
     }
     &_h2 {
       font-family: 'Quicksand', 'Open Sans', sans-serif;
       font-weight: bold;
-      font-size: map-get($font-sizes, "h2");
-      color: map-get($colors, "dark-shade-100");
+      font-size: map-get($font-sizes, 'h2');
+      color: map-get($colors, 'dark-shade-100');
     }
     &_h3 {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: bold;
-      font-size: map-get($font-sizes, "h3");
+      font-size: map-get($font-sizes, 'h3');
       text-transform: uppercase;
-      color: map-get($colors, "dark-shade-100");
+      color: map-get($colors, 'dark-shade-100');
     }
     &_body {
       font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: normal;
-      font-size: map-get($font-sizes, "body");
+      font-size: map-get($font-sizes, 'body');
       line-height: 2rem;
-      color: map-get($colors, "dark-shade-25");
+      color: map-get($colors, 'dark-shade-25');
     }
   }
 }

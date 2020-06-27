@@ -5,12 +5,12 @@
     position: relative;
     height: 4.1rem;
     padding: 1rem 0.5rem 0 1.4rem;
-    border: 1px solid map-get($colors, "dark-shade-25");
+    border: 1px solid map-get($colors, 'dark-shade-25');
     border-radius: 4px;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 1.3rem;
-    color: map-get($colors, "dark-shade-75");
+    color: map-get($colors, 'dark-shade-75');
     cursor: pointer;
     &_expanded {
       border-bottom-left-radius: 0;  
@@ -38,7 +38,7 @@
     width: 100%;
     &_expanded {
       display: block;
-      border: 1px solid map-get($colors, "dark-shade-25");
+      border: 1px solid map-get($colors, 'dark-shade-25');
       border-top: none;
       border-bottom-left-radius: 4px;  
       border-bottom-right-radius: 4px;
@@ -53,7 +53,7 @@
     font-weight: bold;
     font-size: 1.13rem;
     text-transform: uppercase;
-    color: map-get($colors, "dark-shade-100");
+    color: map-get($colors, 'dark-shade-100');
   }
   &__counter-container {
     display: flex;
@@ -64,31 +64,31 @@
   &__decrement {
     width: 3rem;
     height: 3rem;
-    border: 1px solid map-get($colors, "dark-shade-50");
+    border: 1px solid map-get($colors, 'dark-shade-50');
     border-radius: 50%;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-size: 1.65rem;
     font-weight: normal;
     line-height: 2.6rem;
     text-align: center;
-    color: map-get($colors, "dark-shade-50");
+    color: map-get($colors, 'dark-shade-50');
     cursor: pointer;
     user-select: none;
     &_disabled {
-      border-color: map-get($colors, "dark-shade-25");
-      color: map-get($colors, "dark-shade-25");
+      border-color: map-get($colors, 'dark-shade-25');
+      color: map-get($colors, 'dark-shade-25');
       cursor: not-allowed;
     }
   }
   &__counter {
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: bold;
-    color: map-get($colors, "dark-shade-100");
+    color: map-get($colors, 'dark-shade-100');
   }
   &__increment {
     width: 3rem;
     height: 3rem;
-    border: 1px solid map-get($colors, "dark-shade-50");
+    border: 1px solid map-get($colors, 'dark-shade-50');
     border-radius: 50%;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-size: 1.65rem;
@@ -106,10 +106,10 @@
     font-weight: bold;
     font-size: 1.13rem;
     text-transform: uppercase;
-    color: map-get($colors, "purple");
+    color: map-get($colors, 'purple');
   }
   &__clear {
-    color: map-get($colors, "dark-shade-50");
+    color: map-get($colors, 'dark-shade-50');
     cursor: pointer;
     &_disabled {
       display: none;

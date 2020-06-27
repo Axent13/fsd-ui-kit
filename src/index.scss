@@ -11,16 +11,16 @@ html {
   font-weight: normal;
   color: #1f2041;
   font-size: 14px;
-  @media only screen and (min-width: map-get($breakpoints, "mobile")) {
+  @media only screen and (min-width: map-get($breakpoints, 'mobile')) {
     font-size: 8px;
   }
-  @media only screen and (min-width: map-get($breakpoints, "small")) {
+  @media only screen and (min-width: map-get($breakpoints, 'small')) {
     font-size: 12px;
   }
-  @media only screen and (min-width: map-get($breakpoints, "normal")) {
+  @media only screen and (min-width: map-get($breakpoints, 'normal')) {
     font-size: 14px;
   }
-  @media only screen and (min-width: map-get($breakpoints, "large")) {
+  @media only screen and (min-width: map-get($breakpoints, 'large')) {
     font-size: 21.2px;
   }
 }

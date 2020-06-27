@@ -11,9 +11,9 @@
         vertical-align: middle;
         font-family: 'Montserrat', 'Open Sans', sans-serif;
         font-weight: normal;
-        font-size: map-get($font-sizes, "body");
+        font-size: map-get($font-sizes, 'body');
         line-height: 1.5rem;
-        color: map-get($colors, "dark-shade-50");
+        color: map-get($colors, 'dark-shade-50');
         user-select: none;
         cursor: pointer;
       }
@@ -25,16 +25,16 @@
         flex-shrink: 0;
         width: 3.5rem;
         height: 1.75rem;
-        border: 1px solid map-get($colors, "dark-shade-25");
+        border: 1px solid map-get($colors, 'dark-shade-25');
         border-radius: 1rem;
         margin-right: 1rem;
         cursor: pointer;
       }
       &:hover+.toggle-button__label::before {
-        border-color: map-get($colors , "purple");
+        border-color: map-get($colors , 'purple');
       }
       &:checked+.toggle-button__label::before {
-        border-color: map-get($colors , "purple");
+        border-color: map-get($colors , 'purple');
       }
       &+.toggle-button__label::after {
         content: '';
@@ -43,14 +43,14 @@
         left: 0.4rem;
         display: inline-block;
         border-radius: 50%;
-        background-color: map-get($colors, "dark-shade-25");
+        background-color: map-get($colors, 'dark-shade-25');
         width: 1.2rem;
         height: 1.2rem;
         transition: left ease 0.3s;
       }
       &:checked+.toggle-button__label::after {
         left: 2rem;
-        background-color: map-get($colors , "purple");
+        background-color: map-get($colors , 'purple');
       }
   }
   

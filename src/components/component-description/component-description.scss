@@ -5,16 +5,16 @@
   &__name {
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: map-get($font-sizes, "h3");
+    font-size: map-get($font-sizes, 'h3');
     text-transform: uppercase;
-    color: map-get($colors, "dark-shade-100");
+    color: map-get($colors, 'dark-shade-100');
   }
   &__state {
     margin-left: auto;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: normal;
-    font-size: map-get($font-sizes, "h3");
+    font-size: map-get($font-sizes, 'h3');
     text-transform: uppercase;
-    color: map-get($colors, "dark-shade-25");
+    color: map-get($colors, 'dark-shade-25');
   }
 }

@@ -15,25 +15,25 @@
     border-radius: 0.7rem;
     &_color {
       &_dark-shade-100 {
-        background-color: map-get($colors, "dark-shade-100");
+        background-color: map-get($colors, 'dark-shade-100');
       }
       &_dark-shade-75 {
-        background-color: map-get($colors, "dark-shade-75");
+        background-color: map-get($colors, 'dark-shade-75');
       }
       &_dark-shade-50 {
-        background-color: map-get($colors, "dark-shade-50");
+        background-color: map-get($colors, 'dark-shade-50');
       }
       &_dark-shade-25 {
-        background-color: map-get($colors, "dark-shade-25");
+        background-color: map-get($colors, 'dark-shade-25');
       }
       &_dark-shade-5 {
-        background-color: map-get($colors, "dark-shade-5");
+        background-color: map-get($colors, 'dark-shade-5');
       }
       &_purple {
-        background-color: map-get($colors, "purple");
+        background-color: map-get($colors, 'purple');
       }
       &_green {
-        background-color: map-get($colors, "green");
+        background-color: map-get($colors, 'green');
       }
     }
   }
@@ -42,14 +42,14 @@
   }
   &__color-name {
     text-transform: capitalize;
-    font-size: map-get($font-sizes, "h2");
+    font-size: map-get($font-sizes, 'h2');
     font-family: 'Quicksand', 'Open Sans', sans-serif;
     font-weight: bold;
   }
   &__color-hex {
     margin-top: 0.6rem;
     text-transform: uppercase;
-    font-size: map-get($font-sizes, "h2");
+    font-size: map-get($font-sizes, 'h2');
     font-family: 'Quicksand', 'Open Sans', sans-serif;
     font-weight: normal;
   }
