@@ -147,18 +147,8 @@
     width: 6.1rem;
   }
   &__button-with-arrow {
-    position: relative;
     margin-top: 2.7rem;
     width: 30rem;
-    &::after {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-      font-family: 'Material Icons';
-      font-size: 2rem;
-      content: 'arrow_forward';
-      color: white;
-    }
   }
   &__pagination-section {
     margin-top: 4rem;
