@@ -1,6 +1,6 @@
 mixin like-button($arguments)
   - $arguments = $arguments || {}
-  if $arguments.isLiked === 'true'
+  if $arguments.isLiked === true
     .like-button.js-like-button.like-button_liked
         button(type="button" class="like-button__button js-like-button__button like-button__button_liked") favorite
         span.like-button__counter.js-like-button__counter.like-button__counter_liked= $arguments.likesCount
