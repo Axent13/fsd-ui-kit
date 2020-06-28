@@ -35,7 +35,7 @@ html(lang="en")
       section.form-elements__logo-section
         +logo()
       section.form-elements__main-section
-        section.form-elements__upper-section
+        section.form-elements__first-section
           section.form-elements__text-field-section
             +component-description({name: 'Text field', state: 'Default'})
             +text-field({type: 'text', placeholder: 'Email'})
@@ -122,3 +122,21 @@ html(lang="en")
             +component-description({name: 'Pagination'})
             .form-elements__pagination
               +pagination()
+        section.form-elements__second-section
+          .form-elements__first-column-second-section
+            .form-elements__first-element-quantity-dropdown-in-second-section
+              +component-description({name: 'Dropdown', state: 'Default'})
+              .form-elements__first-item-quantity-dropdown-in-second-section
+                +item-quantity-dropdown({placeholder: '2 спальни, 2 кровати'})
+            .form-elements__second-element-quantity-dropdown-in-second-section
+            +component-description({name: 'Dropdown', state: 'Expanded'})
+            .form-elements__second-item-quantity-dropdown-in-second-section
+              +item-quantity-dropdown({placeholder: '2 спальни, 2 кровати'})
+          .form-elements__second-column-second-section
+            +component-description({name: 'Dropdown'})
+            .form-elements__third-item-quantity-dropdown-in-second-section
+              +item-quantity-dropdown({placeholder: 'Сколько гостей'})
+          .form-elements__third-column-second-section
+            +component-description({name: 'Dropdown'})
+            .form-elements__fourth-item-quantity-dropdown-in-second-section
+              +item-quantity-dropdown({placeholder: '3 гостя'})

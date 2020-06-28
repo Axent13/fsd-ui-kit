@@ -22,7 +22,7 @@
       margin: 6.15rem auto 0;
     }
   }
-  &__upper-section {
+  &__first-section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -156,5 +156,39 @@
   }
   &__pagination {
     margin-top: 1.3rem;
+  }
+  &__second-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 25.2rem;
+    margin-top: 9rem;
+  }
+  &__first-column-second-section {
+    width: 25rem;
+  }
+  &__first-item-quantity-dropdown-in-second-section {
+    margin-top: 0.5rem;
+  }
+  &__second-element-quantity-dropdown-in-second-section {
+    margin-top: 2rem;
+  }
+  &__second-item-quantity-dropdown-in-second-section {
+    height: 15.3rem;
+    margin-top: 0.35rem;
+  }
+  &__second-column-second-section {
+    width: 30.2rem;
+  }
+  &__third-item-quantity-dropdown-in-second-section {
+    margin-top: 0.35rem;
+    height: 15.3rem;
+  }
+  &__third-column-second-section {
+    width: 30.2rem;
+  }
+  &__fourth-item-quantity-dropdown-in-second-section {
+    margin-top: 0.35rem;
+    height: 15.3rem;
   }
 }
