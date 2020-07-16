@@ -1,6 +1,30 @@
 @import '../../variables.scss';
 
 .checkbox-button {
+  &__rich-label-text-container {
+    width: 21rem;
+  }
+  &__simple-text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: map-get($font-sizes, 'body');
+    line-height: 1.5rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
+  &__rich-text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: map-get($font-sizes, 'body');
+    line-height: 1.9rem;
+    color: map-get($colors, 'dark-shade-75');
+  }
+  &__details-text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: map-get($font-sizes, 'h3');
+    line-height: 1.5rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
   &__checkbox {
       position: absolute;
       z-index: -1;
@@ -9,11 +33,6 @@
         display: inline-flex;
         position: relative;
         vertical-align: middle;
-        font-family: 'Montserrat', 'Open Sans', sans-serif;
-        font-weight: normal;
-        font-size: map-get($font-sizes, 'body');
-        line-height: 1.5rem;
-        color: map-get($colors, 'dark-shade-50');
         user-select: none;
         cursor: pointer;
       }

@@ -140,3 +140,8 @@ html(lang="en")
             +component-description({name: 'Dropdown'})
             .form-elements__fourth-item-quantity-dropdown-in-second-section
               +item-quantity-dropdown({placeholder: '3 гостя'})
+        section.form-elements__third-section
+          .form-elements__second-column-section
+            +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
+            +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+            +checkbox-button({id: 'mayPetsSecond', name: 'mayPets', value: 'true', text: 'Можно с животными'})
