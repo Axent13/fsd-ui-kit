@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.expandable-checkbox-list {
+  &__spoiler {
+    display: flex;
+  }
+  &__name {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: map-get($font-sizes, 'h3');
+    text-transform: uppercase;
+    color: map-get($colors, 'dark-shade-100');
+  }
+  &__arrow {
+    margin-left: auto;
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-size: map-get($font-sizes, 'h3');
+    color: map-get($colors, 'dark-shade-100');
+    &_opened {
+      transform: rotate(180deg)
+    }
+  }
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    &_hidden {
+      display: none;
+    }
+  }
+  
+}
