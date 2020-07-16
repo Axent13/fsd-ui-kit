@@ -46,15 +46,14 @@ function initEventListeners() {
   $select.on('click', handleSelectClick);
 }
 
-
 function createOptions(optionsData) {
   optionsData.options.forEach((item) => {
     const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
     const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
     const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
-    const $newDecrement = $('<div class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled">-</div>');
+    const $newDecrement = $('<button class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled">-</button>');
     const $newCounter = $('<div class="item-quantity-dropdown__counter">0</div>');
-    const $newIncrement = $('<div class="item-quantity-dropdown__increment">+</div>');
+    const $newIncrement = $('<button class="item-quantity-dropdown__increment">+</button>');
 
     $newCounterContainer.append($newDecrement);
     $newCounterContainer.append($newCounter);
@@ -62,6 +61,30 @@ function createOptions(optionsData) {
     $newOption.append($newOptionName);
     $newOption.append($newCounterContainer);
     $options.append($newOption);
+
+    function handleIncrementClick() {
+      console.log('Increment');
+      const newCount = parseInt($newCounter.text(), 10) + 1;
+      $newCounter.text(newCount);
+      if (newCount > 0) {
+        $newDecrement.removeClass('item-quantity-dropdown__decrement_disabled');
+      }
+    }
+    console.log($newIncrement);
+    $newIncrement.on('click', handleIncrementClick);
+
+    function handleDecrementClick() {
+      console.log('Decrement');
+      const newCount = parseInt($newCounter.text(), 10) - 1;
+      if (newCount >= 0) {
+        $newCounter.text(newCount);
+      }
+      if (newCount === 0) {
+        $newDecrement.addClass('item-quantity-dropdown__decrement_disabled');
+      }
+    }
+
+    $newDecrement.on('click', handleDecrementClick);
   });
 }
 
