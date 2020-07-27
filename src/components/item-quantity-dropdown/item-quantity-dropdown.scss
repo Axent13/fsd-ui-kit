@@ -12,6 +12,7 @@
     font-size: 1.3rem;
     color: map-get($colors, 'dark-shade-75');
     cursor: pointer;
+    user-select: none;
     &_expanded {
       border-bottom-left-radius: 0;  
       border-bottom-right-radius: 0;  
