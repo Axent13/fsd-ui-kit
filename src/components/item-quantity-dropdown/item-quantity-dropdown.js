@@ -32,69 +32,86 @@ const optionsDataFromSomewhere = {
 //   return form5;
 // }
 
-const $select = $('.js-item-quantity-dropdown__select');
-const $arrow = $('.js-item-quantity-dropdown__arrow');
-const $options = $('.js-item-quantity-dropdown__options');
+// const $rootElementFirst = $('.js-item-quantity-dropdown-first');
+// const $rootElementSecond = $('.js-item-quantity-dropdown-second');
 
-function handleSelectClick() {
-  $select.toggleClass('item-quantity-dropdown__select_expanded');
-  $arrow.toggleClass('item-quantity-dropdown__arrow_expanded');
-  $options.toggleClass('item-quantity-dropdown__options_expanded');
-}
+class ItemQuantityDropdown {
+  constructor($rootElement, options = {}) {
+    this.$rootElement = $rootElement;
+    this.$select = this.$rootElement.find('.js-item-quantity-dropdown__select');
+    this.$arrow = this.$rootElement.find('.js-item-quantity-dropdown__arrow');
+    this.$options = this.$rootElement.find('.js-item-quantity-dropdown__options');
+    this._handleSelectClick = this._handleSelectClick.bind(this);
+    this._initEventListeners = this._initEventListeners.bind(this);
+    this._initEventListeners();
+    this._createOptions(options);
+    this._createClearAndApplyButtons();
+  }
 
-function initEventListeners() {
-  $select.on('click', handleSelectClick);
-}
+  _handleSelectClick() {
+    this.$select.toggleClass('item-quantity-dropdown__select_expanded');
+    this.$arrow.toggleClass('item-quantity-dropdown__arrow_expanded');
+    this.$options.toggleClass('item-quantity-dropdown__options_expanded');
+  }
 
-function createOptions(optionsData) {
-  optionsData.options.forEach((item) => {
-    const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
-    const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
-    const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
-    const $newDecrement = $('<button class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled">-</button>');
-    const $newCounter = $('<div class="item-quantity-dropdown__counter">0</div>');
-    const $newIncrement = $('<button class="item-quantity-dropdown__increment">+</button>');
+  _initEventListeners() {
+    this.$select.on('click', this._handleSelectClick);
+  }
 
-    $newCounterContainer.append($newDecrement);
-    $newCounterContainer.append($newCounter);
-    $newCounterContainer.append($newIncrement);
-    $newOption.append($newOptionName);
-    $newOption.append($newCounterContainer);
-    $options.append($newOption);
+  _createOptions(optionsData) {
+    optionsData.options.forEach((item) => {
+      const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
+      const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
+      const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
+      const $newDecrement = $('<button class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled">-</button>');
+      const $newCounter = $('<div class="item-quantity-dropdown__counter">0</div>');
+      const $newIncrement = $('<button class="item-quantity-dropdown__increment">+</button>');
 
-    function handleIncrementClick() {
-      const newCount = parseInt($newCounter.text(), 10) + 1;
-      $newCounter.text(newCount);
-      if (newCount > 0) {
-        $newDecrement.removeClass('item-quantity-dropdown__decrement_disabled');
-      }
-    }
-    $newIncrement.on('click', handleIncrementClick);
+      $newCounterContainer.append($newDecrement);
+      $newCounterContainer.append($newCounter);
+      $newCounterContainer.append($newIncrement);
+      $newOption.append($newOptionName);
+      $newOption.append($newCounterContainer);
+      this.$options.append($newOption);
 
-    function handleDecrementClick() {
-      const newCount = parseInt($newCounter.text(), 10) - 1;
-      if (newCount >= 0) {
+      function handleIncrementClick() {
+        const newCount = parseInt($newCounter.text(), 10) + 1;
         $newCounter.text(newCount);
+        if (newCount > 0) {
+          $newDecrement.removeClass('item-quantity-dropdown__decrement_disabled');
+        }
       }
-      if (newCount === 0) {
-        $newDecrement.addClass('item-quantity-dropdown__decrement_disabled');
-      }
-    }
+      $newIncrement.on('click', handleIncrementClick);
 
-    $newDecrement.on('click', handleDecrementClick);
-  });
+      function handleDecrementClick() {
+        const newCount = parseInt($newCounter.text(), 10) - 1;
+        if (newCount >= 0) {
+          $newCounter.text(newCount);
+        }
+        if (newCount === 0) {
+          $newDecrement.addClass('item-quantity-dropdown__decrement_disabled');
+        }
+      }
+
+      $newDecrement.on('click', handleDecrementClick);
+    });
+  }
+
+  _createClearAndApplyButtons() {
+    const $clearAndApplyButtonsContainer = $('<div class="item-quantity-dropdown__clear-and-apply-buttons-container"></div>');
+    const $clearButton = $('<div class="item-quantity-dropdown__clear item-quantity-dropdown__clear_disabled">Очистить</div>');
+    const $applyButton = $('<div class="item-quantity-dropdown__apply">Применить</div>');
+
+    $clearAndApplyButtonsContainer.append($clearButton);
+    $clearAndApplyButtonsContainer.append($applyButton);
+    this.$options.append($clearAndApplyButtonsContainer);
+  }
 }
 
-function createClearAndApplyButtons() {
-  const $clearAndApplyButtonsContainer = $('<div class="item-quantity-dropdown__clear-and-apply-buttons-container"></div>');
-  const $clearButton = $('<div class="item-quantity-dropdown__clear item-quantity-dropdown__clear_disabled">Очистить</div>');
-  const $applyButton = $('<div class="item-quantity-dropdown__apply">Применить</div>');
+// Находим все элементы на странице с таким классом
+const $rootElements = $('.js-item-quantity-dropdown');
 
-  $clearAndApplyButtonsContainer.append($clearButton);
-  $clearAndApplyButtonsContainer.append($applyButton);
-  $options.append($clearAndApplyButtonsContainer);
-}
-
-initEventListeners();
-createOptions(optionsDataFromSomewhere);
-if (optionsDataFromSomewhere.hasClearAndApplyButtons === true) createClearAndApplyButtons();
+// В цикле для каждого элемента создаём объект
+$rootElements.each((index, node) => {
+  new ItemQuantityDropdown($(node), optionsDataFromSomewhere);
+});
