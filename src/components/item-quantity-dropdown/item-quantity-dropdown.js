@@ -63,18 +63,15 @@ function createOptions(optionsData) {
     $options.append($newOption);
 
     function handleIncrementClick() {
-      console.log('Increment');
       const newCount = parseInt($newCounter.text(), 10) + 1;
       $newCounter.text(newCount);
       if (newCount > 0) {
         $newDecrement.removeClass('item-quantity-dropdown__decrement_disabled');
       }
     }
-    console.log($newIncrement);
     $newIncrement.on('click', handleIncrementClick);
 
     function handleDecrementClick() {
-      console.log('Decrement');
       const newCount = parseInt($newCounter.text(), 10) - 1;
       if (newCount >= 0) {
         $newCounter.text(newCount);
