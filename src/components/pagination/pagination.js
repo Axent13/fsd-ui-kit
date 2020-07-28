@@ -1,4 +1,4 @@
-const dataFromSomewhere = {
+const optionsDataFromSomewhere = {
   currentPage: 1,
   totalPages: 15,
   paginationLengthLeft: 2,
@@ -6,21 +6,18 @@ const dataFromSomewhere = {
 };
 
 class Pagination {
-  constructor(options) {
+  constructor($rootElement, options) {
+    this.$rootElement = $rootElement;
     this.currentPage = options.currentPage;
     this.totalPages = options.totalPages;
     this.paginationLengthLeft = options.paginationLengthLeft;
     this.paginationLengthRight = options.paginationLengthRight;
+    this._drawPagination();
   }
 
-  getPaginationOptions() {
-    // eslint-disable-next-line max-len
-    return [this.currentPage, this.totalPages, this.paginationLengthLeft, this.paginationLengthRight];
-  }
-
-  drawPagination() {
+  _drawPagination() {
     let pageIndex = this.currentPage;
-    const $paginationButtonsContainer = $('.pagination__buttons');
+    const $paginationButtonsContainer = this.$rootElement;
 
     // Добавлем первую кнопку
     const $newFirstButton = document.createElement('button');
@@ -83,19 +80,16 @@ class Pagination {
       }
     }
 
-    function nextButtonClick() {
-      console.log('Click on NEXT button');
-    }
-
     // Добавляем стрелку справа, если эта страница не последняя
     if (this.currentPage < this.totalPages) {
       const $newLastButton = $('<button class="pagination__arrow-button">-></button>');
       $paginationButtonsContainer.append($newLastButton);
-      $newLastButton.on('click', nextButtonClick);
     }
   }
 }
 
-const pagination = new Pagination(dataFromSomewhere);
-console.log(pagination.getPaginationOptions());
-pagination.drawPagination();
+const $rootElements = $('.js-pagination');
+
+$rootElements.each((index, rootElement) => {
+  new Pagination($(rootElement), optionsDataFromSomewhere);
+});
