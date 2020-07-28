@@ -119,14 +119,6 @@ html(lang="en")
                 +button({text: 'Click me', isTextColored: true})
             .form-elements__button-with-arrow
               +button({text: 'Перейти к оплате', hasArrow: true})
-          section.form-elements__pagination-section
-            +component-description({name: 'Pagination'})
-            .form-elements__pagination
-              +pagination()
-            .form-elements__pagination
-              +pagination()
-            .form-elements__pagination
-              +pagination()
         section.form-elements__second-section
           .form-elements__first-column-second-section
             .form-elements__first-element-quantity-dropdown-in-second-section
@@ -146,15 +138,24 @@ html(lang="en")
             .form-elements__fourth-item-quantity-dropdown-in-second-section
               +item-quantity-dropdown({placeholder: '3 гостя'})
         section.form-elements__third-section
-          .form-elements__first-column-section
-            +expandable-checkbox-list({ name: 'Expandable checkbox list', checkboxes: [
-              {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
-              {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
-              {id: 'infantChair', name: 'infantChair', value: 'true', text: 'Стул для кормления', checked: 'checked'},
-              {id: 'infantBed', name: 'infantBed', value: 'true', text: 'Кроватка', checked: 'checked'},
-              {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
-              {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
-          .form-elements__second-column-section
+          .form-elements__third-section-first-column
+            .form-elements__first-expandable-checkbox-list
+              +expandable-checkbox-list({ name: 'Expandable checkbox list', checkboxes: [
+                {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
+                {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
+                {id: 'infantChair', name: 'infantChair', value: 'true', text: 'Стул для кормления', checked: 'checked'},
+                {id: 'infantBed', name: 'infantBed', value: 'true', text: 'Кроватка', checked: 'checked'},
+                {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
+                {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
+            .form-elements__second-expandable-checkbox-list
+              +expandable-checkbox-list({ name: 'Expandable checkbox list', checkboxes: [
+                {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
+                {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
+                {id: 'infantChair', name: 'infantChair', value: 'true', text: 'Стул для кормления', checked: 'checked'},
+                {id: 'infantBed', name: 'infantBed', value: 'true', text: 'Кроватка', checked: 'checked'},
+                {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
+                {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
+          .form-elements__third-section-second-column
             +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
             +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
-            +checkbox-button({id: 'mayPetsSecond', name: 'mayPets', value: 'true', text: 'Можно с животными'})
+          .form-elements__third-section-third-column

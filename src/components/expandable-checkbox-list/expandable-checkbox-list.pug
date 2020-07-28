@@ -5,6 +5,7 @@ mixin expandable-checkbox-list($arguments)
     .expandable-checkbox-list__spoiler
       p.expandable-checkbox-list__name= $arguments.name
       span.expandable-checkbox-list__arrow expand_more
-    .js-expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes_hidden
+    .js-expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes_hidden
       each $checkbox in $arguments.checkboxes
-        +checkbox-button($checkbox)
+        .expandable-checkbox-list__checkbox
+          +checkbox-button($checkbox)

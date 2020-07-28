@@ -191,4 +191,14 @@
     margin-top: 0.35rem;
     height: 15.3rem;
   }
+  &__third-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 26rem;
+    margin-top: 5rem;
+  }
+  &__second-expandable-checkbox-list {
+    margin-top: 4.6rem;
+  }
 }

@@ -22,11 +22,12 @@
     }
   }
   &__checkboxes {
-    display: flex;
-    flex-direction: column;
+    padding-top: 0.6rem;
     &_hidden {
       display: none;
     }
   }
-  
+  &__checkbox {
+    margin: 0.95rem 0;
+  }
 }
