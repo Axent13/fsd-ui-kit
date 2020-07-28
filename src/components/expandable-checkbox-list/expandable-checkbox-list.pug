@@ -4,8 +4,17 @@ mixin expandable-checkbox-list($arguments)
   .expandable-checkbox-list.js-expandable-checkbox-list
     .expandable-checkbox-list__spoiler
       p.expandable-checkbox-list__name= $arguments.name
-      span.expandable-checkbox-list__arrow expand_more
-    .js-expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes_hidden
-      each $checkbox in $arguments.checkboxes
-        .expandable-checkbox-list__checkbox
-          +checkbox-button($checkbox)
+      if $arguments.isHidden === true
+        span.expandable-checkbox-list__arrow expand_more
+      else
+        span.expandable-checkbox-list__arrow.expandable-checkbox-list__arrow_opened expand_more
+    if $arguments.isHidden === true
+      .js-expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes_hidden
+        each $checkbox in $arguments.checkboxes
+          .expandable-checkbox-list__checkbox
+            +checkbox-button($checkbox)
+    else
+      .js-expandable-checkbox-list__checkboxes.expandable-checkbox-list__checkboxes
+        each $checkbox in $arguments.checkboxes
+          .expandable-checkbox-list__checkbox
+            +checkbox-button($checkbox)

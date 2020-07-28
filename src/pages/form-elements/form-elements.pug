@@ -140,7 +140,7 @@ html(lang="en")
         section.form-elements__third-section
           .form-elements__third-section-first-column
             .form-elements__first-expandable-checkbox-list
-              +expandable-checkbox-list({ name: 'Expandable checkbox list', checkboxes: [
+              +expandable-checkbox-list({ name: 'Expandable checkbox list', isHidden: true, checkboxes: [
                 {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
                 {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
                 {id: 'infantChair', name: 'infantChair', value: 'true', text: 'Стул для кормления', checked: 'checked'},
@@ -148,7 +148,7 @@ html(lang="en")
                 {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
                 {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
             .form-elements__second-expandable-checkbox-list
-              +expandable-checkbox-list({ name: 'Expandable checkbox list', checkboxes: [
+              +expandable-checkbox-list({ name: 'Expandable checkbox list', isHidden: false, checkboxes: [
                 {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
                 {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
                 {id: 'infantChair', name: 'infantChair', value: 'true', text: 'Стул для кормления', checked: 'checked'},
@@ -156,6 +156,8 @@ html(lang="en")
                 {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
                 {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
           .form-elements__third-section-second-column
-            +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
-            +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+            +component-description({name: 'Rich checkbox buttons'})
+            .form-elements__rich-checkbox-buttons-container
+              +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
+              +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
           .form-elements__third-section-third-column

@@ -193,12 +193,26 @@
   }
   &__third-section {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: no-wrap;
     height: 26rem;
     margin-top: 5rem;
   }
+  &__third-section-first-column {
+    width: 25rem;
+  }
   &__second-expandable-checkbox-list {
     margin-top: 4.6rem;
+  }
+  &__third-section-second-column {
+    width: 25rem;
+    margin-left: 17.2rem;
+  }
+  &__rich-checkbox-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 12.1rem;
+    margin-top: 1.5rem;
   }
 }

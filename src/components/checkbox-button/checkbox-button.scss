@@ -22,8 +22,9 @@
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: map-get($font-sizes, 'h3');
-    line-height: 1.5rem;
+    line-height: 1.3rem;
     color: map-get($colors, 'dark-shade-50');
+    margin-top: 0.5rem;
   }
   &__checkbox {
       position: absolute;
