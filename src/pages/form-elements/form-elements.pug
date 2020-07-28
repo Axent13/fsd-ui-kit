@@ -14,6 +14,7 @@ include ../../components/rate-button/rate-button.pug
 include ../../components/button/button.pug
 include ../../components/pagination/pagination.pug
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../components/bullet-list/bullet-list.pug
 
 
 doctype html
@@ -161,3 +162,6 @@ html(lang="en")
               +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
               +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
           .form-elements__third-section-third-column
+            +component-description({name: 'Bullet list'})
+            .form-elements__bullet-list-container
+              +bullet-list([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'}, {text: 'Время прибытия — после 13:00, а выезд до 12:00'}])

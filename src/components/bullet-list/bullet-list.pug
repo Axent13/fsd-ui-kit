@@ -1,0 +1,6 @@
+mixin bullet-list($arguments)
+  ul.bullet-list
+    each $bullet in $arguments
+      li.bullet-list__bullet
+        .bullet-list__icon
+        .bullet-list__text= $bullet.text

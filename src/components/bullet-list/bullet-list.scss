@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.bullet-list {
+  list-style: none;
+  vertical-align: middle;
+  &__bullet {
+    display: flex;
+    align-items: baseline;
+  }
+  &__icon {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: map-get($colors, 'dark-shade-25');
+    border-radius: 50%;
+  }
+  &__text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: map-get($colors, 'dark-shade-75');
+    margin: 0.45rem 0 0.45rem 1rem;
+  }
+}
