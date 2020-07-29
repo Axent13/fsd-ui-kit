@@ -16,6 +16,7 @@ include ../../components/pagination/pagination.pug
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/icon-text-list/icon-text-list.pug
+include ../../components/feedback/feedback.pug
 
 
 doctype html
@@ -170,3 +171,6 @@ html(lang="en")
           .form-elements__fourth-section-first-column
             +icon-text-list([{iconName: 'insert_emoticon', name: 'Комфорт', description: 'Шумопоглощающие стены', hasSeparator: true},
               {iconName: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален', hasSeparator: true}])
+          .form-elements__fourth-section-second-column
+            +feedback([{clientAvatar: '/avatars/image.png', name: 'Мурад Сарафанов', time: '5 дней назад', likeButtonArguments: {likesCount: '12', isLiked: true}, feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'},
+{iconName: '^', name: 'Удобство', description: 'Окно в каждой из спален', likeButtonArguments: {likesCount: '2', isLiked: false}, feedbackText: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'}])

@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+
+.feedback {
+  list-style: none;
+  vertical-align: middle;
+  &__client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 1.8rem;
+  }
+  &__client-avatar {
+    flex-shrink: 0;
+    width: 4.6rem;
+    height: 4.6rem;
+    background-image: url('./avatars/image.png'); // TODO: разобраться, как подгружать картинки динамически
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__name-and-time {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.35rem;
+    line-height: 171%;
+    color: map-get($colors, 'dark-shade-75');
+    margin-left: 0.9rem;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__feedback-info {
+    display: flex;
+    align-items: baseline;
+    margin-top: 0.7rem;
+  }
+  &__like-button {
+    flex-shrink: 0;
+    width: 3.4rem;
+    margin-left: 0.55rem;
+  }
+  &__feedback-text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 171%;
+    color: rgba(31, 32, 65, 0.75);
+    margin-left: 1.5rem;
+  }
+}

@@ -223,9 +223,14 @@
     margin-top: 0.7rem;
   }
   &__fourth-section {
+    display: flex;
     margin-top: 8rem;
   }
   &__fourth-section-first-column {
     width: 27rem;
+  }
+  &__fourth-section-second-column {
+    width: 66rem;
+    margin-left: 15.1rem;
   }
 }
