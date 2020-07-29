@@ -1,0 +1,11 @@
+mixin icon-text-list($arguments)
+  ul.icon-text-list
+    each $element in $arguments
+      li.icon-text-list__element
+        .icon-text-list__icon-and-text
+          .icon-text-list__icon= $element.iconName
+          .icon-text-list__text
+            .icon-text-list__name= $element.name
+            .icon-text-list__description= $element.description
+        if $element.hasSeparator === true
+          .icon-text-list__separator

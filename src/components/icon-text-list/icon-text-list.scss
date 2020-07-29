@@ -1,0 +1,45 @@
+@import '../../variables.scss';
+
+.icon-text-list {
+  list-style: none;
+  vertical-align: middle;
+  &__element {
+    height: 8.3rem;
+  }
+  &__icon-and-text {
+    display: flex;
+    align-items: center;
+    height: 6.3rem;
+  }
+  &__icon {
+    font-family: 'Material Icons';
+    flex-shrink: 0;
+    width: 4.7rem;
+    height: 4.7rem;
+    font-size: 4.45rem;
+    // Способ задания градиента тексту, взято отсюда - https://html5book.ru/gradient-dlya-teksta/
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: map-get($colors, 'purple');
+  }
+  &__text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.35rem;
+    line-height: 171%;
+    color: map-get($colors, 'dark-shade-75');
+    margin-left: 0.7rem;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__separator {
+    width: 100%;
+    height: 0.1px;
+    margin-top: 0.9rem;
+    background-color: rgba(31, 32, 65, 0.1);
+  }
+}
