@@ -1,0 +1,34 @@
+include ../component-description/component-description.pug
+include ../text-field/text-field.pug
+include ../radio-button/radio-button.pug
+include ../masked-text-field/masked-text-field.pug
+include ../toggle-button/toggle-button.pug
+include ../button/button.pug
+
+mixin form-registration($arguments = {})
+  form.form-registration
+    .form-registration__wrapper
+      p.form-registration__title Регистрация аккаунта
+      .form-registration__first-name-input
+        +text-field({type: 'text', placeholder: 'Имя'})
+      .form-registration__second-name-input
+        +text-field({type: 'text', placeholder: 'Фамилия'})
+      .form-registration__gender-buttons
+        +radio-button({id: 'male', name: 'gender', value: 'male', text: 'Мужчина'})
+        +radio-button({id: 'female', name: 'gender', value: 'female', text: 'Женщина'})
+      .form-registration__birth-date
+        +component-description({name: 'Дата рождения'})
+        +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
+      .form-registration__authorization-data
+        +component-description({name: 'Данные для входа в сервис'})
+        +text-field({type: 'email', placeholder: 'Email'})
+        .form-registration__email
+          +text-field({type: 'password', placeholder: 'Пароль'})
+        .form-registration__toggle-button
+        +toggle-button({id: 'getSpecialChecked', name: 'special', value: 'true', text: 'Получать спецпредложения'})
+      .form-registration__payment-button
+        +button({type: 'submit', text: 'Перейти к оплате', hasArrow: true})
+      .form-registration__has-account
+        .form-registration__has-account-text Уже есть аккаунт на Toxin
+        .form-registration__has-account-button
+          +button({text: 'Войти', isBordered: true})

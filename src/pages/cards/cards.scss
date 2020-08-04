@@ -16,10 +16,16 @@
     }
   }
   &__main-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 2rem auto 0;
     @media only screen and (min-width: 768px) {
       width: 80.45%;
       margin: 6.75rem auto 0;
     }
+  }
+  &__registration {
+    margin-top: 4rem;
   }
 }
