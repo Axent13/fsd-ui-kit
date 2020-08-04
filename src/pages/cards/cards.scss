@@ -1,0 +1,25 @@
+.cards {
+  &__wrapper {
+    margin: 1rem auto 0;
+    @media only screen and (min-width: 768px) {
+      max-width: 136rem;
+      margin: 0;
+    }
+  }
+  &__logo-section {
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+    @media only screen and (min-width: 768px) {
+      margin: 2.9rem 0 0 2.8rem;
+      height: 4.5rem;
+    }
+  }
+  &__main-section {
+    margin: 2rem auto 0;
+    @media only screen and (min-width: 768px) {
+      width: 80.45%;
+      margin: 6.75rem auto 0;
+    }
+  }
+}

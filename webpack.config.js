@@ -78,8 +78,8 @@ module.exports = {
       filename: 'form-elements.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/cards.pug',
-      filename: './cards.html',
+      template: './src/pages/cards/cards.pug',
+      filename: 'cards.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/headers-and-footers.pug',

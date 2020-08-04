@@ -1,7 +1,8 @@
 mixin button($arguments)
   - $arguments = $arguments || {}
+  - $arguments.type = $arguments.type || 'button' 
   .button
-    button(type="button" class="button__button" + 
+    button(type=$arguments.type class="button__button" + 
       ($arguments.isFilled ? ' button__button_filled' : '') + 
       ($arguments.isBordered ? ' button__button_bordered' : '') + 
       ($arguments.hasArrow ? ' button__button_with-arrow' : '') + 

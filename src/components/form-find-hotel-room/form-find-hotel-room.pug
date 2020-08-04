@@ -1,0 +1,24 @@
+include ../component-description/component-description.pug
+include ../date-dropdown/date-dropdown.pug
+include ../item-quantity-dropdown/item-quantity-dropdown.pug
+include ../button/button.pug
+
+mixin form-find-hotel-room($arguments)
+  form.form-find-hotel-room
+    .form-find-hotel-room__wrapper
+      p.form-find-hotel-room__title Найдём номера под ваши&nbsp;пожелания
+      .form-find-hotel-room__datepickers
+        .form-find-hotel-room__datepicker-and-description
+          +component-description({name: 'Прибытие'})
+          .form-find-hotel-room__datepicker
+            +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+        .form-find-hotel-room__datepicker-and-description
+          +component-description({name: 'Выезд'})
+          .form-find-hotel-room__datepicker
+            +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+      .form-find-hotel-room__guests-title
+        +component-description({name: 'Гости'})
+      .form-find-hotel-room__guests-dropdown
+        +item-quantity-dropdown({placeholder: 'Сколько гостей'})
+      .form-find-hotel-room__find-room-button
+        +button({type: 'submit', text: 'Подобрать номер', hasArrow: true})

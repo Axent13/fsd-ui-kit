@@ -63,9 +63,9 @@ class ItemQuantityDropdown {
       const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
       const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
       const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
-      const $newDecrement = $('<button class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled">-</button>');
+      const $newDecrement = $('<button class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled" type="button">-</button>');
       const $newCounter = $('<div class="item-quantity-dropdown__counter">0</div>');
-      const $newIncrement = $('<button class="item-quantity-dropdown__increment">+</button>');
+      const $newIncrement = $('<button class="item-quantity-dropdown__increment" type="button">+</button>');
 
       $newCounterContainer.append($newDecrement);
       $newCounterContainer.append($newCounter);
