@@ -1,0 +1,47 @@
+include ../component-description/component-description.pug
+include ../date-dropdown/date-dropdown.pug
+include ../item-quantity-dropdown/item-quantity-dropdown.pug
+include ../button/button.pug
+
+mixin form-booking($arguments = {})
+  form.form-booking.js-form-booking
+    .form-booking__wrapper
+      .form-booking__room-number-and-daily-price
+        .form-booking__room-name
+          .form-booking__number-symbol №
+            span.form-booking__room-number.js-form-booking__room-number
+            span.form-booking__luxe.js-form-booking__luxe Люкс
+        .form-booking__daily-price
+          .form-booking__daily-price-currency.js-form-booking__daily-price-currency
+          .form-booking__daily-price-period &nbsp;в сутки
+      .form-find-hotel-room__datepickers
+        .form-find-hotel-room__datepicker-and-description
+          +component-description({name: 'Прибытие'})
+          .form-find-hotel-room__datepicker
+            +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+        .form-find-hotel-room__datepicker-and-description
+          +component-description({name: 'Выезд'})
+          .form-find-hotel-room__datepicker
+            +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+      .form-booking__guests
+        +component-description({name: 'Гости'})
+        .form-booking__guests-dropdown
+          +item-quantity-dropdown({placeholder: '3 гостя'})
+      .form-booking__calculate-price
+        .form-booking__base-price
+          .form-booking__base-price-description.js-form-booking__base-price-description
+          .form-booking__base-price-currency.js-form-booking__base-price-currency
+        .form-booking__discount
+          .form-booking__discount-description.js-form-booking__discount-description
+          .form-booking__discount-info i
+          .form-booking__discount-currency 0₽
+        .form-booking__additional-services
+          .form-booking__additional-services-description Cбор за дополнительные услуги
+          .form-booking__additional-services-info i
+          .form-booking__additional-services-currency.js-form-booking__additional-services-currency
+        .form-booking__total
+          .form-booking__total-description Итого
+          .form-booking__total-dots
+          .form-booking__total-currency.js-form-booking__total-currency
+      .form-booking__payment-button
+        +button({text: 'Забронировать', hasArrow: true})
