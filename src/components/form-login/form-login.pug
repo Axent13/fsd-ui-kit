@@ -1,0 +1,17 @@
+include ../text-field/text-field.pug
+include ../button/button.pug
+
+mixin form-login($arguments)
+  form.form-login
+    .form-login__wrapper
+      p.form-login__title Войти
+      .form-login__authorization-data
+        +text-field({type: 'email', placeholder: 'Email'})
+        .form-login__password
+        +text-field({type: 'password', placeholder: 'Пароль'})
+      .form-login__enter-button
+        +button({text: 'Войти', hasArrow: true})
+      .form-login__has-not-account
+        .form-login__has-not-account-text Нет аккаунта на Toxin?
+        .form-login__has-not-account-button
+          +button({text: 'Создать', isBordered: true})
