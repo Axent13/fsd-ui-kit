@@ -1,6 +1,8 @@
 @import '../../variables.scss';
 
 .expandable-checkbox-list {
+  cursor: pointer;
+  user-select: none;
   &__spoiler {
     display: flex;
   }
@@ -18,7 +20,7 @@
     font-size: map-get($font-sizes, 'h3');
     color: map-get($colors, 'dark-shade-100');
     &_opened {
-      transform: rotate(180deg)
+      transform: rotate(180deg);
     }
   }
   &__checkboxes {
