@@ -1,0 +1,122 @@
+@import '../../variables.scss';
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__logo {
+    margin-right: auto;
+  }
+  &__links {
+    display: flex;
+    list-style: none;
+  }
+  &__about-us {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    text-decoration: none;
+    margin-right: 1.4rem;
+    color: map-get($colors, 'dark-shade-75');
+    &:hover {
+      color: map-get($colors, 'dark-shade-100');
+    }
+  }
+  &__services {
+    position: relative;
+    cursor: pointer;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    margin-right: 1.4rem;
+    color: map-get($colors, 'dark-shade-50');
+    &:hover {
+      color: map-get($colors, 'dark-shade-75');
+    }
+    &:hover .page-header__services-links-container {
+      display: flex;
+    }
+  }
+  &__services-links-container {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background: inherit;
+  }
+  &__service {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    text-decoration: none;
+    color: map-get($colors, 'dark-shade-50');
+    &:hover {
+      color: map-get($colors, 'dark-shade-75');
+    }
+  }
+  &__vacancy {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    text-decoration: none;
+    margin-right: 1.4rem;
+    color: map-get($colors, 'dark-shade-50');
+    &:hover {
+      color: map-get($colors, 'dark-shade-75');
+    }
+  }
+  &__news {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    text-decoration: none;
+    margin-right: 1.4rem;
+    color: map-get($colors, 'dark-shade-50');
+    &:hover {
+      color: map-get($colors, 'dark-shade-75');
+    }
+  }
+  &__agreements {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1.4rem;
+    color: map-get($colors, 'dark-shade-50');
+    &:hover {
+      color: map-get($colors, 'dark-shade-75');
+    }
+    &:hover .page-header__services-links-container {
+      display: flex;
+    }
+  }
+  &__agreement {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 121%;
+    text-decoration: none;
+    margin-right: 1.4rem;
+    color: map-get($colors, 'dark-shade-50');
+    &:hover {
+      color: map-get($colors, 'dark-shade-75');
+    }
+  }
+  &__separator {
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    height: 30px;
+  }
+}

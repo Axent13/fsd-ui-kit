@@ -1,0 +1,32 @@
+include ../button/button.pug
+
+mixin page-header($arguments)
+  header.page-header
+    img.page-header__logo(src=$arguments.logoSrc alt="TOXIN")
+    ul.page-header__links
+      li
+        a.page-header__about-us(href="/mock-address/change-me") О нас
+      li.page-header__services Услуги
+          .page-header__services-links-container
+            a.page-header__service(href="/mock-address/change-me") Услуга 1
+            a.page-header__service(href="/mock-address/change-me") Услуга 2
+            a.page-header__service(href="/mock-address/change-me") Услуга 3
+      li
+        a.page-header__vacancy(href="/mock-address/change-me") Вакансии
+      li
+        a.page-header__news(href="/mock-address/change-me") Новости
+      li.page-header__agreements Соглашения
+        .page-header__services-links-container
+          a.page-header__agreement(href="/mock-address/change-me") Соглашение 1
+          a.page-header__agreement(href="/mock-address/change-me") Соглашение 2
+          a.page-header__agreement(href="/mock-address/change-me") Соглашение 3
+    if $arguments.isUserActive === true
+      .page-header__separator
+    .page-header__user
+    if $arguments.isUserActive === true
+      .page-header__user-nickname= $arguments.userNickname
+    else
+      .page-header__login-button
+        +button({text: 'Войти', isBordered: true})
+      .page-header__registration-button
+        +button({text: 'Зарегистрироваться', isFilled: true})

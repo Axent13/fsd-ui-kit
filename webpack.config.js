@@ -48,7 +48,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'file-loader',
+          'file-loader?name=[path][name].[ext]',
         ],
       },
       {
@@ -82,7 +82,7 @@ module.exports = {
       filename: 'cards.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/headers-and-footers.pug',
+      template: './src/pages/headers-and-footers/headers-and-footers.pug',
       filename: 'headers-and-footers.html',
     })
   ],
