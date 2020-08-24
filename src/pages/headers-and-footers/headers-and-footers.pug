@@ -1,5 +1,6 @@
 include ../../components/logo/logo.pug
 include ../../components/page-header/page-header.pug
+include ../../components/page-footer/page-footer.pug
 
 doctype html
 html(lang="ru")
@@ -26,4 +27,10 @@ html(lang="ru")
           +page-header({logoSrc: require('./images/logo.png').default, isUserActive: false})
         .headers-and-footers__page-header-user-active
           +page-header({logoSrc: require('./images/logo.png').default, isUserActive: true, userNickname: 'Юлий Цезарь'})
+        .headers-and-footers__page-footer
+          +page-footer({logoSrc: require('./images/logo.png').default, socials: [
+            {url: '/mock-address/change-me', imageSrc: require('./images/twitter.png').default, alt: 'Twitter'},
+            {url: '/mock-address/change-me', imageSrc: require('./images/facebook.png').default, alt: 'Facebook'},
+            {url: '/mock-address/change-me', imageSrc: require('./images/instagram.png').default, alt: 'Instagram'}
+          ]})
       

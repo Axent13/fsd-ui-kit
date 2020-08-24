@@ -1,0 +1,49 @@
+include ../subscription-text-field/subscription-text-field.pug
+
+mixin page-footer($arguments = {})
+  footer.page-footer
+    .page-footer__wrapper
+      .page-footer__logo-and-description
+        img.page-footer__logo(src=$arguments.logoSrc alt="TOXIN")
+        p.page-footer__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      nav.page-footer__navigation.page-footer__links-header Навигация
+        ul.page-footer__links
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") О нас
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Новости
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Служба поддержки
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Услуги
+      .page-footer__about-us.page-footer__links-header О нас
+        ul.page-footer__links
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") О сервисе
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Наша команда
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Вакансии
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Инвесторы
+      .page-footer__support.page-footer__links-header Служба поддержки
+        ul.page-footer__links
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Соглашения
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Сообщества
+          li.page-footer__list-item
+            a.page-footer__link(href="/mock-address/change-me") Связь с нами
+      .page-footer__subscription
+        .page-footer__subscription-header Подписка
+        .page-footer__subscription-description Получайте специальные предложения и новости сервиса
+        .page-footer__subscription-text-field
+          +subscription-text-field({placeholder: 'Email'})
+    .page-footer__copyright-bar-wrapper
+      .page-footer__copyright-bar
+        p.page-footer__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
+        ul.page-footer__social-links
+          each $social in $arguments.socials
+            li
+              a.page-footer__social-link(href=$social.url)
+                img.page-footer__social-image(src=$social.imageSrc alt=$social.alt target="_blank" rel="noopener noreferrer")
