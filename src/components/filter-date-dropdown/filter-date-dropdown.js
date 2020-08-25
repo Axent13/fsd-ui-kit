@@ -1,13 +1,21 @@
-// import 'air-datepicker';
-// import 'air-datepicker/dist/css/datepicker.css';
+import 'air-datepicker';
+import 'air-datepicker/dist/css/datepicker.css';
 
-// const $dateDropdown = $('.js-filter-date-dropdown');
-// const $airDatepicker = $('.js-filter-date-dropdown__air-datepicker');
+class FilterDateDropdown {
+  constructor($rootElement) {
+    this.$rootElement = $rootElement;
+    this.$airDatepicker = this.$rootElement.find('.js-filter-date-dropdown__air-datepicker');
+    this.$arrow = this.$rootElement.find('.js-date-dropdown__arrow');
+    this.$airDatepicker.datepicker({
+      range: true,
+      multipleDatesSeparator: ' - ',
+      dateFormat: 'd M',
+    });
+  }
+}
 
-// $airDatepicker.datepicker({
-//   range: true,
-//   multipleDatesSeparator: ' - ',
-//   dateFormat: 'd M',
-// });
+const $rootElements = $('.js-filter-date-dropdown');
 
-// $dateDropdown.innerHTML = $airDatepicker.data('datepicker').currentDate;
+$rootElements.each((index, node) => {
+  new FilterDateDropdown($(node));
+});
