@@ -1,15 +1,14 @@
 include ../like-button/like-button.pug
 
-mixin feedback($arguments)
+mixin feedback($arguments = {})
   ul.feedback.js-feedback
-    each $element in $arguments
       li.feedback__element
         .feedback__client-info
-          .feedback__client-avatar.js-feedback__client-avatar(data-avatar=$element.clientAvatar)
+          .feedback__client-avatar
           .feedback__name-and-time
-            .feedback__name= $element.name
-            .feedback__time= $element.time
+            .feedback__name= $arguments.name
+            .feedback__time= $arguments.time
         .feedback__feedback-info
           .feedback__like-button
-            +like-button($element.likeButtonArguments)
-          .feedback__feedback-text= $element.feedbackText
+            +like-button($arguments.likeButtonArguments)
+          .feedback__feedback-text= $arguments.feedbackText

@@ -11,22 +11,24 @@
     height: 12rem;
     width: 12rem;
     @media only screen and (min-width: 768px) {
-      margin: 2.9rem 0 0 5.5rem;
+      margin: 2.9rem 0 0 2.8rem;
       height: 4.5rem;
     }
   }
   &__main-section {
     margin: 2rem auto 0;
     @media only screen and (min-width: 768px) {
-      width: 89.1%;
-      margin: 6.15rem auto 0;
+      margin: 6.15rem 0 0 13.3rem;
     }
   }
   &__first-section {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 60rem;
+  }
+  &__first-section-second-column {
+    margin-left: 12rem;
+  }
+  &__first-section-third-column {
+    margin-left: 12.2rem;
   }
   &__text-field-section {
     width: 30.2rem;
@@ -152,65 +154,71 @@
     width: 30rem;
     height: 4.1rem;
   }
-  &__pagination-section {
-    margin-top: 4rem;
-    width: 22.7rem;
+  &__pagination-container {
+    width: 24rem;
+    margin-top: 3.9rem;
   }
   &__pagination {
-    margin-top: 1.3rem;
+    margin-top: 1.5rem;
   }
   &__second-section {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 25.2rem;
-    margin-top: 9rem;
+    margin-top: 9.5rem;
   }
-  &__first-column-second-section {
+  &__second-section-first-item-quantity-dropdown-container {
     width: 25rem;
   }
-  &__first-item-quantity-dropdown-in-second-section {
-    margin-top: 0.5rem;
+  &__second-section-first-item-quantity-dropdown {
+    margin-top: 0.4rem;
   }
-  &__second-element-quantity-dropdown-in-second-section {
+  &__second-section-second-item-quantity-dropdown-container {
     margin-top: 2rem;
   }
-  &__second-item-quantity-dropdown-in-second-section {
-    height: 15.3rem;
+  &__second-section-second-item-quantity-dropdown {
+    height: 15.3rem; /* Убрать, когда сделаю открытый по-дефолту дропдаун*/
     margin-top: 0.35rem;
   }
-  &__second-column-second-section {
+  &__second-section-second-column {
+    margin-left: 17rem;
+  }
+  &__second-section-third-item-quantity-dropdown-container {
     width: 30.2rem;
   }
-  &__third-item-quantity-dropdown-in-second-section {
+  &__second-section-third-item-quantity-dropdown {
     margin-top: 0.35rem;
-    height: 15.3rem;
+    height: 15.3rem; /* Убрать, когда сделаю открытый по-дефолту дропдаун*/
   }
-  &__third-column-second-section {
+  &__second-section-third-column {
+    margin-left: 6.8rem;
+  }
+  &__second-section-fourth-item-quantity-dropdown-container {
     width: 30.2rem;
   }
-  &__fourth-item-quantity-dropdown-in-second-section {
+  &__second-section-fourth-item-quantity-dropdown {
     margin-top: 0.35rem;
-    height: 15.3rem;
+    height: 15.3rem; /* Убрать, когда сделаю открытый по-дефолту дропдаун*/
   }
   &__third-section {
     display: flex;
     flex-direction: row;
-    flex-wrap: no-wrap;
     height: 26rem;
-    margin-top: 5rem;
+    margin-top: 4.65rem;
   }
-  &__third-section-first-column {
-    width: 25rem;
+  &__third-section-first-expandable-checkbox-list {
+    width: 24.1rem;
   }
-  &__second-expandable-checkbox-list {
-    margin-top: 4.6rem;
+  &__third-section-second-expandable-checkbox-list {
+    width: 24.1rem;
+    margin-top: 3.7rem;
   }
   &__third-section-second-column {
-    width: 25rem;
-    margin-left: 17.2rem;
+    margin-left: 17.9rem;
   }
-  &__rich-checkbox-buttons-container {
+  &__third-section-rich-checkbox-buttons-container{
+    width: 25rem;
+    margin-top: 0.45em;
+  }
+  &__third-section-rich-checkbox-buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -219,20 +227,25 @@
   }
   &__third-section-third-column {
     margin-left: 12rem;
-    width: 26rem;
   }
-  &__bullet-list-container {
+  &__third-section-bullet-list-container {
+    width: 26rem;
+    margin-top: 0.45em;
+  }
+  &__bullet-list {
     margin-top: 0.7rem;
   }
   &__fourth-section {
     display: flex;
-    margin-top: 8rem;
+    margin-top: 8.3rem;
   }
-  &__fourth-section-first-column {
+  &__fourth-section-icon-text-list-container {
     width: 27rem;
   }
   &__fourth-section-second-column {
-    width: 66rem;
     margin-left: 15.1rem;
+  }
+  &__fourth-section-feedback-container {
+    width: 66rem;
   }
 }

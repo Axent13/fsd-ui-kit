@@ -5,6 +5,7 @@
   user-select: none;
   &__spoiler {
     display: flex;
+    align-items: center;
   }
   &__name {
     font-family: 'Montserrat', 'Open Sans', sans-serif;
@@ -17,14 +18,15 @@
     margin-left: auto;
     font-family: 'Material Icons';
     font-weight: 400;
-    font-size: map-get($font-sizes, 'h3');
+    font-size: 2.3rem;
     color: map-get($colors, 'dark-shade-100');
+    transition: transform 0.5s ease;
     &_opened {
       transform: rotate(180deg);
     }
   }
   &__checkboxes {
-    padding-top: 0.6rem;
+    padding-top: 0.3rem;
     &_hidden {
       display: none;
     }

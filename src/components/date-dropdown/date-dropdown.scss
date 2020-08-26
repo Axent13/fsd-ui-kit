@@ -20,7 +20,7 @@
     right: 1rem;
     font-family: 'Material Icons';
     font-size: 2rem;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
     opacity: 0.75;
     &_expanded {
       transform: rotate(180deg);

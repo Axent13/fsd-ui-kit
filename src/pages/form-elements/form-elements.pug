@@ -40,109 +40,118 @@ html(lang="en")
         +logo()
       section.form-elements__main-section
         section.form-elements__first-section
-          section.form-elements__text-field-section
-            +component-description({name: 'Text field', state: 'Default'})
-            +text-field({type: 'text', placeholder: 'Email'})
-          section.form-elements__text-field-hovered-section
-            +component-description({name: 'Text field', state: 'Hover / Focus'})
-            +text-field({type: 'text'})
-          section.form-elements__item-quantity-dropdown-section
-            +component-description({name: 'Dropdown', state: 'Default'})
-            .form-elements__item-quantity-dropdown
-              +item-quantity-dropdown({placeholder: 'Удобства номера'})
-          section.form-elements__masked-text-field-section
-            +component-description({name: 'Masked text field', state: 'Default'})
-            +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
-          section.form-elements__date-dropdown-section
-              .form-elements__date-dropdown-short-container
-                +component-description({name: 'Date dropdown'})
-                .form-elements__date-dropdown
-                +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
-              .form-elements__date-dropdown-short-container
-                +component-description({name: 'Date dropdown'})
-                .form-elements__date-dropdown
-                +date-dropdown({placeholder: '19.08.2019'})
-          section.form-elements__filter-date-dropdown-section
-            +component-description({name: 'Filter date dropdown'})
-            .form-elements__filter-date-dropdown
-              +filter-date-dropdown({placeholder: '19 авг - 23 авг'})
-          section.form-elements__subscription-text-field-section
-            +component-description({name: 'Subscription text field'})
-            .form-elements__subcription-text-field
-              +subscription-text-field({placeholder: ''})
-          section.form-elements__checkbox-buttons-section
-            +component-description({name: 'Checkbox buttons'})
-            .form-elements__checkbox-buttons
-              .form-elements__checkbox-button
-                +checkbox-button({id: 'maySmoke', name: 'maySmoke', value: 'true', text: 'Можно курить'})
-              .form-elements__checkbox-button
-                +checkbox-button({id: 'mayPets',name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
-              .form-elements__checkbox-button
-                +checkbox-button({id: 'mayGuests',name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
-          section.form-elements__radio-buttons-section
-            +component-description({name: 'Radio buttons'})
-            .form-elements__radio-buttons
-              +radio-button({id: 'male', name: 'gender', value: 'male', text: 'Мужчина', checked: 'checked'})
-              +radio-button({id: 'female', name: 'gender', value: 'female', text: 'Женщина'})
-          section.form-elements__toggle-buttons-section
-            +component-description({name: 'Toggle'})
-            .form-elements__toggle-buttons
-              .form-elements__toggle-button
-                +toggle-button({id: 'getSpecialChecked', name: 'special', value: 'true', text: 'Получать спецпредложения', checked: 'checked'})
-              .form-elements__toggle-button
-                +toggle-button({id: 'getSpecial', name: 'special', value: 'true', text: 'Получать спецпредложения'})
-          section.form-elements__like-buttons-section
-            +component-description({name: 'Like button'})
-            .form-elements__like-buttons
-              +like-button({likesCount: '2', isLiked: false})
-              +like-button({likesCount: '12', isLiked: true})
-          section.form-elements__rate-buttons-section
-            +component-description({name: 'Rate button'})
-            .form-elements__rate-buttons
-              +rate-button({id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'], name: 'ratingFirst', initRating: 4})
-              +rate-button({id: ['1stStarSecond', '2ndStarSecond', '3rdStarSecond', '4thStarSecond', '5thStarSecond'], name: 'ratingSecond', initRating: 5})
-          section.form-elements__range-slider-section
-            .form-elements__range-slider Здесь будет Range Slider...
-          section.form-elements__buttons-section
-            +component-description({name: 'Buttons'})
-            .form-elements__filled-buttons
-              .form-elements__button
-                +button({text: 'Click me', isFilled: true})
-              .form-elements__button
-                +button({text: 'Click me', isFilled: true})
-            .form-elements__bordered-buttons
-              .form-elements__button
-                +button({text: 'Click me', isBordered: true})
-              .form-elements__button
-                +button({text: 'Click me', isBordered: true})
-            .form-elements__colored-text-buttons
-              .form-elements__colored-text-button
-                +button({text: 'Click me', isTextColored: true})
-              .form-elements__colored-text-button
-                +button({text: 'Click me', isTextColored: true})
-            .form-elements__button-with-arrow
-              +button({text: 'Перейти к оплате', hasArrow: true})
-        section.form-elements__second-section
-          .form-elements__first-column-second-section
-            .form-elements__first-element-quantity-dropdown-in-second-section
+          section.form-elements__first-section-first-column
+            section.form-elements__text-field-section
+              +component-description({name: 'Text field', state: 'Default'})
+              +text-field({type: 'text', placeholder: 'Email'})
+            section.form-elements__text-field-hovered-section
+              +component-description({name: 'Text field', state: 'Hover / Focus'})
+              +text-field({type: 'text', placeholder: 'This is pretty awesome'})
+            section.form-elements__item-quantity-dropdown-section
               +component-description({name: 'Dropdown', state: 'Default'})
-              .form-elements__first-item-quantity-dropdown-in-second-section
+              .form-elements__item-quantity-dropdown
+                +item-quantity-dropdown({placeholder: 'Сколько гостей'})
+            section.form-elements__masked-text-field-section
+              +component-description({name: 'Masked text field', state: 'Default'})
+              +masked-text-field({placeholder: 'ДД.ММ.ГГГГ'})
+            section.form-elements__date-dropdown-section
+                .form-elements__date-dropdown-short-container
+                  +component-description({name: 'Date dropdown'})
+                  .form-elements__date-dropdown
+                  +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+                .form-elements__date-dropdown-short-container
+                  +component-description({name: 'Date dropdown'})
+                  .form-elements__date-dropdown
+                  +date-dropdown({placeholder: '19.08.2019'})
+            section.form-elements__filter-date-dropdown-section
+              +component-description({name: 'Filter date dropdown'})
+              .form-elements__filter-date-dropdown
+                +filter-date-dropdown({placeholder: '19 авг - 23 авг'})
+            section.form-elements__subscription-text-field-section
+              +component-description({name: 'Subscription text field'})
+              .form-elements__subcription-text-field
+                +subscription-text-field({placeholder: ''})
+          section.form-elements__first-section-second-column
+            section.form-elements__checkbox-buttons-section
+              +component-description({name: 'Checkbox buttons'})
+              .form-elements__checkbox-buttons
+                .form-elements__checkbox-button
+                  +checkbox-button({id: 'maySmoke', name: 'maySmoke', value: 'true', text: 'Можно курить'})
+                .form-elements__checkbox-button
+                  +checkbox-button({id: 'mayPets',name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
+                .form-elements__checkbox-button
+                  +checkbox-button({id: 'mayGuests',name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+            section.form-elements__radio-buttons-section
+              +component-description({name: 'Radio buttons'})
+              .form-elements__radio-buttons
+                +radio-button({id: 'male', name: 'gender', value: 'male', text: 'Мужчина', checked: 'checked'})
+                +radio-button({id: 'female', name: 'gender', value: 'female', text: 'Женщина'})
+            section.form-elements__toggle-buttons-section
+              +component-description({name: 'Toggle'})
+              .form-elements__toggle-buttons
+                .form-elements__toggle-button
+                  +toggle-button({id: 'getSpecialChecked', name: 'special', value: 'true', text: 'Получать спецпредложения', checked: 'checked'})
+                .form-elements__toggle-button
+                  +toggle-button({id: 'getSpecial', name: 'special', value: 'true', text: 'Получать спецпредложения'})
+            section.form-elements__like-buttons-section
+              +component-description({name: 'Like button'})
+              .form-elements__like-buttons
+                +like-button({likesCount: '2', isLiked: false})
+                +like-button({likesCount: '12', isLiked: true})
+            section.form-elements__rate-buttons-section
+              +component-description({name: 'Rate button'})
+              .form-elements__rate-buttons
+                +rate-button({id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'], name: 'ratingFirst', initRating: 4})
+                +rate-button({id: ['1stStarSecond', '2ndStarSecond', '3rdStarSecond', '4thStarSecond', '5thStarSecond'], name: 'ratingSecond', initRating: 5})
+          section.form-elements__first-section-third-column
+            section.form-elements__range-slider-section
+              .form-elements__range-slider Здесь будет Range Slider...
+            section.form-elements__buttons-section
+              +component-description({name: 'Buttons'})
+              .form-elements__filled-buttons
+                .form-elements__button
+                  +button({text: 'Click me', isFilled: true})
+                .form-elements__button
+                  +button({text: 'Click me', isFilled: true})
+              .form-elements__bordered-buttons
+                .form-elements__button
+                  +button({text: 'Click me', isBordered: true})
+                .form-elements__button
+                  +button({text: 'Click me', isBordered: true})
+              .form-elements__colored-text-buttons
+                .form-elements__colored-text-button
+                  +button({text: 'Click me', isTextColored: true})
+                .form-elements__colored-text-button
+                  +button({text: 'Click me', isTextColored: true})
+              .form-elements__button-with-arrow
+                +button({text: 'Перейти к оплате', hasArrow: true})
+            .form-elements__pagination-container
+              +component-description({name: 'Pagination'})
+              .form-elements__pagination
+                +pagination()
+        section.form-elements__second-section
+          .form-elements__second-section-first-column
+            .form-elements__second-section-first-item-quantity-dropdown-container
+                +component-description({name: 'Dropdown', state: 'Default'})
+                .form-elements__second-section-first-item-quantity-dropdown
+                  +item-quantity-dropdown({placeholder: '2 спальни, 2 кровати'})
+            .form-elements__second-section-second-item-quantity-dropdown-container
+              +component-description({name: 'Dropdown', state: 'Expanded'})
+              .form-elements__second-section-second-item-quantity-dropdown
                 +item-quantity-dropdown({placeholder: '2 спальни, 2 кровати'})
-            .form-elements__second-element-quantity-dropdown-in-second-section
-            +component-description({name: 'Dropdown', state: 'Expanded'})
-            .form-elements__second-item-quantity-dropdown-in-second-section
-              +item-quantity-dropdown({placeholder: '2 спальни, 2 кровати'})
-          .form-elements__second-column-second-section
-            +component-description({name: 'Dropdown'})
-            .form-elements__third-item-quantity-dropdown-in-second-section
-              +item-quantity-dropdown({placeholder: 'Сколько гостей'})
-          .form-elements__third-column-second-section
-            +component-description({name: 'Dropdown'})
-            .form-elements__fourth-item-quantity-dropdown-in-second-section
-              +item-quantity-dropdown({placeholder: '3 гостя'})
+          .form-elements__second-section-second-column
+            .form-elements__second-section-third-item-quantity-dropdown-container
+              +component-description({name: 'Dropdown'})
+              .form-elements__second-section-third-item-quantity-dropdown
+                +item-quantity-dropdown({placeholder: 'Сколько гостей'})
+          .form-elements__second-section-third-column
+            .form-elements__second-section-fourth-item-quantity-dropdown-container
+              +component-description({name: 'Dropdown'})
+              .form-elements__second-section-fourth-item-quantity-dropdown
+                +item-quantity-dropdown({placeholder: '3 гостя'})
         section.form-elements__third-section
           .form-elements__third-section-first-column
-            .form-elements__first-expandable-checkbox-list
+            .form-elements__third-section-first-expandable-checkbox-list
               +expandable-checkbox-list({ name: 'Expandable checkbox list', isHidden: true, checkboxes: [
                 {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
                 {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
@@ -150,7 +159,7 @@ html(lang="en")
                 {id: 'infantBed', name: 'infantBed', value: 'true', text: 'Кроватка', checked: 'checked'},
                 {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
                 {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
-            .form-elements__second-expandable-checkbox-list
+            .form-elements__third-section-second-expandable-checkbox-list
               +expandable-checkbox-list({ name: 'Expandable checkbox list', isHidden: false, checkboxes: [
                 {id: 'breakfast2', name: 'breakfast', value: 'true', text: 'Завтрак'},
                 {id: 'writingTable2', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
@@ -159,18 +168,22 @@ html(lang="en")
                 {id: 'TV2', name: 'TV', value: 'true', text: 'Телевизор'},
                 {id: 'shampoo2', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
           .form-elements__third-section-second-column
-            +component-description({name: 'Rich checkbox buttons'})
-            .form-elements__rich-checkbox-buttons-container
-              +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
-              +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+            .form-elements__third-section-rich-checkbox-buttons-container
+              +component-description({name: 'Rich checkbox buttons'})
+              .form-elements__third-section-rich-checkbox-buttons
+                +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: 'Ширина коридоров в номере не менее 91 см'})
+                +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит специалист и проводит до номера.'})
           .form-elements__third-section-third-column
-            +component-description({name: 'Bullet list'})
-            .form-elements__bullet-list-container
-              +bullet-list([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'}, {text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
+            .form-elements__third-section-bullet-list-container
+              +component-description({name: 'Bullet list'})
+              .form-elements__bullet-list
+                +bullet-list([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'}, {text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
         section.form-elements__fourth-section
           .form-elements__fourth-section-first-column
-            +icon-text-list([{iconName: 'insert_emoticon', name: 'Комфорт', description: 'Шумопоглощающие стены', hasSeparator: true},
-              {iconName: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален', hasSeparator: true}])
+            .form-elements__fourth-section-icon-text-list-container
+              +icon-text-list([{iconName: 'insert_emoticon', name: 'Комфорт', description: 'Шумопоглощающие стены', hasSeparator: true},
+                {iconName: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален', hasSeparator: true}])
           .form-elements__fourth-section-second-column
-            +feedback([{clientAvatar: '/avatars/image.png', name: 'Мурад Сарафанов', time: '5 дней назад', likeButtonArguments: {likesCount: '12', isLiked: true}, feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'},
-{iconName: '^', name: 'Удобство', description: 'Окно в каждой из спален', likeButtonArguments: {likesCount: '2', isLiked: false}, feedbackText: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'}])
+            .form-elements__fourth-section-feedback-container
+              +feedback({name: 'Мурад Сарафанов', time: '5 дней назад', likeButtonArguments: {likesCount: '12', isLiked: true},
+               feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})

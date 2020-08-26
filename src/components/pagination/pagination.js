@@ -3,21 +3,24 @@ const optionsDataFromSomewhere = {
   totalPages: 15,
   paginationLengthLeft: 2,
   paginationLengthRight: 1,
+  description: '1 – 12 из 100+ вариантов аренды',
 };
 
 class Pagination {
   constructor($rootElement, options) {
     this.$rootElement = $rootElement;
+    this.$buttonsContaner = this.$rootElement.find('.js-pagination__buttons');
     this.currentPage = options.currentPage;
     this.totalPages = options.totalPages;
     this.paginationLengthLeft = options.paginationLengthLeft;
     this.paginationLengthRight = options.paginationLengthRight;
-    this._drawPagination();
+    this._addPagination();
+    this._addDescription();
   }
 
-  _drawPagination() {
+  _addPagination() {
     let pageIndex = this.currentPage;
-    const $paginationButtonsContainer = this.$rootElement;
+    const $paginationButtonsContainer = this.$buttonsContaner;
 
     // Добавлем первую кнопку
     const $newFirstButton = document.createElement('button');
@@ -27,7 +30,7 @@ class Pagination {
       pageIndex += 1;
     } else {
       $newFirstButton.classList.add('pagination__arrow-button');
-      $newFirstButton.innerText = '<-';
+      $newFirstButton.innerText = 'arrow_back';
     }
     $paginationButtonsContainer.append($newFirstButton);
 
@@ -82,9 +85,17 @@ class Pagination {
 
     // Добавляем стрелку справа, если эта страница не последняя
     if (this.currentPage < this.totalPages) {
-      const $newLastButton = $('<button class="pagination__arrow-button">-></button>');
+      const $newLastButton = $('<button class="pagination__arrow-button">arrow_forward</button>');
       $paginationButtonsContainer.append($newLastButton);
     }
+  }
+
+  _addDescription() {
+    const descriptionText = optionsDataFromSomewhere.description;
+    const $newDescription = document.createElement('p');
+    $newDescription.classList.add('pagination__text');
+    $newDescription.innerText = descriptionText;
+    this.$rootElement.append($newDescription);
   }
 }
 
