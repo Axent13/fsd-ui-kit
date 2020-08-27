@@ -24,7 +24,7 @@
       }
     }
     &_bordered {
-      border: 2px solid map-get($colors, 'purple');
+      border: 0.14rem solid map-get($colors, 'purple');
       border-radius: 3rem;
       color: map-get($colors, 'purple');
       &:hover {

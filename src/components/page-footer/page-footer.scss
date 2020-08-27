@@ -2,10 +2,10 @@
 
 .page-footer {
   background: white;
-  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  box-shadow: 0 0.07rem 0 rgba(31, 32, 65, 0.1);
   &_creative {
     background: white;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    box-shadow: 0 0.71rem 1.42rem rgba(31, 32, 65, 0.05);
   }
   &__wrapper {
     display: flex;
@@ -15,7 +15,7 @@
     margin: 0 auto;
     padding-top: 9.5rem;
     padding-bottom: 9.6rem;
-    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    box-shadow: 0 0.07rem 0 rgba(31, 32, 65, 0.1);
     &_creative {
       display: flex;
       flex-direction: column;
@@ -118,9 +118,9 @@
   &__copyright-bar-wrapper {
     max-width: 109.5rem;
     margin: 0 auto;
-    margin-top: 1px;
+    margin-top: 0.07rem;
     padding: 1.8rem 0 2rem;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+    box-shadow: 0 0.71rem 1.42rem rgba(31, 32, 65, 0.05)
   }
   &__copyright-bar {
     display: flex;

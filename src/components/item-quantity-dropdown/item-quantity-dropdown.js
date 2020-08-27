@@ -80,6 +80,7 @@ class ItemQuantityDropdown {
         if (newCount > 0) {
           $newDecrement.removeClass('item-quantity-dropdown__decrement_disabled');
         }
+
       }
       $newIncrement.on('click', handleIncrementClick);
 
@@ -105,6 +106,11 @@ class ItemQuantityDropdown {
     $clearAndApplyButtonsContainer.append($clearButton);
     $clearAndApplyButtonsContainer.append($applyButton);
     this.$options.append($clearAndApplyButtonsContainer);
+  }
+
+  _updateValue() {
+    /* Нужно перебрать в цикле все созданные options'ы и записать значения из options объекта optinsDatFromSomewhere*/
+    // this.$select.innerHTML = 
   }
 }
 
