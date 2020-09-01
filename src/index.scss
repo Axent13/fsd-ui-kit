@@ -24,3 +24,70 @@ html {
     font-size: 21.2px;
   }
 }
+
+.main-page {
+  position: relative;
+  height: 100vh;
+  border: 1rem solid map-get($colors, 'purple');
+  &__link {
+    display: block;
+    flex-grow: 1;
+    font-family: 'Quicksand', 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: map-get($colors, 'purple');
+  }
+  &__link-container {
+    width: 30%;
+    border-right: 1rem solid map-get($colors, 'purple');
+    border-bottom: 1rem solid map-get($colors, 'purple');
+    &:hover {
+      border-right: none;
+    }
+    &:hover+.main-page__preview-container {
+      display: block;
+    }
+  }
+  &__preview-container {
+    display: none;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 30%;
+    top: 0;
+  }
+  &__preview-image {
+    width: inherit;
+    height: inherit;
+  }
+  &__colors-and-type-image {
+    background: url(./previews/colors-and-type.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  &__form-elements-image {
+    background: url(./previews/form-elements.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  
+  &__cards-image {
+    background: url(./previews/cards.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  
+  &__headers-and-footers-image {
+    background: url(./previews/headers-and-footers.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+}
