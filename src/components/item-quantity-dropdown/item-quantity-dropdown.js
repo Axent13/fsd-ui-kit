@@ -1,3 +1,5 @@
+import Counter from './counter';
+
 const optionsDataFromSomewhere = {
   placeholder: 'Удобства номера',
   hasClearAndApplyButtons: true,
@@ -32,8 +34,6 @@ const optionsDataFromSomewhere = {
 //   return form5;
 // }
 
-// const $rootElementFirst = $('.js-item-quantity-dropdown-first');
-// const $rootElementSecond = $('.js-item-quantity-dropdown-second');
 
 class ItemQuantityDropdown {
   constructor($rootElement, options = {}) {
@@ -63,37 +63,19 @@ class ItemQuantityDropdown {
       const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
       const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
       const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
-      const $newDecrement = $('<button class="item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled" type="button">-</button>');
-      const $newCounter = $('<div class="item-quantity-dropdown__counter">0</div>');
-      const $newIncrement = $('<button class="item-quantity-dropdown__increment" type="button">+</button>');
+      const $newCounter = new Counter({
+        initialCount: 0,
+        decrementClasses: 'item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled',
+        counterClasses: 'item-quantity-dropdown__counter',
+        incrementClasses: 'item-quantity-dropdown__increment',
+      });
 
-      $newCounterContainer.append($newDecrement);
-      $newCounterContainer.append($newCounter);
-      $newCounterContainer.append($newIncrement);
+      $newCounterContainer.append($newCounter.getDecrementElement());
+      $newCounterContainer.append($newCounter.getCounterElement());
+      $newCounterContainer.append($newCounter.getIncrementElement());
       $newOption.append($newOptionName);
       $newOption.append($newCounterContainer);
       this.$options.append($newOption);
-
-      function handleIncrementClick() {
-        const newCount = parseInt($newCounter.text(), 10) + 1;
-        $newCounter.text(newCount);
-        if (newCount > 0) {
-          $newDecrement.removeClass('item-quantity-dropdown__decrement_disabled');
-        }
-      }
-      $newIncrement.on('click', handleIncrementClick);
-
-      function handleDecrementClick() {
-        const newCount = parseInt($newCounter.text(), 10) - 1;
-        if (newCount >= 0) {
-          $newCounter.text(newCount);
-        }
-        if (newCount === 0) {
-          $newDecrement.addClass('item-quantity-dropdown__decrement_disabled');
-        }
-      }
-
-      $newDecrement.on('click', handleDecrementClick);
     });
   }
 
