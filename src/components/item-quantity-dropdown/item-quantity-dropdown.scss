@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
 .item-quantity-dropdown {
+  position: relative;
   &__select {
     position: relative;
     height: 4.1rem;
