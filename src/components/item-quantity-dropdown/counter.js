@@ -1,8 +1,8 @@
 class Counter {
   constructor(options = {}) {
-    this.count = options.initialCount || 0;
+    this.value = options.initialValue || 0;
     this.$decrement = $(`<button class="${options.decrementClasses}" type="button">-</button>`);
-    this.$counter = $(`<div class="${options.counterClasses}">${this.count}</div>`);
+    this.$counter = $(`<div class="${options.counterClasses}">${this.value}</div>`);
     this.$increment = $(`<button class="${options.incrementClasses}" type="button">+</button>`);
     this._initEventListeners();
   }
@@ -20,24 +20,30 @@ class Counter {
   }
 
   getCounterValue() {
-    return this.count;
+    return this.value;
+  }
+
+  setNewCounterValue(newValue) {
+    this.value = newValue;
+    this.$counter.text(0);
+    this.$decrement.addClass('item-quantity-dropdown__decrement_disabled');
   }
 
   _handleDecrementClick() {
-    this.count = parseInt($(this.$counter).text(), 10);
-    if (this.count > 0) {
-      this.count -= 1;
-      $(this.$counter).text(this.count);
+    this.value = parseInt($(this.$counter).text(), 10);
+    if (this.value > 0) {
+      this.value -= 1;
+      $(this.$counter).text(this.value);
     }
-    if (this.count === 0) {
+    if (this.value === 0) {
       this.$decrement.addClass('item-quantity-dropdown__decrement_disabled');
     }
   }
 
   _handleIncrementClick() {
-    this.count = parseInt($(this.$counter).text(), 10) + 1;
-    $(this.$counter).text(this.count);
-    if (this.count > 0) {
+    this.value = parseInt($(this.$counter).text(), 10) + 1;
+    $(this.$counter).text(this.value);
+    if (this.value > 0) {
       this.$decrement.removeClass('item-quantity-dropdown__decrement_disabled');
     }
   }

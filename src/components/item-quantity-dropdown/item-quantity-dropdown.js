@@ -3,23 +3,17 @@ import Counter from './counter';
 const optionsDataFromSomewhere = [
   {
     placeholder: 'Сколько гостей',
-    hasClearAndApplyButtons: true,
+    hasClearAndApplyButtons: false,
     maxTextLength: 40,
     options: [
       {
-        name: 'взрослые',
-        form1: 'взрослый',
-        form2: 'взрослых',
-        form5: 'взрослых',
+        optionsNames: ['взрослые', 'дети'],
+        form1: 'гость',
+        form2: 'гостя',
+        form5: 'гостей',
       },
       {
-        name: 'дети',
-        form1: 'ребенок',
-        form2: 'ребенка',
-        form5: 'детей',
-      },
-      {
-        name: 'младенцы',
+        optionsNames: ['младенцы'],
         form1: 'младенец',
         form2: 'младенца',
         form5: 'младенцев',
@@ -28,23 +22,23 @@ const optionsDataFromSomewhere = [
   },
   {
     placeholder: 'Удобства номера',
-    hasClearAndApplyButtons: true,
+    hasClearAndApplyButtons: false,
     maxTextLength: 25,
     options: [
       {
-        name: 'спальни',
+        optionsNames: ['спальни'],
         form1: 'спальня',
         form2: 'спальни',
         form5: 'спален',
       },
       {
-        name: 'кровати',
+        optionsNames: ['кровати'],
         form1: 'кровать',
         form2: 'кровати',
         form5: 'кроватей',
       },
       {
-        name: 'ванные комнаты',
+        optionsNames: ['ванные комнаты'],
         form1: 'ванная комната',
         form2: 'ванных комнаты',
         form5: 'ванных комнат',
@@ -53,23 +47,23 @@ const optionsDataFromSomewhere = [
   },
   {
     placeholder: 'Удобства номера',
-    hasClearAndApplyButtons: true,
+    hasClearAndApplyButtons: false,
     maxTextLength: 25,
     options: [
       {
-        name: 'спальни',
+        optionsNames: ['спальни'],
         form1: 'спальня',
         form2: 'спальни',
         form5: 'спален',
       },
       {
-        name: 'кровати',
+        optionsNames: ['кровати'],
         form1: 'кровать',
         form2: 'кровати',
         form5: 'кроватей',
       },
       {
-        name: 'ванные комнаты',
+        optionsNames: ['ванные комнаты'],
         form1: 'ванная комната',
         form2: 'ванных комнаты',
         form5: 'ванных комнат',
@@ -82,19 +76,13 @@ const optionsDataFromSomewhere = [
     maxTextLength: 40,
     options: [
       {
-        name: 'взрослые',
-        form1: 'взрослый',
-        form2: 'взрослых',
-        form5: 'взрослых',
+        optionsNames: ['взрослые', 'дети'],
+        form1: 'гость',
+        form2: 'гостя',
+        form5: 'гостей',
       },
       {
-        name: 'дети',
-        form1: 'ребенок',
-        form2: 'ребенка',
-        form5: 'детей',
-      },
-      {
-        name: 'младенцы',
+        optionsNames: ['младенцы'],
         form1: 'младенец',
         form2: 'младенца',
         form5: 'младенцев',
@@ -107,19 +95,13 @@ const optionsDataFromSomewhere = [
     maxTextLength: 40,
     options: [
       {
-        name: 'взрослые',
-        form1: 'взрослый',
-        form2: 'взрослых',
-        form5: 'взрослых',
+        optionsNames: ['взрослые', 'дети'],
+        form1: 'гость',
+        form2: 'гостя',
+        form5: 'гостей',
       },
       {
-        name: 'дети',
-        form1: 'ребенок',
-        form2: 'ребенка',
-        form5: 'детей',
-      },
-      {
-        name: 'младенцы',
+        optionsNames: ['младенцы'],
         form1: 'младенец',
         form2: 'младенца',
         form5: 'младенцев',
@@ -139,44 +121,48 @@ class ItemQuantityDropdown {
     this.$options = this.$rootElement.find('.js-item-quantity-dropdown__options');
 
     this._createOptions(options);
-    this.$clearAndApplyButtonsContainer = $('<div class="item-quantity-dropdown__clear-and-apply-buttons-container"></div>');
-    this.$clearButton = $('<div class="item-quantity-dropdown__clear item-quantity-dropdown__clear_disabled">Очистить</div>');
-    this.$applyButton = $('<div class="item-quantity-dropdown__apply">Применить</div>');
-    this.$clearAndApplyButtonsContainer.append(this.$clearButton);
-    this.$clearAndApplyButtonsContainer.append(this.$applyButton);
-    this.$options.append(this.$clearAndApplyButtonsContainer);
+    if (this.options.hasClearAndApplyButtons) {
+      this._createClearAndApplyButtons();
+    }
 
-    this._handleSelectClick = this._handleSelectClick.bind(this);
-    this._handleApllyButtonClick = this._handleApllyButtonClick.bind(this);
+    this._handleSelectAndArrowClick = this._handleSelectAndArrowClick.bind(this);
+    this._handleApplyButtonAndCountersClick = this._handleApplyButtonAndCountersClick.bind(this);
+    this._handleApplyButtonClick = this._handleApplyButtonClick.bind(this);
+    this._handleClearButtonClick = this._handleClearButtonClick.bind(this);
     this._initEventListeners = this._initEventListeners.bind(this);
     this._initEventListeners();
+    this._handleOutsideClick();
   }
 
-  _handleSelectClick() {
+  _handleSelectAndArrowClick() {
     this.$select.toggleClass('item-quantity-dropdown__select_expanded');
     this.$arrow.toggleClass('item-quantity-dropdown__arrow_expanded');
     this.$options.toggleClass('item-quantity-dropdown__options_expanded');
   }
 
-  _handleApllyButtonClick() {
-    const values = [];
+  _handleApplyButtonAndCountersClick() {
     let resultText = '';
-    this.counters.forEach((currentCounter) => {
-      values.push(currentCounter.getCounterValue());
-    });
+    let counterIndex = 0;
 
-    this.options.options.forEach((option, index) => {
-      if (values[index] !== 0) {
+    this.options.options.forEach((item) => {
+      let currentOptionValue = 0;
+      item.optionsNames.forEach(() => {
+        currentOptionValue += this.counters[counterIndex].getCounterValue();
+        counterIndex += 1;
+      });
+
+      if (currentOptionValue !== 0) {
         const optionName = ItemQuantityDropdown.pluralForm(
-          values[index],
-          option.form1,
-          option.form2,
-          option.form5,
+          currentOptionValue,
+          item.form1,
+          item.form2,
+          item.form5,
         );
 
-        resultText += `${values[index]}  ${optionName}, `;
+        resultText += `${currentOptionValue}  ${optionName}, `;
       }
     });
+
     // убираю лишние символы "пробела" и "запятой" после последнего элемента
     resultText = resultText.slice(0, -2);
     // обрезаю текст, при превышении максимальной длины текста
@@ -186,10 +172,55 @@ class ItemQuantityDropdown {
     }
     // но если везде был указан 0 - возвращаю placeholder
     if (resultText === '') {
-      resultText = this.options.placeholder;
+      $(this.$select).text(this.options.placeholder);
+      if (this.options.hasClearAndApplyButtons) {
+        $(this.$clearButton.addClass('item-quantity-dropdown__clear_disabled'));
+      }
+    } else {
+      $(this.$select).text(resultText);
+      if (this.options.hasClearAndApplyButtons) {
+        $(this.$clearButton.removeClass('item-quantity-dropdown__clear_disabled'));
+      }
+    }
+  }
+
+  _handleClearButtonClick() {
+    this.counters.forEach((currentCounter) => {
+      currentCounter.setNewCounterValue(0);
+      $(this.$select).text(this.options.placeholder);
+    });
+  }
+
+  _handleOutsideClick() {
+    $(document).mouseup((e) => {
+      const isThisSelectOrArrow = this.$select.is(e.target) || this.$arrow.is(e.target);
+      if (!isThisSelectOrArrow && this.$rootElement.has(e.target).length === 0) {
+        this.$select.removeClass('item-quantity-dropdown__select_expanded');
+        this.$arrow.removeClass('item-quantity-dropdown__arrow_expanded');
+        this.$options.removeClass('item-quantity-dropdown__options_expanded');
+      }
+    });
+  }
+
+  _handleApplyButtonClick() {
+    this.$select.removeClass('item-quantity-dropdown__select_expanded');
+    this.$arrow.removeClass('item-quantity-dropdown__arrow_expanded');
+    this.$options.removeClass('item-quantity-dropdown__options_expanded');
+  }
+
+  _initEventListeners() {
+    this.$select.on('click', this._handleSelectAndArrowClick);
+    this.$arrow.on('click', this._handleSelectAndArrowClick);
+    if (this.options.hasClearAndApplyButtons) {
+      this.$applyButton.on('click', this._handleApplyButtonAndCountersClick);
+      this.$applyButton.on('click', this._handleApplyButtonClick);
+      this.$clearButton.on('click', this._handleClearButtonClick);
     }
 
-    $(this.$select).text(resultText);
+    this.counters.forEach((currentCounter) => {
+      $(currentCounter.getIncrementElement()).on('click', this._handleApplyButtonAndCountersClick);
+      $(currentCounter.getDecrementElement()).on('click', this._handleApplyButtonAndCountersClick);
+    });
   }
 
   static pluralForm(qauntity, form1, form2, form5) {
@@ -201,31 +232,37 @@ class ItemQuantityDropdown {
     return form5;
   }
 
-  _initEventListeners() {
-    this.$select.on('click', this._handleSelectClick);
-    this.$applyButton.on('click', this._handleApllyButtonClick);
-  }
-
   _createOptions(optionsData) {
     optionsData.options.forEach((item) => {
-      const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
-      const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${item.name}</div>'`);
-      const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
-      const $newCounter = new Counter({
-        initialCount: 0,
-        decrementClasses: 'item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled',
-        counterClasses: 'item-quantity-dropdown__counter',
-        incrementClasses: 'item-quantity-dropdown__increment',
-      });
-      this.counters.push($newCounter);
+      item.optionsNames.forEach((option) => {
+        const $newOption = $('<div class="item-quantity-dropdown__option"></div>');
+        const $newOptionName = $(`<div class="item-quantity-dropdown__option-name">${option}</div>'`);
+        const $newCounterContainer = $('<div class="item-quantity-dropdown__counter-container"></div>');
+        const $newCounter = new Counter({
+          initialCount: 0,
+          decrementClasses: 'item-quantity-dropdown__decrement item-quantity-dropdown__decrement_disabled',
+          counterClasses: 'item-quantity-dropdown__counter',
+          incrementClasses: 'item-quantity-dropdown__increment',
+        });
+        this.counters.push($newCounter);
 
-      $newCounterContainer.append($newCounter.getDecrementElement());
-      $newCounterContainer.append($newCounter.getCounterElement());
-      $newCounterContainer.append($newCounter.getIncrementElement());
-      $newOption.append($newOptionName);
-      $newOption.append($newCounterContainer);
-      this.$options.append($newOption);
+        $newCounterContainer.append($newCounter.getDecrementElement());
+        $newCounterContainer.append($newCounter.getCounterElement());
+        $newCounterContainer.append($newCounter.getIncrementElement());
+        $newOption.append($newOptionName);
+        $newOption.append($newCounterContainer);
+        this.$options.append($newOption);
+      });
     });
+  }
+
+  _createClearAndApplyButtons() {
+    this.$clearAndApplyButtonsContainer = $('<div class="item-quantity-dropdown__clear-and-apply-buttons-container"></div>');
+    this.$clearButton = $('<div class="item-quantity-dropdown__clear item-quantity-dropdown__clear_disabled">Очистить</div>');
+    this.$applyButton = $('<div class="item-quantity-dropdown__apply">Применить</div>');
+    this.$clearAndApplyButtonsContainer.append(this.$clearButton);
+    this.$clearAndApplyButtonsContainer.append(this.$applyButton);
+    this.$options.append(this.$clearAndApplyButtonsContainer);
   }
 }
 
