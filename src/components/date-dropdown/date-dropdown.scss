@@ -22,6 +22,7 @@
     font-size: 2rem;
     transition: transform 0.5s ease;
     opacity: 0.75;
+    cursor: pointer;
     &_expanded {
       transform: rotate(180deg);
     }

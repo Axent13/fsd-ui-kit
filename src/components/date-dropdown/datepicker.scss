@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+
+.datepicker {
+  width: 30rem;
+}
+.datepicker--nav {
+  padding: 1.7rem;
+}
+.datepicker--nav-title,
+.datepicker--nav-title i {
+  font-family: 'Quicksand', 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: map-get($colors, 'dark-shade-100');
+}
+.datepicker--nav-action {
+  font-family: 'Material Icons';
+  font-size: 2rem;
+  color: map-get($colors, 'purple');
+}
+.datepicker--content {
+  padding: 1.8rem;
+}
+.datepicker--day-name {
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: none;
+  color: map-get($colors, 'purple');
+}
+.datepicker--cells {
+  margin-top: 1rem;
+}
+.datepicker--cell {
+  height: 3.8rem;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: map-get($colors, 'dark-shade-50');
+  border-radius: 50%;
+}
+.datepicker--cell.-range-from-,
+.datepicker--cell.-range-to- {
+  border-radius: 50%;
+}
+.datepicker--cell-day.-in-range- {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: 0.25;
+  border-radius: 0;
+}
+.datepicker--cell-day.-current- {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.datepicker--cell-day.-selected- {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.datepicker--cell-day.-current-.-in-range- {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: map-get($colors, 'dark-shade-50');
+}
+.datepicker--buttons {
+  border-top: none;
+  padding: 0.3rem 2rem;
+  justify-content: space-between;
+}
+.datepicker--buttons .datepicker--button {
+  display: block;
+  flex: 0;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: map-get($colors, 'dark-shade-50');
+  &:hover {
+    background: none;
+    color: map-get($colors, 'purple');
+  }
+}
