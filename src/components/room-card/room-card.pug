@@ -1,0 +1,20 @@
+include ../rate-button/rate-button.pug
+
+mixin room-card($arguments = {})
+  .room-card.js-room-card
+    .room-card__carousel.js-room-card__carousel.owl-carousel.owl-theme(data-arrows=$arguments.hasArrows ? "true" : "false")
+      each photo in $arguments.photos
+        img.room-card__photo(src=photo.src alt="Room photo") 
+    .room-card__room-number-and-daily-price
+        .room-card__room-name
+          .room-card__number-symbol №
+            span.room-card__room-number.js-room-card__room-number
+            span.room-card__luxe.js-room-card__luxe Люкс
+        .room-card__daily-price
+          .room-card__daily-price-currency.js-room-card__daily-price-currency
+          .room-card__daily-price-period &nbsp;в сутки
+    .room-card__rating-and-feedbacks
+      .room-card__rating
+        +rate-button($arguments.rateButtonOptions)
+      .room-card__feedbacks-number= $arguments.feedbacksNumber
+        span.room-card__feedbacks-text Отзывов

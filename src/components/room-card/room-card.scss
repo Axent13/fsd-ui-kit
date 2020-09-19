@@ -1,0 +1,63 @@
+@import '../../variables.scss';
+
+.room-card {
+  &__room-number-and-daily-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__number-symbol {
+    font-family: 'Quicksand', 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  &__room-number {
+    font-size: 2.2rem;
+    margin-left: 0.5rem;
+  }
+  &__luxe {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: map-get($colors, 'purple');
+    text-transform: uppercase;
+    margin-left: 0.6rem;
+  }
+  &__daily-price {
+    display: flex;
+    align-items: baseline;
+  }
+  &__daily-price-currency {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
+  &__daily-price-period {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
+  &__rating-and-feedbacks {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__feedbacks-number {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
+  &__feedbacks-text {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
+}

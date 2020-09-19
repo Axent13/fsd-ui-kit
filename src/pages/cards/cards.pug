@@ -3,6 +3,7 @@ include ../../components/form-find-hotel-room/form-find-hotel-room.pug
 include ../../components/form-registration/form-registration.pug
 include ../../components/form-booking/form-booking.pug
 include ../../components/form-login/form-login.pug
+include ../../components/room-card/room-card.pug
 
 
 doctype html
@@ -35,3 +36,35 @@ html(lang="ru")
           +form-login()
         .cards__datepicker-container.js-cards__datepicker-container
           .cards__datepicker.js-cards__datepicker
+        .cards__room-card-container
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            hasArrows: true,
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+        .cards__room-card-container
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            hasArrows: false,
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
