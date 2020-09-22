@@ -23,6 +23,14 @@ $(document).ready(() => {
         dots: true,
       });
 
+      if (this.hasArrows) {
+        this.$arrowPrev = this.$carouselElement.find('.owl-prev');
+        this.$arrowNext = this.$carouselElement.find('.owl-next');
+
+        this.$arrowPrev.text('keyboard_arrow_left');
+        this.$arrowNext.text('keyboard_arrow_right');
+      }
+
       this.$roomName.text(data.roomName);
       if (data.isLuxury === true) {
         this.$luxe.text('Люкс');

@@ -13,8 +13,7 @@ class CardsDatepicker {
         days: 'MM <i>yyyy</i>',
       },
     });
-    console.log(new Date());
-    console.log(this.$airDatepicker.datepicker);
+
     this.$prevButton = this.$rootElement.find('.datepicker--nav-action[data-action="prev"]');
     this.$nextButton = this.$rootElement.find('.datepicker--nav-action[data-action="next"]');
 
