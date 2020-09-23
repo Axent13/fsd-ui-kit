@@ -2,7 +2,7 @@ include ../rate-button/rate-button.pug
 
 mixin room-card($arguments = {})
   .room-card.js-room-card
-    .room-card__carousel.js-room-card__carousel.owl-carousel.owl-theme(data-arrows=$arguments.hasArrows ? "true" : "false")
+    .room-card__carousel.js-room-card__carousel.owl-carousel.owl-theme(data-arrows=$arguments.arrows)
       each photo in $arguments.photos
         img.room-card__photo(src=photo.src alt="Room photo") 
     .room-card__room-number-and-daily-price

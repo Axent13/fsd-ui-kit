@@ -6,12 +6,15 @@ const dataFromSomewhere = {
   isLuxury: true,
   dailyPrice: 9990,
 };
+
 $(document).ready(() => {
   class RoomCard {
     constructor($rootElement, data = {}) {
       this.$rootElement = $rootElement;
       this.$carouselElement = this.$rootElement.find('.js-room-card__carousel');
-      this.hasArrows = this.$carouselElement.data('arrows');
+      console.log(this.$carouselElement.data('arrows'));
+      this.hasArrows = this.$carouselElement.data('arrows') === 'on';
+      console.log(this.hasArrows);
       this.$roomName = this.$rootElement.find('.js-room-card__room-number');
       this.$luxe = this.$rootElement.find('.js-room-card__luxe');
       this.$dailyPrice = this.$rootElement.find('.js-room-card__daily-price-currency');
