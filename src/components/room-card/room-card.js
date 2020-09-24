@@ -1,11 +1,18 @@
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
-const dataFromSomewhere = {
-  roomName: '888',
-  isLuxury: true,
-  dailyPrice: 9990,
-};
+const dataFromSomewhere = [
+  {
+    roomName: '888',
+    isLuxury: true,
+    dailyPrice: 9990,
+  },
+  {
+    roomName: '840',
+    isLuxury: false,
+    dailyPrice: 9990,
+  },
+];
 
 $(document).ready(() => {
   class RoomCard {
@@ -51,6 +58,6 @@ $(document).ready(() => {
   const $rootElements = $('.js-room-card');
 
   $rootElements.each((index, node) => {
-    new RoomCard($(node), dataFromSomewhere);
+    new RoomCard($(node), dataFromSomewhere[index]);
   });
 });

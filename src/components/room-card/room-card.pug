@@ -13,8 +13,9 @@ mixin room-card($arguments = {})
         .room-card__daily-price
           .room-card__daily-price-currency.js-room-card__daily-price-currency
           .room-card__daily-price-period &nbsp;в сутки
+    .room-card__separator
     .room-card__rating-and-feedbacks
       .room-card__rating
         +rate-button($arguments.rateButtonOptions)
       .room-card__feedbacks-number= $arguments.feedbacksNumber
-        span.room-card__feedbacks-text Отзывов
+        span.room-card__feedbacks-text &nbsp;Отзывов
