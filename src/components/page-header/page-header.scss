@@ -116,13 +116,13 @@
     height: 3rem;
   }
   &__login-button {
-    width: 8rem;
-    height: 3.3rem;
+    min-width: 8rem;
+    min-height: 3.3rem;
     margin-right: 2.2rem;
   }
   &__registration-button {
-    width: 18.5rem;
-    height: 3.3rem;
+    min-width: 18.5rem;
+    min-height: 3.3rem;
   }
   &__user {
     display: flex;
