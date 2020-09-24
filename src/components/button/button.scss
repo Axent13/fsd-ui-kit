@@ -2,13 +2,15 @@
 
 .button {
   position: relative;
-  height: inherit;
+  min-height: inherit;
   user-select: none;
+  min-width: inherit;
   &__button {
+    padding: 10px;
     background: none;
     border: none;
-    width: 100%;
-    height: inherit;
+    min-width: inherit;
+    min-height: inherit;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: map-get($font-sizes, 'h3');
@@ -24,7 +26,7 @@
       }
     }
     &_bordered {
-      border: 0.14rem solid map-get($colors, 'purple');
+      border: 2px solid map-get($colors, 'purple');
       border-radius: 3rem;
       color: map-get($colors, 'purple');
       &:hover {
@@ -33,6 +35,7 @@
     }
     &_colored-text {
       color: map-get($colors, 'purple');
+      padding: 0;
       &:hover {
         color: map-get($colors, 'dark-shade-50');
       }

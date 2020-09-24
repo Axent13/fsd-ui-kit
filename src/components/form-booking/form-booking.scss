@@ -181,5 +181,7 @@
   }
   &__payment-button {
     margin-top: 2rem;
+    min-width: 100%;
+    min-height: 4rem;
   }
 }

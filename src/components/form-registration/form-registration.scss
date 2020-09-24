@@ -43,6 +43,8 @@
   }
   &__payment-button {
     margin-top: 2.3rem;
+    min-width: 100%;
+    min-height: 4rem;
   }
   &__has-account {
     display: flex;
@@ -59,6 +61,6 @@
   }
   &__has-account-button {
     min-width: 9.3rem;
-    
+    min-height: 4rem;
   }
 }

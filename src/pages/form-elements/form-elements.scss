@@ -143,16 +143,16 @@
     width: 13.5rem;
   }
   &__button {
-    width: 9.3rem;
-    height: 4.1rem;
+    min-width: 9.3rem;
+    min-height: 4.1rem;
   }
   &__colored-text-button {
-    width: 6.1rem;
+    min-width: 6.1rem;
   }
   &__button-with-arrow {
     margin-top: 2.7rem;
-    width: 30rem;
-    height: 4.1rem;
+    min-width: 30rem;
+    min-height: 4.1rem;
   }
   &__pagination-container {
     width: 24rem;

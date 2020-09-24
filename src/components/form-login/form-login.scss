@@ -25,6 +25,8 @@
   }
   &__enter-button {
     margin-top: 2rem;
+    min-width: 100%;
+    min-height: 4rem;
   }
   &__has-not-account {
     display: flex;
@@ -41,5 +43,6 @@
   }
   &__has-not-account-button {
     min-width: 9.3rem;
+    min-height: 4rem;
   }
 }
