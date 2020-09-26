@@ -85,6 +85,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/headers-and-footers/headers-and-footers.pug',
       filename: 'headers-and-footers.html',
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/landing-page/landing-page.pug',
+      filename: 'landing-page.html',
+    }),
   ],
 };

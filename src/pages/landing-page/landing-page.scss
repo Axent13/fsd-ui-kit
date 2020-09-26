@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.landing-page {
+  background-color: #e5e5e5;
+  &__main-section {
+    @media only screen and (min-width: 768px) {
+      height: 100rem;
+    }
+  }
+  &__background-and-form-find-hotel-room-and-text {
+    position: relative;
+  }
+  &__background {
+    height: 78.65rem;
+    background: url('images/landing-page-background.png') no-repeat;
+    background-size: 100%;
+    background-position-y: 102%;
+  }
+  &__form-find-hotel-room {
+    position: absolute;
+    top: 6.66rem;
+    left: 13.3rem;
+  }
+  &__text {
+    position: absolute;
+    bottom: 2rem;
+    right: 12.5rem;
+    width: 26rem;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.33rem;
+    line-height: 2.4rem;
+    text-align: right;
+    color: map-get($colors, 'dark-shade-75');
+  }
+}
