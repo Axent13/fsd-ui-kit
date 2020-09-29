@@ -90,5 +90,9 @@ module.exports = {
       template: './src/pages/landing-page/landing-page.pug',
       filename: 'landing-page.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/search-room/search-room.pug',
+      filename: 'search-room.html',
+    }),
   ],
 };

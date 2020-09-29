@@ -1,0 +1,170 @@
+include ../../components/page-header/page-header.pug
+include ../../components/component-description/component-description.pug
+include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/item-quantity-dropdown/item-quantity-dropdown.pug
+include ../../components/checkbox-button/checkbox-button.pug
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../components/room-card/room-card.pug
+include ../../components/pagination/pagination.pug
+include ../../components/page-footer/page-footer.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="keywords" content="FSD, UI-kit, frontend, junior")
+    meta(name="description" content="Second task for junior frontend-developer position in FSD")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="apple-touch-icon", sizes="180x180", href="src/favicons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="src/favicons/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="src/favicons/favicon-16x16.png")
+    link(rel="manifest", href="src/favicons/site.webmanifest")
+    link(rel="mask-icon", href="src/favicons/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+    title Search Room
+  body
+    .search-room
+      .search-room__page-header
+        +page-header({logoSrc: require('./images/logo.png').default, isUserActive: false})
+      main.search-room__main-section
+        .search-room__filters
+          +component-description({name: 'Дата пребывания в отеле'})
+          +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+          +component-description({name: 'Гости'})
+          +item-quantity-dropdown({placeholder: 'Сколько гостей'})
+          +component-description({name: 'Диапазон цены', state: '5000 - 10000'})
+          .search-room__mock-for-slider
+          +component-description({name: 'Checkbox buttons'})
+          +checkbox-button({id: 'maySmoke', name: 'maySmoke', value: 'true', text: 'Можно курить'})
+          +checkbox-button({id: 'mayPets',name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
+          +checkbox-button({id: 'mayGuests',name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+          +component-description({name: 'Доступность'})
+          +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: `Ширина коридоров в номере не\u00A0менее 91 см`})
+          +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит\u00A0специалист и проводит до номера.'})
+          +component-description({name: 'Удобства номера'})
+          +item-quantity-dropdown({placeholder: 'Удобства номера'})
+          +expandable-checkbox-list({ name: 'Дополнительные убодства', isHidden: false, checkboxes: [
+                {id: 'breakfast', name: 'breakfast', value: 'true', text: 'Завтрак'},
+                {id: 'writingTable', name: 'writingTable', value: 'true', text: 'Письменный стол', checked: 'checked'},
+                {id: 'infantChair', name: 'infantChair', value: 'true', text: 'Стул для кормления', checked: 'checked'},
+                {id: 'infantBed', name: 'infantBed', value: 'true', text: 'Кроватка', checked: 'checked'},
+                {id: 'TV', name: 'TV', value: 'true', text: 'Телевизор'},
+                {id: 'shampoo', name: 'shampoo', value: 'true', text: 'Шампунь'}] })
+        .search-room__rooms
+          h2.search-room__rooms-title Номера, которые мы для вас подобрали
+          .search-room__room-cards
+            +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+          +room-card({
+            photos: [
+              {src: require('./images/photo1.png').default, alt: 'Photo1'},
+              {src: require('./images/photo2.png').default, alt: 'Photo2'},
+              {src: require('./images/photo3.png').default, alt: 'Photo3'},
+              {src: require('./images/photo4.png').default, alt: 'Photo4'},
+            ],
+            arrows: 'on',
+            rateButtonOptions: {
+              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+              name: 'ratingFirst',
+              initRating: 4
+            },
+            feedbacksNumber: 145
+          })
+      .search-room__pagination
+        +pagination()
+      .search-room__page-footer
+        +page-footer({logoSrc: require('./images/logo.png').default, socials: [
+          {url: '/mock-address/change-me', imageSrc: require('./images/twitter.png').default, alt: 'Twitter'},
+          {url: '/mock-address/change-me', imageSrc: require('./images/facebook.png').default, alt: 'Facebook'},
+          {url: '/mock-address/change-me', imageSrc: require('./images/instagram.png').default, alt: 'Instagram'}
+        ]})
+      
