@@ -29,19 +29,30 @@ html(lang="ru")
         +page-header({logoSrc: require('./images/logo.png').default, isUserActive: false})
       main.search-room__main-section
         .search-room__filters
-          +component-description({name: 'Дата пребывания в отеле'})
-          +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
-          +component-description({name: 'Гости'})
-          +item-quantity-dropdown({placeholder: 'Сколько гостей'})
-          +component-description({name: 'Диапазон цены', state: '5000 - 10000'})
+          +component-description({name: 'Даты пребывания в отеле'})
+          .search-room__date-dropdown
+            +date-dropdown({placeholder: 'ДД.ММ.ГГГГ'})
+          .search-room__item-quantity-dropdown-description
+            +component-description({name: 'Гости'})
+          .search-room__item-quantity-dropdown
+            +item-quantity-dropdown({placeholder: 'Сколько гостей'})
+          .search-room__slider-description
+            +component-description({name: 'Диапазон цены', state: '5000 - 10000'})
           .search-room__mock-for-slider
-          +component-description({name: 'Checkbox buttons'})
-          +checkbox-button({id: 'maySmoke', name: 'maySmoke', value: 'true', text: 'Можно курить'})
-          +checkbox-button({id: 'mayPets',name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
-          +checkbox-button({id: 'mayGuests',name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
-          +component-description({name: 'Доступность'})
-          +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: `Ширина коридоров в номере не\u00A0менее 91 см`})
-          +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит\u00A0специалист и проводит до номера.'})
+          .search-room__checkbox-buttons-description
+            +component-description({name: 'Checkbox buttons'})
+          .search-room__checkbox-buttons
+            .search-room__checkbox-button
+              +checkbox-button({id: 'maySmoke', name: 'maySmoke', value: 'true', text: 'Можно курить'})
+            .search-room__checkbox-button
+              +checkbox-button({id: 'mayPets',name: 'mayPets', value: 'true', text: 'Можно с питомцами', checked: 'checked'})
+            .search-room__checkbox-button
+              +checkbox-button({id: 'mayGuests',name: 'mayGuests', value: '10', text: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+          .search-room__availability-description
+            +component-description({name: 'Доступность'})
+          .search-room__availability-buttons
+            +checkbox-button({id: 'hasWideCorridor', name: 'hasWideCorridor', value: 'true', text: 'Широкий коридор', details: `Ширина коридоров в номере не\u00A0менее 91 см`})
+            +checkbox-button({id: 'hasDisabledHelper', name: 'hasDisabledHelper', value: 'true', text: 'Помощник для инвалидов', details: 'На 1 этаже вас встретит\u00A0специалист и проводит до номера.'})
           +component-description({name: 'Удобства номера'})
           +item-quantity-dropdown({placeholder: 'Удобства номера'})
           +expandable-checkbox-list({ name: 'Дополнительные убодства', isHidden: false, checkboxes: [
@@ -69,96 +80,96 @@ html(lang="ru")
             },
             feedbacksNumber: 145
           })
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
       .search-room__pagination
         +pagination()
       .search-room__page-footer

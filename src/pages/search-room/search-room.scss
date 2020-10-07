@@ -1,8 +1,61 @@
 @import '../../variables.scss';
 
 .search-room {
-  background-color: #e5e5e5;
+  max-width: 110rem;
+  margin: 0 auto;
   &__main-section {
-    
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.2rem;
+    padding-top: 2.8rem;
+  }
+  &__filters {
+    width: 25.1rem;
+  }
+  &__rooms {
+    max-width: 79rem;
+  }
+  &__rooms-title {
+    font-family: 'Quicksand', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: map-get($font-sizes, 'h1');
+    color: map-get($colors, 'dark-shade-100');
+  }
+  &__date-dropdown {
+    margin-top: 0.5rem;
+  }
+  &__item-quantity-dropdown-description {
+    margin-top: 2rem;
+  }
+  &__item-quantity-dropdown {
+    margin-top: 0.5rem;
+  }
+  &__slider-description {
+    margin-top: 2.8rem;
+  }
+  &__mock-for-slider {
+    min-height: 5.5rem;
+  }
+  &__checkbox-buttons-description {
+    margin-top: 2.8rem;
+  }
+  &__checkbox-buttons {
+    margin-top: 1.5rem;
+  }
+  &__checkbox-button {
+    margin-top: 1rem;
+  }
+  &__availability-description {
+    margin-top: 2.8rem;
+  }
+  &__availability-buttons {
+    margin-top: 1rem;
+  }
+  &__room-cards {
+    display: grid;
+    grid-template-columns: 32.3% 32.3% 32.3%;
+    grid-column-gap: 1.5%;
+    grid-row-gap: 4%;
+    padding-top: 1.8rem;
   }
 }

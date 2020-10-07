@@ -7,8 +7,8 @@
   &__simple-text {
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     font-weight: normal;
-    font-size: map-get($font-sizes, 'body');
-    line-height: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.75rem;
     color: map-get($colors, 'dark-shade-50');
   }
   &__rich-text {
