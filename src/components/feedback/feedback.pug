@@ -4,7 +4,7 @@ mixin feedback($arguments = {})
   ul.feedback.js-feedback
       li.feedback__element
         .feedback__client-info
-          .feedback__client-avatar
+          img.feedback__client-avatar(src=$arguments.avatarSrc alt=$arguments.avatarAlt)
           .feedback__name-and-time
             .feedback__name= $arguments.name
             .feedback__time= $arguments.time
