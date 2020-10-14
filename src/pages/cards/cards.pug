@@ -22,49 +22,50 @@ html(lang="ru")
     meta(name="theme-color", content="#ffffff")
     title Cards
   body
-    .cards__wrapper
-      section.cards__logo-section
-        +logo()
-      section.cards__main-section
-        .cards__find-hotel-room
-          +form-find-hotel-room()
-        .cards__registration
-          +form-registration()
-        .cards__booking
-          +form-booking()
-        .cards__login
-          +form-login()
-        .cards__datepicker-container.js-cards__datepicker-container
-          .cards__datepicker.js-cards__datepicker
-        .cards__room-card-container
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-        .cards__room-card-container
-          +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'off',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 65
-          })
+    .cards.js-cards
+      .cards__wrapper
+        section.cards__logo-section
+          +logo()
+        section.cards__main-section
+          .cards__find-hotel-room
+            +form-find-hotel-room()
+          .cards__registration
+            +form-registration()
+          .cards__booking
+            +form-booking()
+          .cards__login
+            +form-login()
+          .cards__datepicker-container
+            .cards__datepicker
+          .cards__room-card-container
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'on',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 145
+            })
+          .cards__room-card-container
+            +room-card({
+              photos: [
+                {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                {src: require('./images/photo4.png').default, alt: 'Photo4'},
+              ],
+              arrows: 'off',
+              rateButtonOptions: {
+                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                name: 'ratingFirst',
+                initRating: 4
+              },
+              feedbacksNumber: 65
+            })
