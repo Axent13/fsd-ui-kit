@@ -1,8 +1,10 @@
 @import '../../variables.scss';
 
 .search-room {
-  max-width: 110rem;
-  margin: 0 auto;
+  &__wrapper {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
   &__main-section {
     display: flex;
     justify-content: space-between;
@@ -10,7 +12,9 @@
     padding-top: 2.8rem;
   }
   &__filters {
-    width: 25.3rem;
+    width: 25.2rem;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
   }
   &__rooms {
     max-width: 78.9rem;
@@ -22,34 +26,47 @@
     color: map-get($colors, 'dark-shade-100');
   }
   &__date-dropdown {
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
   }
-  &__item-quantity-dropdown-description {
+  &__guests-dropdown-description {
     margin-top: 2rem;
   }
-  &__item-quantity-dropdown {
+  &__guests-dropdown {
     margin-top: 0.5rem;
   }
   &__slider-description {
-    margin-top: 2.8rem;
+    margin-top: 3rem;
   }
   &__mock-for-slider {
     min-height: 5.5rem;
   }
-  &__checkbox-buttons-description {
-    margin-top: 2.8rem;
+  &__house-rules-description {
+    margin-top: 2.7rem;
   }
-  &__checkbox-buttons {
+  &__house-rules-checkbox-buttons {
     margin-top: 1.5rem;
   }
-  &__checkbox-button {
+  &__house-rules-checkbox-button {
     margin-top: 1rem;
   }
   &__availability-description {
-    margin-top: 2.8rem;
+    margin-top: 3.15rem;
   }
   &__availability-buttons {
+    margin-top: 1.5rem;
+  }
+  &__availability-button {
     margin-top: 1rem;
+  }
+  &__improvements-description {
+    margin-top: 3rem;
+  }
+  &__improvements-dropdown {
+    margin-top: 0.4rem;
+  }
+  &__additional-improvements {
+    width: 96.5%;
+    margin-top: 2.5rem;
   }
   &__room-cards {
     display: grid;
@@ -57,5 +74,16 @@
     grid-column-gap: 1.3%;
     grid-row-gap: 1.9%;
     padding-top: 1.8rem;
+  }
+  &__pagination {
+    width: 23.6rem;
+    margin: 9.5rem auto 7.2rem;
+  }
+  &__separator {
+    height: 0.2rem;
+    background-color: map-get($colors, 'dark-shade-25');
+  }
+  &__copyright-bar {
+    margin-top: 0.35ыrem;
   }
 }

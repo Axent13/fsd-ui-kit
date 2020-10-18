@@ -6,12 +6,6 @@ mixin page-footer($arguments = {})
       .page-footer__wrapper_creative
         .page-footer__logo-container
           img.page-footer__logo(src=$arguments.logoSrc alt="TOXIN")
-        p.page-footer__copyright-text.page-footer__copyright-text_creative Copyright © 2018 Toxin отель. Все права зачищены.
-        ul.page-footer__social-links.page-footer__social-links_creative
-          each $social in $arguments.socials
-            li
-              a.page-footer__social-link(href=$social.url)
-                img.page-footer__social-image(src=$social.imageSrc alt=$social.alt target="_blank" rel="noopener noreferrer")
   else
     footer.page-footer
       .page-footer__wrapper
@@ -51,11 +45,3 @@ mixin page-footer($arguments = {})
           .page-footer__subscription-description Получайте специальные предложения и новости сервиса
           .page-footer__subscription-text-field
             +subscription-text-field({placeholder: 'Email'})
-      .page-footer__copyright-bar-wrapper
-        .page-footer__copyright-bar
-          p.page-footer__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
-          ul.page-footer__social-links
-            each $social in $arguments.socials
-              li
-                a.page-footer__social-link(href=$social.url)
-                  img.page-footer__social-image(src=$social.imageSrc alt=$social.alt target="_blank" rel="noopener noreferrer")

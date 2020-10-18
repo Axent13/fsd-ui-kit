@@ -1,0 +1,19 @@
+mixin copyright-bar($arguments = {})
+  if $arguments.isCreative === true
+    .copyright-bar.copyright-bar_creative
+      p.copyright-bar__copyright-text.copyright-bar__copyright-text_creative Copyright © 2018 Toxin отель. Все права зачищены.
+          ul.copyright-bar__social-links.copyright-bar__social-links_creative
+            each $social in $arguments.socials
+              li
+                a.copyright-bar__social-link(href=$social.url)
+                  img.copyright-bar__social-image(src=$social.imageSrc alt=$social.alt target="_blank" rel="noopener noreferrer")
+  else
+    .copyright-bar
+      .copyright-bar__wrapper
+            .copyright-bar__copyright-bar
+              p.copyright-bar__copyright-text Copyright © 2018 Toxin отель. Все права зачищены.
+              ul.copyright-bar__social-links
+                each $social in $arguments.socials
+                  li
+                    a.copyright-bar__social-link(href=$social.url)
+                      img.copyright-bar__social-image(src=$social.imageSrc alt=$social.alt target="_blank" rel="noopener noreferrer")
