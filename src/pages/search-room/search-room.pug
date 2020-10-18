@@ -65,22 +65,8 @@ html(lang="ru")
         .search-room__rooms
           h2.search-room__rooms-title Номера, которые мы для вас подобрали
           .search-room__room-cards
-            +room-card({
-            photos: [
-              {src: require('./images/photo1.png').default, alt: 'Photo1'},
-              {src: require('./images/photo2.png').default, alt: 'Photo2'},
-              {src: require('./images/photo3.png').default, alt: 'Photo3'},
-              {src: require('./images/photo4.png').default, alt: 'Photo4'},
-            ],
-            arrows: 'on',
-            rateButtonOptions: {
-              id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-              name: 'ratingFirst',
-              initRating: 4
-            },
-            feedbacksNumber: 145
-          })
-            +room-card({
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
               photos: [
                 {src: require('./images/photo1.png').default, alt: 'Photo1'},
                 {src: require('./images/photo2.png').default, alt: 'Photo2'},
@@ -91,85 +77,186 @@ html(lang="ru")
               rateButtonOptions: {
                 id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
                 name: 'ratingFirst',
-                initRating: 4
+                initRating: 5
               },
               feedbacksNumber: 145
             })
-            +room-card({
-              photos: [
-                {src: require('./images/photo1.png').default, alt: 'Photo1'},
-                {src: require('./images/photo2.png').default, alt: 'Photo2'},
-                {src: require('./images/photo3.png').default, alt: 'Photo3'},
-                {src: require('./images/photo4.png').default, alt: 'Photo4'},
-              ],
-              arrows: 'on',
-              rateButtonOptions: {
-                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-                name: 'ratingFirst',
-                initRating: 4
-              },
-              feedbacksNumber: 145
-            })
-            +room-card({
-              photos: [
-                {src: require('./images/photo1.png').default, alt: 'Photo1'},
-                {src: require('./images/photo2.png').default, alt: 'Photo2'},
-                {src: require('./images/photo3.png').default, alt: 'Photo3'},
-                {src: require('./images/photo4.png').default, alt: 'Photo4'},
-              ],
-              arrows: 'on',
-              rateButtonOptions: {
-                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-                name: 'ratingFirst',
-                initRating: 4
-              },
-              feedbacksNumber: 145
-            })
-            +room-card({
-              photos: [
-                {src: require('./images/photo1.png').default, alt: 'Photo1'},
-                {src: require('./images/photo2.png').default, alt: 'Photo2'},
-                {src: require('./images/photo3.png').default, alt: 'Photo3'},
-                {src: require('./images/photo4.png').default, alt: 'Photo4'},
-              ],
-              arrows: 'on',
-              rateButtonOptions: {
-                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-                name: 'ratingFirst',
-                initRating: 4
-              },
-              feedbacksNumber: 145
-            })
-            +room-card({
-              photos: [
-                {src: require('./images/photo1.png').default, alt: 'Photo1'},
-                {src: require('./images/photo2.png').default, alt: 'Photo2'},
-                {src: require('./images/photo3.png').default, alt: 'Photo3'},
-                {src: require('./images/photo4.png').default, alt: 'Photo4'},
-              ],
-              arrows: 'on',
-              rateButtonOptions: {
-                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-                name: 'ratingFirst',
-                initRating: 4
-              },
-              feedbacksNumber: 145
-            })
-            +room-card({
-              photos: [
-                {src: require('./images/photo1.png').default, alt: 'Photo1'},
-                {src: require('./images/photo2.png').default, alt: 'Photo2'},
-                {src: require('./images/photo3.png').default, alt: 'Photo3'},
-                {src: require('./images/photo4.png').default, alt: 'Photo4'},
-              ],
-              arrows: 'on',
-              rateButtonOptions: {
-                id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
-                name: 'ratingFirst',
-                initRating: 4
-              },
-              feedbacksNumber: 145
-            })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 4
+                },
+                feedbacksNumber: 65
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 3
+                },
+                feedbacksNumber: 35
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 5
+                },
+                feedbacksNumber: 19
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 4
+                },
+                feedbacksNumber: 44
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 3
+                },
+                feedbacksNumber: 56
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 5
+                },
+                feedbacksNumber: 45
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 4
+                },
+                feedbacksNumber: 39
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 3
+                },
+                feedbacksNumber: 77
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 5
+                },
+                feedbacksNumber: 25
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 3
+                },
+                feedbacksNumber: 15
+              })
+            .search-room__room-card.js-search-room__room-card
+              +room-card({
+                photos: [
+                  {src: require('./images/photo1.png').default, alt: 'Photo1'},
+                  {src: require('./images/photo2.png').default, alt: 'Photo2'},
+                  {src: require('./images/photo3.png').default, alt: 'Photo3'},
+                  {src: require('./images/photo4.png').default, alt: 'Photo4'},
+                ],
+                arrows: 'on',
+                rateButtonOptions: {
+                  id: ['1stStarFirst', '2ndStarFirst', '3rdStarFirst', '4thStarFirst', '5thStarFirst'],
+                  name: 'ratingFirst',
+                  initRating: 4
+                },
+                feedbacksNumber: 55
+              })
       .search-room__pagination
         +pagination()
       .search-room__page-footer
