@@ -1,21 +1,21 @@
 @import '../../variables.scss';
 
-.registration {
+.sign-in {
   &__wrapper {
     max-width: 110rem;
     margin: 0 auto;
   }
   &__background {
-    height: 64.9rem;
-    background: url('images/registration-background.png') no-repeat;
+    height: 66.9rem;
+    background: url('images/sign-in-background.png') no-repeat;
     background-size: 100.5%;
     background-position-y: 103%;
     background-position-x: 8%;
   }
-  &__form-registration {
+  &__form-sign-in {
     position: absolute;
-    top: 8.4rem;
-    left: 50.9rem;
+    top: 23rem;
+    left: 50.5rem;
   }
   &__separator {
     height: 0.2rem;

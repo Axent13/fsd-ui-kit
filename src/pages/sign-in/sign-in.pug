@@ -1,0 +1,39 @@
+include ../../components/page-header/page-header.pug
+include ../../components/form-login/form-login.pug
+include ../../components/page-footer/page-footer.pug
+include ../../components/copyright-bar/copyright-bar.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="keywords" content="FSD, UI-kit, frontend, junior")
+    meta(name="description" content="Second task for junior frontend-developer position in FSD")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="apple-touch-icon", sizes="180x180", href="src/favicons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="src/favicons/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="src/favicons/favicon-16x16.png")
+    link(rel="manifest", href="src/favicons/site.webmanifest")
+    link(rel="mask-icon", href="src/favicons/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+    title Sign In
+  body
+    .sign-in
+      section.sign-in__main-section
+        .sign-in__page-header
+          +page-header({logoSrc: require('./images/logo.png').default, isUserActive: false})
+        .sign-in__background-and-form-sign-in
+          .sign-in__background
+          .sign-in__form-sign-in
+            +form-login()
+      .search-room__wrapper
+        .search-room__page-footer
+          +page-footer({logoSrc: require('./images/logo.png').default})
+      .search-room__separator
+      .search-room__copyright-bar
+        +copyright-bar({socials: [
+          {url: '/mock-address/change-me', imageSrc: require('./images/twitter.png').default, alt: 'Twitter'},
+          {url: '/mock-address/change-me', imageSrc: require('./images/facebook.png').default, alt: 'Facebook'},
+          {url: '/mock-address/change-me', imageSrc: require('./images/instagram.png').default, alt: 'Instagram'}
+        ]})

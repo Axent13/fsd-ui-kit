@@ -102,5 +102,9 @@ module.exports = {
       template: './src/pages/registration/registration.pug',
       filename: 'registration.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/sign-in/sign-in.pug',
+      filename: 'sign-in.html',
+    }),
   ],
 };
