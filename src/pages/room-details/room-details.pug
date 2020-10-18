@@ -1,0 +1,100 @@
+include ../../components/page-header/page-header.pug
+include ../../components/icon-text-list/icon-text-list.pug
+include ../../components/feedback/feedback.pug
+include ../../components/bullet-list/bullet-list.pug
+include ../../components/form-booking/form-booking.pug
+include ../../components/page-footer/page-footer.pug
+include ../../components/copyright-bar/copyright-bar.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="keywords" content="FSD, UI-kit, frontend, junior")
+    meta(name="description" content="Second task for junior frontend-developer position in FSD")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="apple-touch-icon", sizes="180x180", href="src/favicons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="src/favicons/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="src/favicons/favicon-16x16.png")
+    link(rel="manifest", href="src/favicons/site.webmanifest")
+    link(rel="mask-icon", href="src/favicons/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+    title Landing Page
+  body
+    .room-details
+      .room-details__wrapper
+        .room-details__page-header
+          +page-header({logoSrc: require('./images/logo.png').default, isUserActive: false})
+      .room-details__room-photos
+          .room-details__room-photo-first
+          .room-details__room-photo-second
+          .room-details__room-photo-third
+      .room-details__wrapper
+        .room-details__main-section
+          .room-details__details
+            .room-details__info-and-impression
+              .room-details__info
+                h2.room-details__section-header Сведения о номере
+                .room-details__info-elements
+                  +icon-text-list([
+                    {iconName: 'insert_emoticon', name: 'Комфорт', description: 'Шумопоглощающие стены', hasSeparator: true},
+                    {iconName: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален', hasSeparator: true},
+                    {iconName: 'whatshot', name: 'Уют', description: 'Номер оснащен камином', hasSeparator: true}
+                  ])
+              .room-details__impression
+                h2.room-details__section-header Впечатления от номера
+                .room-details__donut Здесь будет донат...
+            .room-details__feedbacks
+              .room-details__header-and-feedbacks-count
+                .room-details__section-header Отзывы посетителей номера
+                .room-details__feedbacks-count 2 Отзыва
+              .room-details__first-feedback
+                +feedback({
+                  avatarSrc: require('./images/user1.png').default,
+                  avatarAlt: 'Мурад Сарафанов',
+                  name: 'Мурад Сарафанов',
+                  time: '5 дней назад',
+                  likeButtonArguments: {
+                    likesCount: '12',
+                    isLiked: true
+                  },
+                  feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'}
+                )
+              .room-details__second-feedback
+                +feedback({
+                  avatarSrc: require('./images/user2.png').default,
+                  avatarAlt: 'Патрисия Стёклышкова',
+                  name: 'Патрисия Стёклышкова',
+                  time: 'Неделю назад',
+                  likeButtonArguments: {
+                    likesCount: '2',
+                    isLiked: false
+                  },
+                  feedbackText: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'}
+                )
+            .room-details__rules-and-cancel
+              .room-details__rules
+                h2.room-details__section-header.room-details__rules-header Правила
+                .room-details__rules-list
+                  +bullet-list([
+                    {text: 'Нельзя с питомцами'},
+                    {text: 'Без вечеринок и мероприятий'},
+                    {text: 'Время прибытия — после 13:00, а выезд до 12:00'}
+                  ])
+              .room-details__cancel
+                h2.room-details__section-header Отмена
+                .room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          .room-details__form-booking
+            +form-booking()
+      .room-details__separator
+      .room-details__wrapper
+        .room-details__page-footer
+          +page-footer({logoSrc: require('./images/logo.png').default})
+      .room-details__separator
+      .room-details__copyright-bar
+        +copyright-bar({socials: [
+          {url: '/mock-address/change-me', imageSrc: require('./images/twitter.png').default, alt: 'Twitter'},
+          {url: '/mock-address/change-me', imageSrc: require('./images/facebook.png').default, alt: 'Facebook'},
+          {url: '/mock-address/change-me', imageSrc: require('./images/instagram.png').default, alt: 'Instagram'}
+        ]})

@@ -1,0 +1,111 @@
+@import '../../variables.scss';
+
+.room-details {
+  &__wrapper {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+  &__room-photos {
+    display: grid;
+    grid-template-columns: 69% 31%;
+    grid-template-areas:
+        'photo1 photo2'
+        'photo1 photo3';
+    min-height: 46rem;
+  }
+  &__room-photo-first {
+    grid-area: photo1;
+    background: url('images/room1.png') no-repeat;
+    background-size: contain;
+  }
+  &__room-photo-second {
+    grid-area: photo2;
+    background: url('images/room2.png') no-repeat;
+    background-size: contain;
+  }
+  &__room-photo-third {
+    grid-area: photo3;
+    background: url('images/room3.png') no-repeat;
+    background-size: contain;
+  }
+  &__main-section {
+    display: flex;
+    margin-top: 6.6rem;
+    margin-bottom: 6.4rem;
+  }
+  &__details {
+    margin-left: 0.3rem;
+  }
+  &__info-and-impression {
+    display: flex;
+  }
+  &__section-header {
+    font-family: 'Quicksand', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.9rem;
+    color: map-get($colors, 'dark-shade-100');
+  }
+  &__info-elements {
+    margin-top: 1.1rem;
+  }
+  &__impression {
+    margin-left: 9.8rem;
+  }
+  &__feedbacks {
+    margin-top: 0.3rem;
+  }
+  &__header-and-feedbacks-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 91%;
+  }
+  &__feedbacks-count {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: map-get($colors, 'dark-shade-50');
+  }
+  &__first-feedback {
+    max-width: 89%;;
+  }
+  &__second-feedback {
+    margin-top: 2.3rem;
+    max-width: 87%;
+  }
+  &__rules-and-cancel {
+    display: flex;
+    margin-top: 3.15rem;
+  }
+  &__rules {
+    width: 35%;
+  }
+  &__rules-header {
+    margin-left: 1.8rem;
+  }
+  &__rules-list {
+    margin-top: 1.2rem;
+  }
+  &__cancel {
+    width: 41%;
+    margin-left: 8.4rem;
+  }
+  &__cancel-text {
+    margin-top: 1.6rem;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.33rem;
+    line-height: 2.35rem;
+    color: map-get($colors, 'dark-shade-75');
+  }
+  &__form-booking {
+    margin-left: auto;
+  }
+  &__separator {
+    height: 0.2rem;
+    background-color: map-get($colors, 'dark-shade-25');
+  }
+  &__copyright-bar {
+    margin-top: 0.35rem;
+  }
+}
