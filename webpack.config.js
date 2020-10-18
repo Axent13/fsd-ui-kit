@@ -98,5 +98,9 @@ module.exports = {
       template: './src/pages/room-details/room-details.pug',
       filename: 'room-details.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/registration/registration.pug',
+      filename: 'registration.html',
+    }),
   ],
 };

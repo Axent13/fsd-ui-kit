@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.registration {
+  &__wrapper {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+  &__background-and-form-find-hotel-room-and-text {
+    position: relative;
+  }
+  &__background {
+    height: 64.9rem;
+    background: url(src/pages/registration/images/registration-background.png) no-repeat;
+    background-size: 100.5%;
+    background-position-y: 103%;
+    background-position-x: 8%;
+  }
+  &__form-registration {
+    position: absolute;
+    top: 8.4rem;
+    left: 50.9rem;
+  }
+  &__separator {
+    height: 0.2rem;
+    background-color: map-get($colors, 'dark-shade-25');
+  }
+  &__copyright-bar {
+    margin-top: 0.35rem;
+  }
+}
