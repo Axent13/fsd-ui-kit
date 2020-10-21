@@ -2,56 +2,55 @@
 
 .toggle-button {
   &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &+.toggle-button__label {
+      display: inline-flex;
+      position: relative;
+      vertical-align: middle;
+      font-family: 'Montserrat', 'Open Sans', sans-serif;
+      font-weight: normal;
+      font-size: map-get($font-sizes, 'body');
+      line-height: 1.5rem;
+      color: map-get($colors, 'dark-shade-75');
+      user-select: none;
+      cursor: pointer;
+    }
+    &+.toggle-button__label::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 3.5rem;
+      height: 1.75rem;
+      border: 0.07rem solid map-get($colors, 'dark-shade-25');
+      border-radius: 1rem;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    &:hover+.toggle-button__label::before {
+      border-color: map-get($colors , 'purple');
+    }
+    &:checked+.toggle-button__label::before {
+      border-color: map-get($colors , 'purple');
+    }
+    &+.toggle-button__label::after {
+      content: '';
       position: absolute;
-      z-index: -1;
-      opacity: 0;
-      &+.toggle-button__label {
-        display: inline-flex;
-        position: relative;
-        vertical-align: middle;
-        font-family: 'Montserrat', 'Open Sans', sans-serif;
-        font-weight: normal;
-        font-size: map-get($font-sizes, 'body');
-        line-height: 1.5rem;
-        color: map-get($colors, 'dark-shade-75');
-        user-select: none;
-        cursor: pointer;
-      }
-      &+.toggle-button__label::before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        flex-grow: 0;
-        flex-shrink: 0;
-        width: 3.5rem;
-        height: 1.75rem;
-        border: 0.07rem solid map-get($colors, 'dark-shade-25');
-        border-radius: 1rem;
-        margin-right: 1rem;
-        cursor: pointer;
-      }
-      &:hover+.toggle-button__label::before {
-        border-color: map-get($colors , 'purple');
-      }
-      &:checked+.toggle-button__label::before {
-        border-color: map-get($colors , 'purple');
-      }
-      &+.toggle-button__label::after {
-        content: '';
-        position: absolute;
-        top: 0.35rem;
-        left: 0.4rem;
-        display: inline-block;
-        border-radius: 50%;
-        background-color: map-get($colors, 'dark-shade-25');
-        width: 1.2rem;
-        height: 1.2rem;
-        transition: left ease 0.3s;
-      }
-      &:checked+.toggle-button__label::after {
-        left: 2rem;
-        background-color: map-get($colors , 'purple');
-      }
+      top: 0.35rem;
+      left: 0.4rem;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: map-get($colors, 'dark-shade-25');
+      width: 1.2rem;
+      height: 1.2rem;
+      transition: left ease 0.3s;
+    }
+    &:checked+.toggle-button__label::after {
+      left: 2rem;
+      background-color: map-get($colors , 'purple');
+    }
   }
-  
 }

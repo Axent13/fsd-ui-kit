@@ -27,47 +27,46 @@
     margin-top: 0.5rem;
   }
   &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &+.checkbox-button__label {
+      display: inline-flex;
+      position: relative;
+      vertical-align: middle;
+      user-select: none;
+      cursor: pointer;
+    }
+    &+.checkbox-button__label::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      border: 0.07rem solid map-get($colors, 'dark-shade-25');
+      border-radius: 0.25rem;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    &:hover+.checkbox-button__label::before {
+      border-color: map-get($colors , 'purple');
+    }
+    &:checked+.checkbox-button__label::before {
+      border-color: map-get($colors , 'purple');
+    }
+    &:checked+.checkbox-button__label::after {
+      content: '';
       position: absolute;
-      z-index: -1;
-      opacity: 0;
-      &+.checkbox-button__label {
-        display: inline-flex;
-        position: relative;
-        vertical-align: middle;
-        user-select: none;
-        cursor: pointer;
-      }
-      &+.checkbox-button__label::before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        flex-grow: 0;
-        flex-shrink: 0;
-        width: 1.75rem;
-        height: 1.75rem;
-        border: 0.07rem solid map-get($colors, 'dark-shade-25');
-        border-radius: 0.25rem;
-        margin-right: 1rem;
-        cursor: pointer;
-      }
-      &:hover+.checkbox-button__label::before {
-        border-color: map-get($colors , 'purple');
-      }
-      &:checked+.checkbox-button__label::before {
-        border-color: map-get($colors , 'purple');
-      }
-      &:checked+.checkbox-button__label::after {
-        content: '';
-        position: absolute;
-        top: 0.6rem;
-        left: 0.6rem;
-        display: inline-block;
-        border-left: 0.2rem solid map-get($colors , 'purple');
-        border-bottom: 0.2rem solid map-get($colors , 'purple');
-        width: 0.6rem;
-        height: 0.3rem;
-        transform: rotate(-45deg);
-      }
+      top: 0.6rem;
+      left: 0.6rem;
+      display: inline-block;
+      border-left: 0.2rem solid map-get($colors , 'purple');
+      border-bottom: 0.2rem solid map-get($colors , 'purple');
+      width: 0.6rem;
+      height: 0.3rem;
+      transform: rotate(-45deg);
+    }
   }
-  
 }
