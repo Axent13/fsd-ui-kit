@@ -1,12 +1,12 @@
 .colors-and-types {
-  &-wrapper {
+  &__wrapper {
     margin: 1rem auto 0;
     @media only screen and (min-width: 768px) {
       max-width: 136rem;
       margin: 0;
     }
   }
-  &-logo-container {
+  &__logo-container {
     margin: 0 auto;
     height: 8rem;
     width: 8rem;
@@ -16,38 +16,38 @@
       width: 12rem;
     }
   }
-  &-main-container {
+  &__main-container {
     margin: 2rem auto 0;
-    &__colors-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 57.7rem;
-      align-items: center;
-      @media only screen and (min-width: 768px) {
-        align-items: initial;
-      }
-    }
-    &__texts-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 5rem;
-      height: 30rem;
-      &:first-child {
-        margin-top: 1rem;
-        background-color: #fff;
-      }
-      @media only screen and (min-width: 768px) {
-        margin: 0 2rem 0 auto;
-        align-items: initial;
-      }
-    }
     @media only screen and (min-width: 768px) {
       display: flex;
       width: 79.2%;
       margin: 6.15rem auto 0;
+    }
+  }
+  &__colors-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 57.7rem;
+    align-items: center;
+    @media only screen and (min-width: 768px) {
+      align-items: initial;
+    }
+  }
+  &__texts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    height: 30rem;
+    &:first-child {
+      margin-top: 1rem;
+      background-color: #fff;
+    }
+    @media only screen and (min-width: 768px) {
+      margin: 0 2rem 0 auto;
+      align-items: initial;
     }
   }
 }

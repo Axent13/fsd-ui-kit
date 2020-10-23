@@ -18,11 +18,11 @@ html(lang="en")
     meta(name="theme-color", content="#ffffff")
     title Colors and Types
   body
-    section.colors-and-types-wrapper
-      section.colors-and-types-logo-container
+    section.colors-and-types__wrapper
+      section.colors-and-types__logo-container
         +logo()
-      section.colors-and-types-main-container
-        section.colors-and-types-main-container__colors-container
+      section.colors-and-types__main-container
+        section.colors-and-types__colors-container
           +color-pick({ className: 'dark-shade-100', colorName: 'dark shade 100%', colorHex: '#1f2041' })
           +color-pick({ className: 'dark-shade-75', colorName: 'dark shade 75%', colorHex: '#1f2041' })
           +color-pick({ className: 'dark-shade-50', colorName: 'dark shade 50%', colorHex: '#1f2041' })
@@ -30,7 +30,7 @@ html(lang="en")
           +color-pick({ className: 'dark-shade-5', colorName: 'dark shade 5%', colorHex: '#1f2041' })
           +color-pick({ className: 'purple', colorName: 'purple', colorHex: '#bc9cff' })
           +color-pick({ className: 'green', colorName: 'green', colorHex: '#6fcf97' })
-        section.colors-and-types-main-container__texts-container
+        section.colors-and-types__texts-container
           +text-example({ className: 'h1', tagName: 'H1', definition: 'This one is the sub-section or widget title' })
           +text-example({ className: 'h2', tagName: 'H2', definition: 'Next one is the item title inside widgets' })
           +text-example({ className: 'h3', tagName: 'H3', definition: 'This label or cta text' })
