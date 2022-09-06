@@ -1,6 +1,12 @@
-# Toxin hotel
-Верстка UI-кита и страниц макета Toxin Hotel для прохождения заданий на должность Junior Frontend Developer
+# Toxin hotel [WIP]
 
+Верстка UI-кита и страниц макета Toxin Hotel
+
+[Описание задания](https://docs.google.com/document/d/1NUYis4EVhD_jyRzt4t0FR7xpif5RNESTidl1Mdl5pTU/edit?usp=sharing)
+
+[Ссылка на макет](https://www.figma.com/file/MKxeXgDgaF4IFlbsTZl9R1/MetaLamp-former-FSD-frontend-education-program.-The-2nd-task-Copy-Copy)
+
+# Запуск проекта
 Клонируем репозиторий:
 `git clone https://github.com/Axent13/fsd-ui-kit.git`
 
