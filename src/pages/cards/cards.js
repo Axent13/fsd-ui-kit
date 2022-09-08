@@ -1,5 +1,3 @@
-import 'air-datepicker';
-import 'air-datepicker/dist/css/datepicker.css';
 import DateDropdown from '../../components/date-dropdown/date-dropdown';
 import RoomCard from '../../components/room-card/room-card';
 import cardsData from './cards-data';

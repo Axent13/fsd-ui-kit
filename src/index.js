@@ -1,5 +1,3 @@
-import './favicons/favicons';
-
 const requireAllFiles = function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
 };

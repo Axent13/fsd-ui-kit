@@ -1,11 +1,11 @@
-import 'air-datepicker';
-import 'air-datepicker/dist/css/datepicker.css';
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
 
 class DateDropdown {
   constructor($rootElement, options = {}) {
     this.$rootElement = $rootElement;
     this.$airDatepicker = this.$rootElement.find('.js-date-dropdown__air-datepicker');
-    this.$airDatepicker.datepicker(options);
+    new AirDatepicker(this.$airDatepicker, options);
 
     this.$datepickersContainer = $('.datepickers-container');
     this.$currentDatepiker = this.$datepickersContainer.find('.datepicker:last');
