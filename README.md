@@ -18,7 +18,7 @@
 `npm install`
 
 Запускаем проект:
-`npm run dev`
+`npm run start`
 
 Проект будет доступен по адресу `http://localhost:8080/`
 
