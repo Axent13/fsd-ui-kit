@@ -9,10 +9,10 @@
 # Запуск проекта
 
 Клонируем репозиторий:
-`git clone https://github.com/Axent13/fsd-ui-kit.git`
+`git clone https://github.com/Axent13/toxin-hotel.git`
 
 Переходим в папку с проектом:
-`cd fsd-iu-kit/`
+`cd toxin-hotel/`
 
 Устанавливаем зависимости:
 `npm install`
@@ -35,4 +35,4 @@
 - Маска ввода для инпутов - [Inputmask](https://github.com/RobinHerbots/Inputmask)
 - Карусель - [Owl Carousel 2](https://github.com/OwlCarousel2/OwlCarousel2)
 
-Проект развернут на gihub-pages - https://axent13.github.io/fsd-ui-kit
+Проект развернут на gihub-pages - https://axent13.github.io/toxin-hotel
