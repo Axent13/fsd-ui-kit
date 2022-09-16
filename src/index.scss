@@ -74,7 +74,6 @@ html {
     background-position: center;
     background-color: white;
   }
-  
   &__cards-image {
     background: url(./previews/cards.jpg);
     background-size: contain;
@@ -82,9 +81,43 @@ html {
     background-position: center;
     background-color: white;
   }
-  
   &__headers-and-footers-image {
     background: url(./previews/headers-and-footers.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  &__landing-page-image {
+    background: url(./previews/landing-page.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  &__search-room-image {
+    background: url(./previews/search-room.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  &__room-details-image {
+    background: url(./previews/room-details.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  &__registration-image {
+    background: url(./previews/registration.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+  }
+  &__sign-in-image {
+    background: url(./previews/sign-in.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
