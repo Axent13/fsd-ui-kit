@@ -20,6 +20,7 @@
     margin: 2rem auto 0;
     @media only screen and (min-width: 768px) {
       margin-top: 6.15rem;
+      padding-left: 13rem;
     }
   }
   &__first-section {
@@ -27,7 +28,7 @@
     align-items: center;
     flex-direction: column;
     @media only screen and (min-width: 768px) {
-      margin: 6.15rem 0 0 13.3rem;
+      margin-bottom: 13.3rem;
       align-items: initial;
       flex-direction: row;  
     }
